@@ -1,30 +1,59 @@
-@mixin h4 {
-  font-size: 26px;
+@mixin xxl {
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 44px;
+}
+
+@mixin xl {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 35px;
+}
+
+@mixin l {
+  	font-size: 26px;
 	font-weight: 400;
 	line-height: 28px;
 }
 
+@mixin m {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+@mixin s {
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+@mixin xs {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21px;
+	color: #3D4548;
+}
+
+@mixin left-header {
+	min-width: 210px;
+	margin: 0;
+	color: #909090;
+}
+
 @mixin button-white {
-  	max-width: 343px;
-	height: 52px;
+  	@include xs;
 	padding: 17px 62px;
 	background-color: white;
 	border: 1px solid #499647;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 16px;
 	color: #282828;
 }
 
 @mixin button-green {
-	max-width: 343px;
-	height: 52px;
+	@include xs;
 	padding: 17px 62px;
 	background-color: #499647;
 	border: 1px solid white;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 16px;
 	color: white;
 }
 
@@ -40,18 +69,6 @@
 	height: auto;
 }
 
-@mixin h6 {
-	font-size: 21px;
-	font-weight: 400;
-	line-height: 23px;
-}
-
-@mixin h5 {
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 28px;
-}
-
 @mixin ul {
 	list-style-type: none;
 	padding: 0;
@@ -60,21 +77,6 @@
 @mixin a {
 	text-decoration: none;
 	color: #EAEEF1;
-}
-
-@mixin left-header {
-	min-width: 210px;
-	margin: 0;
-	color: #909090;
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 26px;
-}
-
-@mixin h3 {
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 44px;
 }
 
 @mixin box-with-left-header {
@@ -89,24 +91,12 @@
 }
 
 @mixin big-p {
+	@include xl;
 	margin: 0 0 24px 0;
-	font-size: 32px;
-	font-weight: 400;
-	line-height: 35px;
 	color: #282828;
 }
 
-@mixin p-top-border {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 21px;
-	color: #3D4548;
+@mixin top-border {
 	border-top: 1px solid #EAEEF1;
 }
 
-@mixin p {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 21px;
-	color: #3D4548;
-}

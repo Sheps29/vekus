@@ -1,3 +1,52 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 section {
   padding-left: 60px;
   padding-right: 60px;
@@ -31,7 +80,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 @media screen and (max-width: 678px) {
   .box-promo .left-header {
@@ -45,10 +94,10 @@ section {
   max-width: 872px;
 }
 .box-promo .right-promo-box .big-p {
-  margin: 0 0 24px 0;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
+  margin: 0 0 24px 0;
   color: #282828;
 }
 @media screen and (max-width: 678px) {
@@ -58,11 +107,11 @@ section {
   }
 }
 .box-promo .right-promo-box .p-top-border {
+  border-top: 1px solid #EAEEF1;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   color: #3D4548;
-  border-top: 1px solid #EAEEF1;
 }
 .box-promo .right-promo-box .p-without-border {
   font-size: 16px;
@@ -80,25 +129,23 @@ section {
   }
 }
 .box-promo .right-promo-box .button-box .green-button {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: #499647;
   border: 1px solid white;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: white;
 }
 .box-promo .right-promo-box .button-box .white-button {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: white;
   border: 1px solid #499647;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: #282828;
 }
 
@@ -149,14 +196,13 @@ section {
   }
 }
 .promo button {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: white;
   border: 1px solid #499647;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: #282828;
   padding: 18px 48px;
 }
@@ -203,14 +249,13 @@ section {
   height: auto;
 }
 .news button {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: white;
   border: 1px solid #499647;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: #282828;
   color: #499647;
 }
@@ -347,7 +392,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 .history__block {
   display: flex;
@@ -388,14 +433,13 @@ section {
   }
 }
 .history__block--detale {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: #499647;
   border: 1px solid white;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: white;
   margin-right: 24px;
   display: inline-block;
@@ -406,14 +450,13 @@ section {
   }
 }
 .history__block--collab {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: white;
   border: 1px solid #499647;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: #282828;
 }
 @media screen and (max-width: 370px) {
@@ -508,14 +551,13 @@ section {
   font-size: 12px;
 }
 .questionnaire .dispatch {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: #499647;
   border: 1px solid white;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: white;
   display: block;
 }
@@ -590,7 +632,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   min-width: 343px;
   max-width: 424px;
 }
@@ -651,7 +693,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   max-width: 424px;
   min-width: 343px;
 }
@@ -674,7 +716,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   max-width: 424px;
   min-width: 343px;
 }
@@ -894,14 +936,13 @@ section {
 }
 
 .loading button {
-  max-width: 343px;
-  height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
   padding: 17px 62px;
   background-color: white;
   border: 1px solid #499647;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
   color: #282828;
   display: block;
   margin: auto;
@@ -1067,11 +1108,11 @@ section {
   }
 }
 .box-promo .activity-header .about {
+  border-top: 1px solid #EAEEF1;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   color: #3D4548;
-  border-top: 1px solid #EAEEF1;
   max-width: 872px;
 }
 
@@ -1197,7 +1238,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   margin: 50px 0;
 }
 .direction__box {
@@ -1237,6 +1278,90 @@ section {
   line-height: 21px;
   color: #3D4548;
   margin: 0;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.products__header {
+  min-width: 210px;
+  margin: 0;
+  color: #909090;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+.products__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 872px;
+}
+.products__box .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.products__box .list__item {
+  flex: 0 0 50%;
+  margin: 12px 0 24px 0;
+  padding-top: 20px;
+  border-top: 1px solid #EAEEF1;
+}
+@media screen and (max-width: 678px) {
+  .products__box .list__item {
+    flex: 0 0 100%;
+  }
+}
+.products__box .list__item span {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  background-color: #499647;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.products__box .list__item h6 {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 20px 0 10px 0;
+}
+.products__box .list__item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+@media screen and (max-width: 678px) {
+  .products__box .list .itemTop {
+    margin-bottom: 0;
+  }
+}
+.products__box .list .itemBottom {
+  display: flex;
+  align-items: end;
+}
+@media screen and (max-width: 678px) {
+  .products__box .list .itemBottom {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+.products__box .list .lastItem {
+  flex: 0 0 100%;
+}
+.products__box .button--white {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  margin-left: auto;
 }
 
 .checkbox-container input:checked ~ .checkmark {
@@ -1305,7 +1430,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 .conditions .right_box {
   display: grid;
@@ -1395,17 +1520,17 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 .values .right_box {
   display: grid;
   max-width: 872px;
 }
 .values .right_box .right_promo {
-  margin: 0 0 24px 0;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
+  margin: 0 0 24px 0;
   color: #282828;
 }
 @media screen and (max-width: 678px) {
@@ -1477,13 +1602,13 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 .vacancy p {
-  margin: 0 0 24px 0;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
+  margin: 0 0 24px 0;
   color: #282828;
   max-width: 872px;
   border-top: 1px solid #EAEEF1;
@@ -1514,7 +1639,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 .offer .right_box {
   display: grid;
@@ -1574,10 +1699,10 @@ section {
   justify-content: end;
 }
 .bid .offer_box .p-top-border {
-  margin: 0 0 24px 0;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
+  margin: 0 0 24px 0;
   color: #282828;
 }
 @media screen and (max-width: 678px) {
@@ -1616,7 +1741,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
 }
 @media screen and (max-width: 678px) {
   .menu .left_box .left-header {
@@ -1692,7 +1817,7 @@ section {
   color: #909090;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
   max-width: 250px;
   white-space: pre-wrap;
 }
@@ -1737,6 +1862,61 @@ section {
 }
 .part .part_box .right_box .item1 {
   background-color: #499647;
+}
+
+.product_promo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 678px) {
+  .product_promo {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.product_promo h4 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0;
+  color: #282828;
+}
+@media screen and (min-width: 678px) {
+  .product_promo h4 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+.product_promo p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #3D4548;
+  margin: 0;
+  max-width: 872px;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_item {
+  display: flex;
+  flex-direction: column;
+}
+.product_item .phone {
+  display: block;
+  max-width: 343px;
+  height: auto;
+}
+.product_item .phone img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.product_item .pk {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
