@@ -1,60 +1,80 @@
+@mixin font-normal {
+	font-weight: 400;
+}
+
+@mixin font-medium {
+	font-weight: 500;
+}
+@mixin font-bold {
+	font-weight: 700;
+}
+
+@mixin font-strong {
+	font-weight: 800;
+}
+
 @mixin xxl {
 	font-size: 40px;
-	font-weight: 400;
 	line-height: 44px;
+	@include font-normal;
 }
 
 @mixin xl {
 	font-size: 32px;
-	font-weight: 400;
 	line-height: 35px;
+	@include font-normal;
 }
 
 @mixin l {
   	font-size: 26px;
-	font-weight: 400;
 	line-height: 28px;
+	@include font-normal;
 }
 
 @mixin m {
 	font-size: 24px;
-	font-weight: 400;
 	line-height: 28px;
+	@include font-normal;
 }
 
 @mixin s {
 	font-size: 21px;
-	font-weight: 400;
 	line-height: 23px;
+	@include font-normal;
 }
 
 @mixin xs {
 	font-size: 16px;
-	font-weight: 400;
 	line-height: 21px;
-	color: #3D4548;
+	@include font-medium;
+}
+
+@mixin xxs {
+	font-size: 14px;
+	line-height: 16px;
+	@include font-normal;
 }
 
 @mixin left-header {
 	min-width: 210px;
 	margin: 0;
-	color: #909090;
+	color: $header-grey;
 }
 
 @mixin button-white {
   	@include xs;
 	padding: 17px 62px;
-	background-color: white;
-	border: 1px solid #499647;
-	color: #282828;
+	background-color: $white;
+	border: 1px solid $green;
+	color: $dark-grey;
 }
 
 @mixin button-green {
 	@include xs;
 	padding: 17px 62px;
-	background-color: #499647;
-	border: 1px solid white;
-	color: white;
+	background-color: $green;
+	border: 1px solid $white;
+	color: $white;
 }
 
 @mixin icon {
@@ -76,7 +96,7 @@
 
 @mixin a {
 	text-decoration: none;
-	color: #EAEEF1;
+	color: $light-grey;
 }
 
 @mixin box-with-left-header {
@@ -93,10 +113,15 @@
 @mixin big-p {
 	@include xl;
 	margin: 0 0 24px 0;
-	color: #282828;
+	color: $dark-grey;
 }
 
 @mixin top-border {
-	border-top: 1px solid #EAEEF1;
+	border-top: 1px solid $light-grey;
 }
 
+@mixin join {
+	padding: 40px 24px;
+	background-color: $green;
+	color: $white;
+}
