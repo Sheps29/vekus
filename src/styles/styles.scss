@@ -3,7 +3,7 @@
 @import 'colors';
 
 section {
-	margin: 30px 0;
+	margin: 40px 0;
 	padding-left: 60px;
 	padding-right: 60px;
 
@@ -847,6 +847,66 @@ h2 {
 	}
 }
 
+.press-center {
+	@include box-with-left-header;
+
+	@media screen and (max-width: 678px) {
+		flex-direction: column;
+	}
+
+	.left-header {
+		@include left-header;
+		@include m;
+
+		@media screen and (max-width: 678px) {
+			font-size: 18px;
+			line-height: 21px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.right-box {
+		@include right-box;
+
+		p:first-of-type {
+			@include big-p;
+
+			@media screen and (max-width: 678px) {
+				font-size: 26px;
+				line-height: 28px;
+			}
+		}
+
+		p:nth-of-type(2) {
+			@include top-border;
+			@include xs;
+			padding-top: 16px;
+		}
+
+		p:last-of-type {
+			@include xs;
+			margin: 24px 0;
+		}
+
+		.button-box {
+			display: flex;
+			gap: 24px;
+
+			@media screen and (max-width: 468px) {
+				flex-direction: column;
+			}
+
+			.green-button {
+				@include button-green;
+			}
+
+			.white-button {
+				@include button-white;
+			}
+		}
+	}
+}
+
 .comment{
 
 	&__header{
@@ -862,64 +922,85 @@ h2 {
 	}
 
 	&__box {
-		display: grid;
-		grid-template-columns: auto auto auto;
-		gap: 40px 24px;
-		padding: 0;
-		max-width: 1322px;
+		display: flex;
+		gap: 24px;
+		flex-wrap: wrap;
 
-		@media screen and (max-width: 1440px) {
-			grid-template-columns: auto;
-		}
-
-		.subject {
+		.topic {
+			@include top-border;
 			list-style-type: none;
-			border-top: 1px solid#EAEEF1;
-			max-width: 424px;
-			min-width: 343px;
+			padding-top: 28px;
+			flex: 1;
+			flex-basis: 30%;
+
+			@media screen and (max-width: 678px) {
+				flex-basis: 40%;
+			}
+
+			@media screen and (max-width: 480px) {
+				flex-basis: 100%;
+			}
 
 			.number {
 				background-color: #499647;
 				color: white;
 				border-radius: 50%;
-				padding: 18px;
+				padding: 14px;
 				font-size: 24px;
 				font-weight: 400;
 				line-height: 24px;
 			}
 
-			.topic {
+			p {
 				@include s;
+				margin-top: 20px;
+			}
+
+			div {
+				display: flex;
+
+				@media screen and (max-width: 678px) {
+					flex-direction: column;
+				}
+
+				.item {
+					flex-basis: 50%;
+				}
+
+				.item:first-of-type {
+					@media screen and (max-width: 678px) {
+						margin-bottom: 0;
+					}
+				}
+
+				.item:last-of-type {
+					@media screen and (max-width: 678px) {
+						margin-top: 0;
+					}
+				}
 			}
 
 			.item {
 				list-style-type: disc;
-				@include xs;
+				margin: 10px 20px;
+
+				li {
+					line-height: 18px;
+				}
 			}
 		}
 
-		.subject1 {
-			grid-column: span 2;
-			max-width: 872px;
-			min-width: 872px;
-			
-			@media screen and (max-width: 1000px) {
-				max-width: 424px;
-				min-width: 343px;
-				grid-column: span 1;
+		.topic:nth-of-type(1), .topic:nth-of-type(3) {
+			flex: 2;
+			flex-basis: 60%;
+
+			@media screen and (max-width: 678px) {
+				flex: 1;
+				flex-basis: 40%;
 			}
 
-		}
-
-		.subject3 {
-			grid-column: span 2;
-			max-width: 872px;
-			min-width: 872px;
-
-			@media screen and (max-width: 1000px) {
-				max-width: 424px;
-				min-width: 343px;
-				grid-column: span 1;
+			@media screen and (max-width: 480px) {
+				flex-basis: 100%;
 			}
 		}
 	}
@@ -938,7 +1019,7 @@ h2 {
 		}
 	}
 
-	&__box {
+	&__group {
 		padding: 0;
 
 		.item-media {
@@ -947,6 +1028,7 @@ h2 {
 			.item-header {
 				@include s;
 				margin: 20px 0;
+				color: $grey;
 			}
 
 			.item-list {
@@ -955,27 +1037,47 @@ h2 {
 				flex-wrap: wrap;
 				gap: 20px 24px;
 
-				.point {
-					list-style-type: none;
-
-					picture {
-						display: block;
-						width: 424px;
-						height: 141px;
-
-						img {
-							@include img;
-						}
-					}
+				@media screen and (max-width: 678px) {
+					justify-content: space-between;
 				}
 
-				.point-cripto {
+				@media screen and (max-width: 480px) {
+					flex-wrap: nowrap;
+					overflow-x: scroll;
+					overflow-y: hidden;
+				}
+
+				&::-webkit-scrollbar {
+					width: 6px;
+					height: 6px;
+				}
+		
+				&::-webkit-scrollbar-track {
+					height: 10px;
+					background-color: $light-grey;
+				}
+		
+				&::-webkit-scrollbar-thumb {
+					height: 10px;
+					background-color: $grey;
+				}
+
+				.point {
+					display: flex;
 					list-style-type: none;
+					flex-basis: 30%;
+
+					@media screen and (max-width: 678px) {
+						flex-basis: 45%;
+					}
 
 					picture {
 						display: block;
-						width: 311px;
-						height: 141px;
+						width: 100%;
+
+						@media screen and (max-width: 480px) {
+							min-width: 165px;
+						}
 
 						img {
 							@include img;
