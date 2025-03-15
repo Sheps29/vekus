@@ -37,7 +37,7 @@ h2 {
 .box-promo {
 	@include box-with-left-header;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 
@@ -45,9 +45,9 @@ h2 {
 		@include left-header;
 		@include m;
 
-		@media screen and (max-width: 678px) {
-			font-size: 18px;
-			line-height: 21px;
+		@media screen and (max-width: 768px) {
+			@include xs;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -57,15 +57,16 @@ h2 {
 		.big-p {
 			@include big-p;
 
-			@media screen and (max-width: 678px) {
-				font-size: 26px;
-				line-height: 28px;
+			@media screen and (max-width: 768px) {
+				@include l;
 			}
 		}
 
 		.p-top-border {
 			@include top-border;
 			@include xs;
+			margin-bottom: 20px;
+			padding-top: 16px;
 		}
 
 		.p-without-border {
@@ -1800,42 +1801,158 @@ h2 {
   background-color: #3498db;
 }
 
+.invitation {
+	position: relative;
+	padding: 0;
+	margin-top: 0;
+
+	picture {
+		display: block;
+		width: 100%;
+
+		img {
+			@include img;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		color: $white;
+		left: 16px;
+		right: 16px;
+		bottom: 30px;
+
+		@media screen and (min-width: 768px) {
+			left: 60px;
+			bottom: 65px;
+		}
+
+		p:first-of-type {
+			@include l;
+			margin-bottom: 16px;
+
+			@media screen and (min-width: 768px) {
+				@include xxl;
+			}
+		}
+
+		p:last-of-type {
+			@include xs;
+			margin-bottom: 30px;
+
+			@media screen and (min-width: 481px) and (max-width: 767px) {
+				margin-bottom: 16px;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+
+			@media screen and (min-width: 481px) {
+				flex-direction: row;
+			}
+
+			button:first-of-type {
+				@include button-green;
+				border: none;
+
+				@media screen and (min-width: 481px) and (max-width: 767px) {
+					@include xxs;
+					padding: 10px 38px;
+				}
+			}
+
+			button:last-of-type {
+				@include button-white;
+				color: $green;
+
+				@media screen and (min-width: 481px) and (max-width: 767px) {
+					@include xxs;
+					padding: 10px 38px;
+				}
+			}
+		}
+	}
+}
+
 .face_team {
 	display: block;
-	max-width: 1320px;
-	max-height: 417px;
 	padding: 0 60px;
 
 	img {
 		@include img;
 	}
 
-	@media screen and (max-width: 678px) {
-		padding-left: 24px;
-		padding-right: 24px;
+	@media screen and (max-width: 768px) {
+		padding: 0 24px;
 	}
 
 	@media screen and (max-width: 480px) {
-		padding-left: 16px;
-		padding-right: 16px;
+		display: none;
+	}
+}
+
+.mission {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 481px) {
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
-	@media screen and (max-width: 375px) {
-		display: none;
+	.left-header {
+		@include left-header;
+		margin-bottom: 20px;
+	}
+
+	&__box {
+		@include right-box;
+
+		p {
+			@include xs;
+			@include top-border;
+			padding-top: 16px;
+			margin-bottom: 35px;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+
+			@media screen and (min-width: 768px) {
+				flex-direction: row;
+			}
+
+			@media screen and (min-width: 481px) {
+				gap: 24px;
+			}
+
+			button:first-of-type {
+				@include button-green;
+			}
+
+			button:last-of-type {
+				@include button-white;
+			}
+		}
 	}
 }
 
 .face_mobile {
 	display: block;
-	max-width: 375px;
-	max-height: 275px;
-	margin-top: 32px;
+	width: 100%;
 
 	img {
 		@include img;
 	}
 
-	@media screen and (min-width: 376px) {
+	@media screen and (min-width: 481px) {
 		display: none;
 	}
 }
@@ -1845,22 +1962,32 @@ h2 {
 	justify-content: space-between;
 	margin-top: 72px;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 
 	.left-header {
 		@include left-header;
 		@include m;
+		margin-bottom: 20px;
 	}
 
 	.right_box {
-		display: grid;
+		display: flex;
 		max-width: 872px;
 		gap: 24px;
+		flex-wrap: wrap;
 
 		.item {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			flex-basis: 45%;
 			border-top: 1px solid #EAEEF1;
+
+			@media screen and (max-width: 480px) {
+				flex-basis: 100%;
+			}
 
 			picture {
 				@include icon;
@@ -1881,11 +2008,12 @@ h2 {
 			}
 		}
 
-		.item3 {
-			grid-column: 1 / span 2;
+		.item:last-of-type {
+			flex-basis: 100%;
+			flex: 2;
 
-			@media screen and (max-width: 376px) {
-				grid-column: auto;
+			@media screen and (max-width: 480px) {
+				flex: 1;
 			}
 		}
 	}
@@ -2088,6 +2216,28 @@ h2 {
 
 			@media screen and (max-width: 678px) {
 				@include m;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@media screen and (min-width: 768px) {
+				flex-direction: row;
+			}
+
+			@media screen and (min-width: 481px) {
+				gap: 24px;
+			}
+
+			button:first-of-type {
+				@include button-green;
+			}
+
+			button:last-of-type {
+				@include button-white;
 			}
 		}
 	}
