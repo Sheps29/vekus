@@ -7,7 +7,7 @@ section {
 	padding-left: 60px;
 	padding-right: 60px;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		padding-left: 24px;
 		padding-right: 24px;
 	}
@@ -848,7 +848,7 @@ h2 {
 	}
 }
 
-.press-center {
+.about {
 	@include box-with-left-header;
 
 	@media screen and (max-width: 678px) {
@@ -857,7 +857,7 @@ h2 {
 
 	.left-header {
 		@include left-header;
-		@include m;
+		@include m; 
 
 		@media screen and (max-width: 678px) {
 			font-size: 18px;
@@ -866,7 +866,7 @@ h2 {
 		}
 	}
 
-	.right-box {
+	&__info {
 		@include right-box;
 
 		p:first-of-type {
@@ -893,15 +893,15 @@ h2 {
 			display: flex;
 			gap: 24px;
 
-			@media screen and (max-width: 468px) {
+			@media screen and (max-width: 480px) {
 				flex-direction: column;
 			}
 
-			.green-button {
+			.button--green {
 				@include button-green;
 			}
 
-			.white-button {
+			.button--white {
 				@include button-white;
 			}
 		}
@@ -910,31 +910,26 @@ h2 {
 
 .comment{
 
-	&__header{
-		max-width: 423px;
-		font-size: 32px;
-		font-weight: 400;
-		line-height: 35px;
+	.header{
+		@include xl;
 
-		@media screen and (max-width: 678px) {
-			font-size: 26px;
-			line-height: 28px;
+		@media screen and (max-width: 768px) {
+			@include l;
 		}
 	}
 
-	&__box {
+	.list {
 		display: flex;
 		gap: 24px;
 		flex-wrap: wrap;
 
 		.topic {
 			@include top-border;
-			list-style-type: none;
 			padding-top: 28px;
 			flex: 1;
 			flex-basis: 30%;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 				flex-basis: 40%;
 			}
 
@@ -943,13 +938,11 @@ h2 {
 			}
 
 			.number {
-				background-color: #499647;
-				color: white;
+				@include m;
+				background-color: $green;
+				color: $white;
 				border-radius: 50%;
 				padding: 14px;
-				font-size: 24px;
-				font-weight: 400;
-				line-height: 24px;
 			}
 
 			p {
@@ -960,7 +953,7 @@ h2 {
 			div {
 				display: flex;
 
-				@media screen and (max-width: 678px) {
+				@media screen and (max-width: 768px) {
 					flex-direction: column;
 				}
 
@@ -969,13 +962,13 @@ h2 {
 				}
 
 				.item:first-of-type {
-					@media screen and (max-width: 678px) {
+					@media screen and (max-width: 768px) {
 						margin-bottom: 0;
 					}
 				}
 
 				.item:last-of-type {
-					@media screen and (max-width: 678px) {
+					@media screen and (max-width: 768px) {
 						margin-top: 0;
 					}
 				}
@@ -995,7 +988,7 @@ h2 {
 			flex: 2;
 			flex-basis: 60%;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 				flex: 1;
 				flex-basis: 40%;
 			}
@@ -1009,10 +1002,8 @@ h2 {
 
 .media {
 
-	&__header {
-		font-size: 32px;
-		font-weight: 400;
-		line-height: 35px;
+	.header {
+		@include l;
 
 		@media screen and (max-width: 678px) {
 			font-size: 26px;
@@ -1020,11 +1011,10 @@ h2 {
 		}
 	}
 
-	&__group {
+	.list {
 		padding: 0;
 
 		.item-media {
-			list-style-type: none;
 
 			.item-header {
 				@include s;
@@ -1065,7 +1055,7 @@ h2 {
 
 				.point {
 					display: flex;
-					list-style-type: none;
+	
 					flex-basis: 30%;
 
 					@media screen and (max-width: 678px) {
@@ -1119,7 +1109,6 @@ h2 {
 		padding: 0;
 
 		.activity-item {
-			list-style-type: none;
 			display: flex;
 			flex-wrap: wrap;
 			margin: 12px 0;
@@ -1161,7 +1150,7 @@ h2 {
 						padding: 0;
 
 						li {
-							list-style-type: none;
+			
 							display: flex;
 
 							.num {
@@ -1265,7 +1254,6 @@ h2 {
 			flex: 1 1 33%;
 			max-width: 424px;
 			@include top-border;
-			list-style-type: none;
 
 			@media screen and (max-width: 1439px) {
 				max-width: 50%;
@@ -1815,10 +1803,11 @@ h2 {
 		}
 	}
 
-	&__box {
+	.box {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
+		max-width: 620px;
 		color: $white;
 		left: 16px;
 		right: 16px;
@@ -1829,7 +1818,7 @@ h2 {
 			bottom: 65px;
 		}
 
-		p:first-of-type {
+		h3 {
 			@include l;
 			margin-bottom: 16px;
 
@@ -1838,7 +1827,7 @@ h2 {
 			}
 		}
 
-		p:last-of-type {
+		p {
 			@include xs;
 			margin-bottom: 30px;
 
@@ -1879,81 +1868,92 @@ h2 {
 	}
 }
 
-.face_team {
-	display: block;
-	padding: 0 60px;
+.goals {
+	display: flex;
+	justify-content: space-between;
 
-	img {
-		@include img;
+	.header {
+		@include left-header;
+		@include l;
 	}
 
-	@media screen and (max-width: 768px) {
-		padding: 0 24px;
-	}
+	.box {
+		
+		p {
+			@include xs;
+		}
 
-	@media screen and (max-width: 480px) {
-		display: none;
+		p:first-of-type {
+			@include top-border;
+			margin-bottom: 20px;
+			padding-top: 16px;
+		}
 	}
 }
 
 .mission {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
+	gap: 50px;
 
-	@media screen and (min-width: 481px) {
-		flex-direction: row;
-		justify-content: space-between;
+	@media screen and (max-width: 480px) {
+		flex-direction: column;
 	}
 
-	.left-header {
-		@include left-header;
-		margin-bottom: 20px;
-	}
+	&__info {
+		display: flex;
+		flex-direction: column;
 
-	&__box {
-		@include right-box;
-
-		p {
-			@include xs;
-			@include top-border;
-			padding-top: 16px;
-			margin-bottom: 35px;
+		@media screen and (min-width: 481px) {
+			flex-direction: row;
+			justify-content: space-between;
 		}
 
-		div {
-			display: flex;
-			flex-direction: column;
-			gap: 18px;
+		.left-header {
+			@include left-header;
+			margin-bottom: 20px;
+		}
 
-			@media screen and (min-width: 768px) {
-				flex-direction: row;
+		.box {
+			@include right-box;
+
+			p {
+				@include xs;
+				@include top-border;
+				padding-top: 16px;
+				margin-bottom: 35px;
 			}
 
-			@media screen and (min-width: 481px) {
-				gap: 24px;
-			}
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
 
-			button:first-of-type {
-				@include button-green;
-			}
+				@media screen and (min-width: 768px) {
+					flex-direction: row;
+				}
 
-			button:last-of-type {
-				@include button-white;
+				@media screen and (min-width: 481px) {
+					gap: 24px;
+				}
+
+				button:first-of-type {
+					@include button-green;
+				}
+
+				button:last-of-type {
+					@include button-white;
+				}
 			}
 		}
 	}
-}
 
-.face_mobile {
-	display: block;
-	width: 100%;
+	picture {
+		display: block;
 
-	img {
-		@include img;
-	}
-
-	@media screen and (min-width: 481px) {
-		display: none;
+		img {
+			@include img;
+		}
 	}
 }
 
@@ -2021,29 +2021,21 @@ h2 {
 
 .group_photo {
 	display: block;
-	margin: auto;
-	max-width: 415px;
-	max-height: 294px;
+	padding: 0 60px;
+	margin: 40px 0;
 
-	@media screen and (max-width: 376px) {
-		max-height: 707px;
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 
-
-	.computer {
-		@include img;
-
-		@media screen and (max-width: 375px) {
-			display: none;
-		}
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 
-	.mobile {
+	img {
 		@include img;
-
-		@media screen and (min-width: 376px) {
-			display: none;
-		}
 	}
 }
 
@@ -2052,7 +2044,7 @@ h2 {
 	justify-content: space-between;
 	margin-top: 72px;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 
@@ -2061,20 +2053,20 @@ h2 {
 		@include m;
 	}
 
-	.right_box {
+	.box {
 		display: grid;
 		max-width: 872px;
 
-		.right_promo {
+		.right__promo {
 			@include big-p;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 			border-bottom: 1px solid #EAEEF1;
 			@include m;
 		}
 		}
 
-		.item_box {
+		.item__box {
 			display: grid;
 			gap: 24px;
 
@@ -2082,7 +2074,7 @@ h2 {
 				display: grid;
 				border-top: 1px solid #EAEEF1;
 
-				@media screen and (max-width: 678px) {
+				@media screen and (max-width: 768px) {
 					border-bottom: 1px solid #EAEEF1;
 				}
 
@@ -2108,7 +2100,7 @@ h2 {
 			.item3 {
 				grid-column: 1 / span 2;
 
-				@media screen and (max-width: 376px) {
+				@media screen and (max-width: 480px) {
 					grid-column: auto;
 				}
 			}
@@ -2135,7 +2127,7 @@ h2 {
 		max-width: 872px;
 		border-top: 1px solid #EAEEF1;
 
-		@media screen and (max-width: 678px) {
+		@media screen and (max-width: 768px) {
 			border-bottom: 1px solid #EAEEF1;
 			border-top: none;
 			@include m;
@@ -2147,7 +2139,7 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 		gap: 16px;
 	}
@@ -2207,14 +2199,16 @@ h2 {
 }
 
 .bid {
+	display: flex;
 	justify-content: end;
 
-	.offer_box {
+	.box {
+		max-width: 872px;
 
-		.p-top-border {
+		p {
 			@include big-p;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 				@include m;
 			}
 		}
@@ -2247,16 +2241,16 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		flex-direction: column;
 	}
 
-	.left_box {
+	.left {
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
 
-		@media screen and (max-width: 678px) {
+		@media screen and (max-width: 768px) {
 			flex-direction: row;
 			gap: 0;
 			overflow-x: hidden;
@@ -2267,7 +2261,7 @@ h2 {
 			@include left-header;
 			@include m;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 				padding: 13px 0;
 				border: 1px solid #EAEEF1;
 				@include xxs;
@@ -2275,59 +2269,73 @@ h2 {
 		}
 	}
 
-	.right_box {
+	.right {
 		display: flex;
 		flex-direction: column;
 		max-width: 872px;
 
 		.item {
+			display: flex;
+			justify-content: space-between;
 			border-top: 1px solid #EAEEF1;
 			border-bottom: 1px solid #EAEEF1;
 
-			h6 {
-				@include s;
-				margin: 10px 0;
+			div {
 				
-				@media screen and (max-width: 678px) {
-					font-size: 18px;
-					line-height: 21px;
+				h6 {
+					@include s;
+					margin: 10px 0;
+					
+					@media screen and (max-width: 768px) {
+						font-size: 18px;
+						line-height: 21px;
+					}
+
+					a {
+						text-decoration: none;
+						color: #282828;
+					}
 				}
 
-				a {
-					text-decoration: none;
-					color: #282828;
+				p {
+					@include xs;
+
+					@media screen and (max-width: 768px) {
+						@include xxs;
+					}
+
+					.metro{
+						border: 1px solid #0063F9;
+						border-radius: 50%;
+						width: 8px;
+						height: 8px;
+						display: inline-block;
+						background-color: $blue;
+					}
 				}
 			}
 
-			p {
-				@include xs;
+			picture {
+				display: flex;
+				align-items: center;
 
-				@media screen and (max-width: 678px) {
-					@include xxs;
-				}
-
-				.metro{
-					border: 1px solid #0063F9;
-					border-radius: 50%;
-					width: 8px;
-					height: 8px;
-					display: inline-block;
-					background-color: #0063F9;
+				img {
+					@include img;
 				}
 			}
 		}
 
 		.item :active {
-			background-color: #EAEEF1;
+			background-color: $light-grey;
 		}
 
 		button {
-			border: 1px solid #A0A7AC;
-			background-color: white;
+			border: 1px solid $grey;
+			background-color: $white;
 			padding: 17px 0;
 			margin-top: 56px;
 
-			@media screen and (max-width: 678px) {
+			@media screen and (max-width: 768px) {
 				margin-top: 40px;
 			}
 		}
@@ -2343,46 +2351,66 @@ h2 {
 		white-space: pre-wrap;
 	}
 
-	.part_box {
+	.box {
 		display: flex;
 		justify-content: space-between;
 
-		.left_box {
+		&__left {
 			max-width: 427px;
-			max-height: 225px;
-			background-color: #499647;
+			height: 200px;
+			background-color: $green;
+			border-radius: 10px;
+			display: flex;
+			align-items: end;
 
 			h6 {
 				@include m;
+				max-width: 200px;
+				margin: 0 0 30px 20px;
 			}
 		}
 
-		.right_box {
+		&__right {
 			@include right-box;
 			gap: 24px;
 
 			.item {
 				display: flex;
 				justify-content: space-between;
-				max-height: 225px;
-
-				h6 {
-					display: flex;
-					@include m;
-					max-width: 500px;
-				}
+				flex-direction: row-reverse;
+				height: 200px;
+				background-color: $green;
+				border-radius: 10px;
 
 				span {
 					display: flex;
 					font-size: 180px;
 					line-height: 180px;
 					font-weight: 700;
-					color: #FFFFFF;
+					color: $white;
 				}
-			}
 
-			.item1 {
-				background-color: #499647;
+				div {
+					display: flex;
+					gap: 16px;
+					align-items: end;
+					margin: 0 0 30px 20px;
+
+					h6 {
+						display: flex;
+						@include l;
+						max-width: 300px;
+					}
+
+					picture {
+						display: flex;
+
+						img {
+							@include arrow;
+						}
+					}
+				}
+				
 			}
 		}
 	}

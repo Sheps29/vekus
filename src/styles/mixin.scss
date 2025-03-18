@@ -17,6 +17,7 @@
 	font-size: 40px;
 	line-height: 44px;
 	@include font-normal;
+	// добавить пояснения font-xxl
 }
 
 @mixin xl {
@@ -83,6 +84,12 @@
 	height: 61px;
 }
 
+@mixin arrow {
+	display: block;
+	width: 36px;
+	height: 36px;
+}
+
 @mixin img {
 	object-fit: cover;
 	width: 100%;
@@ -114,6 +121,7 @@
 	@include xl;
 	margin: 0 0 24px 0;
 	color: $dark-grey;
+	// убрать /переименовать
 }
 
 @mixin top-border {
