@@ -236,20 +236,22 @@
 	</div>
 </section>
 
-<section>
+<section class="form">
 	<div>
 		<h3>Хочу стать частью команды «Векус»</h3>
 		<p>Заполните данные о себе. Мы свяжемся с вами в любом случае</p>
-		<form action="">
-			<input type="text" placeholder="Ваше имя*" name="name">
-			<input type="email" placeholder="E-mail*" name="email">
-			<input type="tel" placeholder="Телефон*" name="tel">
-			<textarea name="motivation" rows="1" placeholder="Расскажите, пожалуйста, почему вы хотите работать в «Векус»"></textarea>
-			<textarea name="link" rows="1" placeholder="Добавьте ссылку, с которой хотите поделиться (Linkedin, портфолио и тд.)*"></textarea>
-			<p><img src="images/clip.png" alt="clip">Или прикрепите документ резюме (Сопроводительное письмо, портфолио и тд.)</p>
-			<p><a href="#">Добавить документ</a>(Максимальный вес прикрепленных файлов 30MB. Допустимы форматы: .pdf, .docx, .doc, .txt, .png, .jpg) </p>
-			<input type="checkbox"  id="assent">
-			<label for="assent">Я соглашаюсь с <span>Политикой конфиденциальности</span></label>
+		<form action="#">
+			<input type="text" placeholder="Ваше имя*" name="name" class="info">
+			<input type="email" placeholder="E-mail*" name="email" class="info">
+			<input type="tel" placeholder="Телефон*" name="tel" class="info">
+			<textarea name="motivation" rows="1" class="info" placeholder="Расскажите, пожалуйста, почему вы хотите работать в «Векус»"></textarea>
+			<textarea name="link" rows="1" class="info" placeholder="Добавьте ссылку, с которой хотите поделиться (Linkedin, портфолио и тд.)*"></textarea>
+			<span><img src="images/clip.png" alt="clip">Или прикрепите документ резюме (Сопроводительное письмо, портфолио и тд.)</span>
+			<span><a href="#">Добавить документ</a>  (Максимальный вес прикрепленных файлов 30MB. Допустимы форматы: .pdf, .docx, .doc, .txt, .png, .jpg) </span>
+			<label for="assent"><input type="checkbox"  id="assent">Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></label>
 		</form>
+		<div>
+			<button>Отправить заявку</button>
+		</div>
 	</div>
 </section>

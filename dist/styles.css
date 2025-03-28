@@ -2551,6 +2551,7 @@ h2 {
 .menu .right {
   display: flex;
   flex-direction: column;
+  flex: 1;
   max-width: 872px;
 }
 .menu .right .item {
@@ -2632,8 +2633,10 @@ h2 {
 .part .box {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 .part .box__left {
+  flex: 1;
   max-width: 427px;
   height: 200px;
   background-color: #499647;
@@ -2653,6 +2656,7 @@ h2 {
   flex-direction: column;
   max-width: 872px;
   gap: 24px;
+  flex: 2;
 }
 .part .box__right .item {
   display: flex;
@@ -2689,6 +2693,90 @@ h2 {
   display: block;
   width: 36px;
   height: 36px;
+}
+
+.form {
+  display: flex;
+  justify-content: end;
+}
+.form div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 872px;
+}
+.form div h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form div p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #3D4548;
+}
+.form div form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form div form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.form div form span:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.form div form span:first-of-type img {
+  vertical-align: bottom;
+}
+.form div form span:nth-of-type(2) {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #909090;
+}
+.form div form span:nth-of-type(2) a {
+  text-decoration: none;
+  color: #499647;
+}
+.form div form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #A0A7AC;
+}
+.form div form label input:last-of-type {
+  vertical-align: sub;
+}
+.form div form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.form div div {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.form div div button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
 }
 
 .product_promo {
