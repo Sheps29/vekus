@@ -59,7 +59,7 @@
 @mixin left-header {
 	min-width: 210px;
 	margin: 0;
-	color: $header-grey;
+	color: $grey-300;
 }
 
 @mixin button-white {
@@ -67,7 +67,7 @@
 	padding: 17px 62px;
 	background-color: $white;
 	border: 1px solid $green;
-	color: $dark-grey;
+	color: $grey-500;
 }
 
 @mixin button-green {
@@ -82,6 +82,12 @@
 	display: block;
 	width: 61px;
 	height: 61px;
+}
+
+@mixin person {
+	display: block;
+	width: 47px;
+	height: 47px;
 }
 
 @mixin arrow {
@@ -103,7 +109,7 @@
 
 @mixin a {
 	text-decoration: none;
-	color: $light-grey;
+	color: $grey-100;
 }
 
 @mixin box-with-left-header {
@@ -120,12 +126,11 @@
 @mixin big-p {
 	@include xl;
 	margin: 0 0 24px 0;
-	color: $dark-grey;
-	// убрать /переименовать
+	color: $grey-500;
 }
 
 @mixin top-border {
-	border-top: 1px solid $light-grey;
+	border-top: 1px solid $grey-100;
 }
 
 @mixin join {
