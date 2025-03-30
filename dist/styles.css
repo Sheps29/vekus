@@ -2513,6 +2513,7 @@ h2 {
 .menu {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -2558,6 +2559,7 @@ h2 {
 .menu .right .item {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
   border-top: 1px solid #EAEEF1;
   border-bottom: 1px solid #EAEEF1;
 }
@@ -2565,7 +2567,7 @@ h2 {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 @media screen and (max-width: 768px) {
   .menu .right .item div h6 {
@@ -2590,7 +2592,7 @@ h2 {
   }
 }
 .menu .right .item div p .metro {
-  border: 1px solid #0063F9;
+  margin: 0 7px;
   border-radius: 50%;
   width: 8px;
   height: 8px;
@@ -2599,7 +2601,9 @@ h2 {
 }
 .menu .right .item picture {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin: 20px 0;
+  min-width: 36px;
 }
 .menu .right .item picture img {
   object-fit: cover;
@@ -2678,6 +2682,7 @@ h2 {
   font-weight: 400;
   max-width: 200px;
   margin: 0 0 30px 20px;
+  color: white;
 }
 .part .box__right {
   display: flex;
@@ -2743,7 +2748,7 @@ h2 {
   background-color: #EAEEF1;
 }
 .part .box__right .item:nth-of-type(2) span, .part .box__right .item:last-of-type span {
-  color: #EAEEF1;
+  color: #A0A7AC;
 }
 
 .form {
@@ -2855,12 +2860,13 @@ h2 {
 .contacts .header {
   display: flex;
   flex-direction: column;
+  gap: 22px;
 }
 .contacts .header h6 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin: 10px 0 8px;
   color: #3D4548;
 }
 .contacts .header button {
@@ -2898,7 +2904,12 @@ h2 {
   align-items: center;
 }
 .contacts .name {
+  align-items: flex-start;
+}
+.contacts .name div {
+  display: flex;
   align-items: center;
+  gap: 16px;
 }
 .contacts .info {
   display: flex;

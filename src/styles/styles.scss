@@ -2241,6 +2241,7 @@ h2 {
 .menu {
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column;
@@ -2279,6 +2280,7 @@ h2 {
 		.item {
 			display: flex;
 			justify-content: space-between;
+			padding-bottom: 20px;
 			border-top: 1px solid $grey-100;
 			border-bottom: 1px solid $grey-100;
 
@@ -2286,7 +2288,7 @@ h2 {
 				
 				h6 {
 					@include s;
-					margin: 10px 0;
+					margin: 20px 0;
 					
 					@media screen and (max-width: 768px) {
 						font-size: 18px;
@@ -2307,7 +2309,7 @@ h2 {
 					}
 
 					.metro{
-						border: 1px solid $blue;
+						margin: 0 7px;
 						border-radius: 50%;
 						width: 8px;
 						height: 8px;
@@ -2319,7 +2321,9 @@ h2 {
 
 			picture {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
+				margin: 20px 0;
+				min-width: 36px;
 
 				img {
 					@include img;
@@ -2394,6 +2398,7 @@ h2 {
 				@include m;
 				max-width: 200px;
 				margin: 0 0 30px 20px;
+				color: $white;
 			}
 		}
 
@@ -2467,7 +2472,7 @@ h2 {
 				background-color: $grey-100;
 
 				span {
-					color: $grey-100;
+					color: $grey-200;
 				}
 			}
 		}
@@ -2578,10 +2583,11 @@ h2 {
 	.header {
 		display: flex;
 		flex-direction: column;
+		gap: 22px;
 
 		h6 {
 			@include m;
-			margin-bottom: 8px;
+			margin: 10px 0 8px;
 			color: $grey-400;
 		}
 
@@ -2620,7 +2626,13 @@ h2 {
 	}
 
 		.name {
-			align-items: center;
+			align-items: flex-start;
+
+			div {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+			}
 		}
 
 		.info {
