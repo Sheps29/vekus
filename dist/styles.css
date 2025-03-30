@@ -2920,58 +2920,101 @@ h2 {
   }
 }
 
-.product_promo {
+.products {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-@media screen and (min-width: 678px) {
-  .product_promo {
+@media screen and (min-width: 768px) {
+  .products {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.product_promo h4 {
+.products h4 {
   font-size: 26px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
   color: #282828;
 }
-@media screen and (min-width: 678px) {
-  .product_promo h4 {
+@media screen and (min-width: 768px) {
+  .products h4 {
     font-size: 32px;
     line-height: 35px;
   }
 }
-.product_promo p {
+.products .right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.products .right p {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
   margin: 0;
   max-width: 872px;
 }
-
-.product {
-  display: flex;
-  flex-wrap: wrap;
-}
-.product_item {
+.products .right .box {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  max-width: 872px;
 }
-.product_item .mobile {
+@media screen and (min-width: 481px) {
+  .products .right .box {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .products .right .box {
+    justify-content: space-between;
+  }
+}
+.products .right .box .item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EAEEF1;
+}
+@media screen and (min-width: 481px) {
+  .products .right .box .item {
+    flex-basis: 40%;
+  }
+}
+.products .right .box .item picture {
   display: block;
-  max-width: 343px;
-  height: auto;
 }
-.product_item .mobile img {
+.products .right .box .item picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.product_item .pk {
-  display: none;
+.products .right .box .item .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 8px 16px;
+}
+.products .right .box .item .header h6 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.products .right .box .item .header picture {
+  display: block;
+}
+.products .right .box .item .header picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.products .right .box .item p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  padding: 0 10px 28px 16px;
+  color: #3D4548;
 }
 
 /*# sourceMappingURL=styles.css.map */

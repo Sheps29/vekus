@@ -2638,12 +2638,12 @@ h2 {
 	}
 }
 
-.product_promo {
+.products {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 
-	@media screen and (min-width: 678px) {
+	@media screen and (min-width: 768px) {
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -2651,42 +2651,86 @@ h2 {
 	h4 {
 		@include l;
 		margin: 0;
-		color: #282828;
+		color: $grey-500;
 
-		@media screen and (min-width: 678px) {
+		@media screen and (min-width: 768px) {
 			font-size: 32px;
 			line-height: 35px;
 		}	
 	}
 
-	p {
-		@include xs;
-		margin: 0;
-		max-width: 872px;
-	}
-}
-
-.product {
-	display: flex;
-	flex-wrap: wrap;
-
-	&_item {
+	.right {
 		display: flex;
 		flex-direction: column;
+		gap: 32px;
 
-		.mobile {
-			display: block;
-			max-width: 343px;
-			height: auto;
+		p {
+			@include xs;
+			margin: 0;
+			max-width: 872px;
+		}
+	
+		.box {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			max-width: 872px;
 
-			img{
-				@include img;
+			@media screen and (min-width: 481px) {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}	
+
+			@media screen and (min-width: 481px) and (max-width: 768px) {
+				justify-content: space-between;
+			}	
+			
+			.item {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid $grey-100;
+
+				@media screen and (min-width: 481px) {
+					flex-basis: 40%;
+				}		
+	
+				picture {
+					display: block;
+	
+					img {
+						@include img;
+					}
+				}
+	
+				.header {
+					display: flex;
+					justify-content: space-between;
+					padding: 10px 10px 8px 16px;
+	
+					h6 {
+						@include s;
+					}
+	
+					picture {
+						display: block;
+	
+						img {
+							@include img;
+						}
+					}
+				}
+	
+				p {
+					@include xxs;
+					padding: 0 10px 28px 16px;
+					color: $grey-400;
+				}
 			}
 		}
-
-		.pk {
-			display: none;
-		}
 	}
-}
+	}
+
+	
+
+
 
