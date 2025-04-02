@@ -1,11 +1,13 @@
 @import "mixin";
 @import 'reset';
 @import 'colors';
+@import 'font';
 
 section {
 	margin: 40px 0;
 	padding-left: 60px;
 	padding-right: 60px;
+	@include raleway;
 
 	@media screen and (max-width: 768px) {
 		padding-left: 24px;
@@ -2742,7 +2744,97 @@ h2 {
 	}
 	}
 
+.privacy {
+	display: flex;
+	justify-content: center;
+
+	div {
+		display: flex;
+		flex-direction: column;
+		max-width: 872px;
+
+		h3 {
+			@include xl;
+			margin-bottom: 32px;
+			color: $grey-500;
+			text-align: center;
+
+			@media screen and (max-width: 480px) {
+				@include l;
+			}	
+		}
 	
+		p {
+			@include xs;
+			@include font-medium;
+			color: $grey-400;
+		}
+	}
+}
+
+.anticorruption {
+	display: flex;
+	justify-content: center;
+
+	.box {
+		display: flex;
+		flex-direction: column;
+		max-width: 872px;
+
+		.header {
+			display: flex;
+			justify-content: center;
+
+			h3 {
+				@include xl;
+				display: flex;
+				max-width: 500px;
+				margin-bottom: 32px;
+				color: $grey-500;
+				text-align: center;
+	
+				@media screen and (max-width: 480px) {
+					@include l;
+				}	
+			}
+		}
+
+		.police-content {
+			@include xs;
+			@include font-medium;
+			color: $grey-400;
+
+			.list {
+				counter-reset: main;
+
+				.item {
+					counter-increment: main;
+					margin-bottom: 32px;
+
+					.sub-list {
+						counter-reset: sub;
+
+						.sub-item {
+							counter-increment: sub;
+						}
+
+						.sub-item:first-of-type {
+							margin-top: 20px;
+						}
+					}
+				}
+
+				.item::before {
+					content: counter(main)'. ';			
+				}
+
+				.sub-item::before {
+					content: counter(main)'.'counter(sub)'. ';
+				}
+			}
+		}
+	}
+}
 
 
 
