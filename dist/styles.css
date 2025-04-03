@@ -3123,4 +3123,49 @@ h2 {
   content: counter(main) "." counter(sub) ". ";
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+}
+.error div {
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+  margin-top: 110px;
+  text-align: center;
+}
+.error div span:first-of-type {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 250px;
+  background-image: linear-gradient(to right, rgb(13, 84, 13), #499647, rgb(13, 84, 13));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.error div span:nth-of-type(2) {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 400;
+  margin: 10px 0;
+  color: #282828;
+}
+.error div p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.error div button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  margin: 40px 80px;
+}
+
 /*# sourceMappingURL=styles.css.map */

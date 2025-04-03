@@ -2836,5 +2836,43 @@ h2 {
 	}
 }
 
+.error {
+	display: flex;
+	justify-content: center;
+
+	div {
+		display: flex;
+		flex-direction: column;
+		max-width: 510px;
+		margin-top: 110px;
+		text-align: center;
+
+		span:first-of-type {
+			@include inria;
+			font-size: 250px;
+			background-image: linear-gradient(to right, rgb(13, 84, 13), $green, rgb(13, 84, 13) );
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		span:nth-of-type(2) {
+			@include xxl;
+			margin: 10px 0;
+			color: $grey-500;
+		}
+
+		p {
+			@include xs;
+			color: $grey-400;
+		}
+
+		button {
+			@include button-green;
+			border-radius: 4px;
+			margin: 40px 80px;
+		}
+	}
+}
+
 
 
