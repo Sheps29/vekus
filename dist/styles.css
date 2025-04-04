@@ -2163,6 +2163,7 @@ h2 {
   background-color: white;
   border: 1px solid #499647;
   color: #282828;
+  border: 1px solid #909090;
 }
 .mission picture {
   display: block;
@@ -2508,6 +2509,7 @@ h2 {
   background-color: white;
   border: 1px solid #499647;
   color: #282828;
+  border: 1px solid #909090;
 }
 
 .menu {
@@ -2560,12 +2562,12 @@ h2 {
   justify-content: space-between;
   border-top: 1px solid #EAEEF1;
   border-bottom: 1px solid #EAEEF1;
+  padding-top: 20px;
 }
 .menu .right .item div h6 {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
-  margin: 10px 0;
 }
 @media screen and (max-width: 768px) {
   .menu .right .item div h6 {
@@ -2599,12 +2601,14 @@ h2 {
 }
 .menu .right .item picture {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .menu .right .item picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
+  width: 36px;
+  height: 36px;
 }
 .menu .right .item :active {
   background-color: #EAEEF1;
@@ -2714,7 +2718,7 @@ h2 {
   display: flex;
   gap: 16px;
   align-items: end;
-  margin: 0 0 30px 20px;
+  margin-left: 20px;
 }
 @media screen and (max-width: 768px) {
   .part .box__right .item div {
@@ -2727,12 +2731,16 @@ h2 {
   line-height: 28px;
   font-weight: 400;
   max-width: 300px;
+  margin-bottom: 36px;
 }
 .part .box__right .item div picture {
   display: flex;
+  margin-bottom: 30px;
 }
 .part .box__right .item div picture img {
   display: block;
+  width: 36px;
+  height: 36px;
   width: 36px;
   height: 36px;
 }
@@ -2839,6 +2847,169 @@ h2 {
   background-color: #499647;
   border: 1px solid white;
   color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 72px 24px;
+  align-items: stretch;
+  margin: 40px 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: auto;
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .left {
+    margin-top: 24px;
+  }
+}
+.container .left h4 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #909090;
+}
+.container .right .job {
+  margin: 0;
+  padding: 0;
+}
+.container .right .job h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+  margin-bottom: 18px;
+}
+.container .right .job p:first-of-type {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #909090;
+}
+.container .right .job p:first-of-type .dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #909090;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+.container .right .job div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 32px 0 29px;
+}
+@media screen and (max-width: 768px) {
+  .container .right .job div {
+    gap: 16px;
+    margin: 40px 0 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container .right .job div {
+    flex-direction: column;
+  }
+}
+.container .right .job div .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+}
+.container .right .job div .button--white {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border: 1px solid #A0A7AC;
+}
+.container .right .job p:nth-of-type(2), .container .right .job p:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  padding-top: 16px;
+}
+.container .right .job p:nth-of-type(2) {
+  border-top: 1px solid #EAEEF1;
+}
+.container .right .list {
+  border-top: 1px solid #EAEEF1;
+  margin: 0;
+  padding: 0;
+}
+.container .right .list ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
+  padding-top: 16px;
+}
+.container .right .list ul li {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding-top: 10px;
+  color: #3D4548;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+.container .right .list ul li:first-of-type {
+  padding-top: 0;
+}
+.container .right .list ul li::marker {
+  font-size: 1em;
+}
+.container .r {
+  grid-column: 2/1 span;
+  margin-top: 62px;
+}
+@media screen and (max-width: 768px) {
+  .container .r {
+    grid-column: auto;
+    margin-top: 22px;
+  }
+}
+.container .r section {
+  margin: 0;
+  padding: 0;
+}
+.container .r section p {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  border-top: 1px solid #EAEEF1;
+  padding-top: 20px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .container .r section p {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    padding-top: 16px;
+  }
 }
 
 .contacts {

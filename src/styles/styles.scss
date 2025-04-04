@@ -1943,6 +1943,7 @@ h2 {
 
 				button:last-of-type {
 					@include button-white;
+					border: 1px solid $grey-300;
 				}
 			}
 		}
@@ -2233,6 +2234,7 @@ h2 {
 
 			button:last-of-type {
 				@include button-white;
+				border: 1px solid $grey-300;
 			}
 		}
 	}
@@ -2281,12 +2283,12 @@ h2 {
 			justify-content: space-between;
 			border-top: 1px solid $grey-100;
 			border-bottom: 1px solid $grey-100;
+			padding-top: 20px;
 
 			div {
 				
 				h6 {
 					@include s;
-					margin: 10px 0;
 					
 					@media screen and (max-width: 768px) {
 						font-size: 18px;
@@ -2319,10 +2321,12 @@ h2 {
 
 			picture {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 
 				img {
 					@include img;
+					width: 36px;
+					height: 36px;
 				}
 			}
 		}
@@ -2430,7 +2434,7 @@ h2 {
 					display: flex;
 					gap: 16px;
 					align-items: end;
-					margin: 0 0 30px 20px;
+					margin-left: 20px;
 
 					@media screen and (max-width: 768px) {
 						gap: 8px;
@@ -2440,13 +2444,17 @@ h2 {
 						display: flex;
 						@include l;
 						max-width: 300px;
+						margin-bottom: 36px;
 					}
 
 					picture {
 						display: flex;
+						margin-bottom: 30px;
 
 						img {
 							@include arrow;
+							width: 36px;
+							height: 36px;
 						}
 					}
 				}
@@ -2560,6 +2568,161 @@ h2 {
 
 			button {
 				@include button-green;
+			}
+		}
+	}
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+	gap: 72px 24px;
+	align-items: stretch;
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+		grid-template-columns: auto;
+		gap: 32px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.left {
+
+		@media screen and (max-width: 768px) {
+			margin-top: 24px;
+		}
+		
+		h4 {
+			@include l;
+			color: $grey-300;
+		}
+	}
+
+	.right {
+
+		.job {
+			margin: 0;
+			padding:0;
+
+			h3 {
+				@include xl;
+				color: $grey-500;
+				margin-bottom: 18px;
+			}
+
+			p:first-of-type {
+				@include s;
+				color: $grey-300;
+
+				.dot {
+					display: inline-block;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					background-color: $grey-300;
+					margin: 0 8px;
+					vertical-align: middle;
+				}
+			}
+
+			div {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 24px;
+				margin: 32px 0 29px;
+
+				@media screen and (max-width: 768px) {
+					gap: 16px;
+					margin: 40px 0 24px;
+				}
+
+				@media screen and (max-width: 480px) {
+					flex-direction: column;
+				}
+
+				.button--green {
+					@include button-green;
+				}
+
+				.button--white {
+					@include button-white;
+					border: 1px solid $grey-200;
+				}
+			}
+
+			p:nth-of-type(2), p:last-of-type {
+				@include xs;
+				color: $grey-400;
+				padding-top: 16px;
+			}
+
+			p:nth-of-type(2) {
+				@include top-border;
+			}
+		}
+
+
+		.list {
+			@include top-border;
+			margin: 0;
+			padding:0;
+
+			ul {
+				list-style-type: disc;
+				list-style-position: inside;
+				padding-left: 10px;
+				padding-top: 16px;
+
+				li {
+					@include xs;
+					padding-top: 10px;
+					color: $grey-400;
+					text-indent: -1.5em;
+					padding-left: 1.5em;
+				}
+
+				li:first-of-type {
+					padding-top: 0;
+				}
+
+				li::marker {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+
+	.r {
+		grid-column: 2 / 1 span;
+		margin-top: 62px;
+
+		@media screen and (max-width: 768px) {
+			grid-column: auto;
+			margin-top: 22px;
+		}
+
+		section {
+			margin: 0;
+			padding:0;
+
+			p {
+				@include xl;
+				@include top-border;
+				padding-top: 20px;
+				color: $grey-500;
+
+				@media screen and (max-width: 768px) {
+					@include l;
+					padding-top: 16px;
+				}
 			}
 		}
 	}
