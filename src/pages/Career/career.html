@@ -232,18 +232,15 @@
 			</div>
 		</div>
 	</section>
-</main>
-
-<section class="form">
-	<div class="box">
+	<section class="right form">
 		<h3>Хочу стать частью команды «Векус»</h3>
 		<p>Заполните данные о себе. Мы свяжемся с вами в любом случае</p>
 		<form action="#">
 			<input type="text" placeholder="Ваше имя*" name="name" class="info">
 			<input type="email" placeholder="E-mail*" name="email" class="info">
 			<input type="tel" placeholder="Телефон*" name="tel" class="info">
-			<textarea name="motivation" rows="2" class="info" placeholder="Расскажите, пожалуйста, почему вы хотите работать в «Векус»"></textarea>
-			<textarea name="link" rows="2" class="info" placeholder="Добавьте ссылку, с которой хотите поделиться (Linkedin, портфолио и тд.)*"></textarea>
+			<textarea name="motivation" rows="2" class="info motivation" placeholder="Расскажите, пожалуйста, почему вы хотите работать в «Векус»"></textarea>
+			<input type="url" name="url" class="info" placeholder="Добавьте ссылку, с которой хотите поделиться (Linkedin, портфолио и тд.)*">
 			<div>
 				<picture>
 					<img src="images/clip.png" alt="clip">
@@ -255,10 +252,34 @@
 				<span>(Максимальный вес прикрепленных файлов 30MB. Допустимы форматы: .pdf, .docx, .doc, .txt, .png, .jpg)</span>
 			</div>
 			<label for="assent"><input type="checkbox"  id="assent">Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></label>
+			<input type="submit" class="button--green" placeholder="Отправить заявку">
 		</form>
-		<div class="button-box">
-			<button>Отправить заявку</button>
-		</div>
+	</section>
+</main>
+
+<section class="form">
+	<div class="box">
+		<h3>Хочу стать частью команды «Векус»</h3>
+		<p>Заполните данные о себе. Мы свяжемся с вами в любом случае</p>
+		<form action="#">
+			<input type="text" placeholder="Ваше имя*" name="name" class="info">
+			<input type="email" placeholder="E-mail*" name="email" class="info">
+			<input type="tel" placeholder="Телефон*" name="tel" class="info">
+			<textarea name="motivation" rows="2" class="info motivation" placeholder="Расскажите, пожалуйста, почему вы хотите работать в «Векус»"></textarea>
+			<input type="url" name="url" class="info" placeholder="Добавьте ссылку, с которой хотите поделиться (Linkedin, портфолио и тд.)*">
+			<div>
+				<picture>
+					<img src="images/clip.png" alt="clip">
+				</picture>
+				<p class="clip">Или прикрепите документ резюме (Сопроводительное письмо, портфолио и тд.)</p>
+			</div>
+			<div class="doc">
+				<a href="#">Добавить документ</a>
+				<span>(Максимальный вес прикрепленных файлов 30MB. Допустимы форматы: .pdf, .docx, .doc, .txt, .png, .jpg)</span>
+			</div>
+			<label for="assent"><input type="checkbox"  id="assent">Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></label>
+			<input type="submit" class="button--green" placeholder="Отправить заявку">
+		</form>
 	</div>
 </section>
 
