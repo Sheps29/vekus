@@ -78,6 +78,29 @@
 	color: $white;
 }
 
+@mixin button-box {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
+
+	@media screen and (min-width: 481px) {
+		gap: 24px;
+	}
+
+	button:first-of-type {
+		@include button-green;
+	}
+
+	button:last-of-type {
+		@include button-white;
+		border: 1px solid $grey-300;
+	}
+}
+
 @mixin icon {
 	display: block;
 	width: 61px;
