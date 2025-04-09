@@ -2929,8 +2929,22 @@ h2 {
 		flex-direction: column;
 		gap: 16px;
 
+		@media screen and (max-width: 768px) {
+			flex-direction: row;
+			gap: 0;
+		}
+
 		h4 {
 			@include m;
+
+			@media screen and (max-width: 768px) {
+				@include xs;
+				display: flex;
+				flex: 1;
+				padding: 13px 0;
+				justify-content: center;
+				border: 1px solid $grey-100;
+			}
 		}
 
 		h4:first-of-type {
@@ -2939,6 +2953,10 @@ h2 {
 
 		h4:last-of-type {
 			color: $green;
+
+			@media screen and (max-width: 768px) {
+				background-color: $grey-100;
+			}
 		}
 	}
 

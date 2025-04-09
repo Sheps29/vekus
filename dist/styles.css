@@ -3228,16 +3228,39 @@ h2 {
   flex-direction: column;
   gap: 16px;
 }
+@media screen and (max-width: 768px) {
+  .submit .left {
+    flex-direction: row;
+    gap: 0;
+  }
+}
 .submit .left h4 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .submit .left h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
 }
 .submit .left h4:first-of-type {
   color: #909090;
 }
 .submit .left h4:last-of-type {
   color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .submit .left h4:last-of-type {
+    background-color: #EAEEF1;
+  }
 }
 @media screen and (max-width: 768px) {
   .submit .right {
