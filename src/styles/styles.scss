@@ -98,12 +98,12 @@ h2 {
 }
 
 .promo {
-    display: flex;
-    flex-direction: column;
-    max-width: 375px;
-		width: 100%;
-    background-image: url("src/images/background.png");
-    background-color: rgb(4, 106, 4);
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+	width: 100%;
+  background-image: url("src/images/background.png");
+  background-color: rgb(4, 106, 4);
 
   p {
 		color: white;
@@ -2138,6 +2138,7 @@ h2 {
 
 	.values {
 		display: grid;
+		gap: 24px;
 
 		.right__promo {
 			@include big-p;
@@ -2159,7 +2160,6 @@ h2 {
 			.item {
 				display: grid;
 				border-top: 1px solid $grey-100;
-				padding-bottom: 24px;
 
 				@media screen and (max-width: 768px) {
 					border-bottom: 1px solid $grey-100;
@@ -2196,11 +2196,6 @@ h2 {
 
 		.button-box {
 			@include button-box;
-			margin-top: 24px;
-
-			@media screen and (max-width: 480px) {
-				margin-top: 20px;
-			}
 		}
 	}
 
@@ -2498,11 +2493,6 @@ h2 {
 			padding-top: 30px;
 		}
 
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		max-width: 872px;
-
 		h3 {
 			@include xl;
 			margin-bottom: 8px;
@@ -2660,6 +2650,36 @@ h2 {
 				display: none;
 			}
 		}
+	}
+}
+
+.back {
+	padding-left: 60px;
+	margin: 24px 0 54px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+	}
+
+	picture {
+
+		img {
+			@include img;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	span {
+		font-size: 13px;
+		color: $grey-300;
 	}
 }
 
@@ -2969,11 +2989,6 @@ h2 {
 			grid-column: auto;
 			padding-top: 30px;
 		}
-
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		max-width: 872px;
 
 		h3 {
 			@include xl;
