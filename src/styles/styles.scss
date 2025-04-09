@@ -2874,5 +2874,158 @@ h2 {
 	}
 }
 
+.back {
+	@include inria;
+	padding-left: 60px;
+	margin: 32px 0 56px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	font-weight: 400;
 
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+	}
+
+	picture {
+
+		img {
+			@include img;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	span {
+		font-size: 13px;
+		color: $grey-300;
+	}
+}
+
+.submit {
+	@include inria;
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+	padding: 0 60px;
+	font-weight: 400;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+		grid-template-columns: auto;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.left {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		h4 {
+			@include m;
+		}
+
+		h4:first-of-type {
+			color: $grey-300;
+		}
+
+		h4:last-of-type {
+			color: $green;
+		}
+	}
+
+	.right {
+
+		@media screen and (max-width: 768px) {
+			margin-top: 54px;
+		}
+
+		h3 {
+			@include xl;
+			margin-bottom: 10px;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include m;
+				margin-bottom: 16px;
+			}
+		}
+
+		p {
+			@include xs;
+			color: $grey-400;
+			margin-bottom: 42px;
+
+			@media screen and (max-width: 768px) {
+				margin-bottom: 32px;
+			}
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+
+			.info {
+				@include xs;
+				color: $grey-300;
+				padding-bottom: 8px;
+				border: none;
+				border-bottom: 1px solid $grey-100;
+			}
+
+			.info:nth-of-type(3) {
+
+				@media screen and (max-width: 768px) {
+					margin-top: 24px;
+				}
+			}
+
+			.task {
+				line-height: 14px;
+				padding-bottom: 2px;
+				margin-top: 24px;
+
+				@media screen and (max-width: 480px) {
+					padding-bottom: 8px;
+					line-height: 20px;
+				}
+			}
+
+			label {
+				@include xxs;
+				font-size: 12px;
+				color: $grey-400;
+				margin-top: -8px;
+
+				@media screen and (max-width: 768px) {
+					margin-top: -16px;
+				}
+
+				a {
+					text-decoration: none;
+					color: $green;
+				}
+			}
+
+			.button--green {
+				@include button-green;
+				margin-left: auto;
+				margin-top: 10px;
+
+				@media screen and (max-width: 480px) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
 
