@@ -1053,14 +1053,143 @@ h2 {
 
 .part {
 	margin-top: 56px;
+	margin-bottom: 90px;
 
-	h4 {
+	h3 {
 		@include xl;
+		max-width: 27%;
+		margin-bottom: 26px;
 
 		@media screen and (max-width: 768px) {
 			@include l;
+			max-width: 100%;
+			margin-bottom: 32px;
 		}
 	}
+
+	.separation {
+
+		.box--green {
+      height: 225px;
+      background-color: $green;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: 26px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      .bar {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 46px;
+        margin: 33px 20px;
+        border-radius: 10px;
+
+        .icon {
+          width: 70px;
+          height: 46px;
+          background-color: $white;
+          border-radius: 10px;
+        }
+      }
+
+      h6 {
+        @include m;
+        max-width: 200px;
+        margin: 24px 0 30px 20px;
+        color: $white;
+      }
+    }
+
+		.invite{
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			margin-top: 26px;
+
+			@media screen and (max-width: 768px) {
+				margin: 0;
+			}
+
+			.item {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row-reverse;
+				height: 225px;
+				background-color: $green;
+				border-radius: 10px;
+
+				span {
+					display: flex;
+					padding-right: 20px;
+					font-size: 180px;
+					line-height: 180px;
+					font-weight: 700;
+					color: $grey-200;
+					opacity: 30%;
+
+					@media screen and (max-width: 480px) {
+						font-size: 96px;
+						line-height: 130px;
+						align-items: start;
+					}
+				}
+
+				div {
+					display: flex;
+					gap: 16px;
+					align-items: end;
+					margin-left: 20px;
+
+					@media screen and (max-width: 768px) {
+						gap: 8px;
+					}
+
+					h6 {
+						display: flex;
+						@include l;
+						margin-bottom: 36px;
+
+						@media screen and (max-width: 768px) {
+							@include s;
+						}
+					}
+
+					picture {
+						display: flex;
+						margin-bottom: 30px;
+
+						img {
+							@include arrow;
+						}
+					}
+				}
+			}
+
+			.item:first-of-type {
+
+				div {
+
+					h6 {
+						color: $white;
+					}
+				}
+			}
+
+			.item:nth-of-type(2), .item:last-of-type {
+				background-color: $grey-100;
+
+				span {
+					color: $grey-200;
+				}
+			}
+		}
+  }
 }
 
 .about {
@@ -3162,13 +3291,18 @@ h2 {
 
 		h4:first-of-type {
 			color: $grey-300;
+
+			@media screen and (max-width: 768px) {
+				background-color: $grey-100;
+				color: $green;
+			}
 		}
 
 		h4:last-of-type {
 			color: $green;
 
 			@media screen and (max-width: 768px) {
-				background-color: $grey-100;
+				color: $grey-300;
 			}
 		}
 	}
@@ -3214,16 +3348,26 @@ h2 {
 			}
 
 			.info:nth-of-type(3) {
+				display: none;
 
 				@media screen and (max-width: 768px) {
-					margin-top: 24px;
+					display: block;
+					margin-top: 32px;
+				}
+			}
+
+			.tel {
+
+
+				@media screen and (max-width: 768px) {
+					display: none;
 				}
 			}
 
 			.task {
 				line-height: 14px;
 				padding-bottom: 2px;
-				margin-top: 24px;
+				margin-top: 32px;
 
 				@media screen and (max-width: 480px) {
 					padding-bottom: 8px;
@@ -3255,6 +3399,32 @@ h2 {
 				@media screen and (max-width: 480px) {
 					margin-left: 0;
 				}
+			}
+		}
+	}
+}
+
+.double {
+	padding-top: 65px;
+
+	@media screen and (max-width: 768px) {
+		padding-top: 20px;
+	}
+
+	.right {
+
+		.request {
+
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+
+		.call {
+			display: none;
+
+			@media screen and (max-width: 768px) {
+				display: block;
 			}
 		}
 	}

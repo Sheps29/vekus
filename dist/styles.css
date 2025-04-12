@@ -1207,18 +1207,137 @@ h2 {
 
 .part {
   margin-top: 56px;
+  margin-bottom: 90px;
 }
-.part h4 {
+.part h3 {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
+  max-width: 27%;
+  margin-bottom: 26px;
 }
 @media screen and (max-width: 768px) {
-  .part h4 {
+  .part h3 {
     font-size: 26px;
     line-height: 28px;
     font-weight: 400;
+    max-width: 100%;
+    margin-bottom: 32px;
   }
+}
+.part .separation .box--green {
+  height: 225px;
+  background-color: #499647;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 26px;
+}
+@media screen and (max-width: 768px) {
+  .part .separation .box--green {
+    display: none;
+  }
+}
+.part .separation .box--green .bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 46px;
+  margin: 33px 20px;
+  border-radius: 10px;
+}
+.part .separation .box--green .bar .icon {
+  width: 70px;
+  height: 46px;
+  background-color: white;
+  border-radius: 10px;
+}
+.part .separation .box--green h6 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  max-width: 200px;
+  margin: 24px 0 30px 20px;
+  color: white;
+}
+.part .separation .invite {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 26px;
+}
+@media screen and (max-width: 768px) {
+  .part .separation .invite {
+    margin: 0;
+  }
+}
+.part .separation .invite .item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  height: 225px;
+  background-color: #499647;
+  border-radius: 10px;
+}
+.part .separation .invite .item span {
+  display: flex;
+  padding-right: 20px;
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: 700;
+  color: #A0A7AC;
+  opacity: 30%;
+}
+@media screen and (max-width: 480px) {
+  .part .separation .invite .item span {
+    font-size: 96px;
+    line-height: 130px;
+    align-items: start;
+  }
+}
+.part .separation .invite .item div {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .part .separation .invite .item div {
+    gap: 8px;
+  }
+}
+.part .separation .invite .item div h6 {
+  display: flex;
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 768px) {
+  .part .separation .invite .item div h6 {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.part .separation .invite .item div picture {
+  display: flex;
+  margin-bottom: 30px;
+}
+.part .separation .invite .item div picture img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+.part .separation .invite .item:first-of-type div h6 {
+  color: white;
+}
+.part .separation .invite .item:nth-of-type(2), .part .separation .invite .item:last-of-type {
+  background-color: #EAEEF1;
+}
+.part .separation .invite .item:nth-of-type(2) span, .part .separation .invite .item:last-of-type span {
+  color: #A0A7AC;
 }
 
 .about {
@@ -3491,12 +3610,18 @@ h2 {
 .submit .left h4:first-of-type {
   color: #909090;
 }
+@media screen and (max-width: 768px) {
+  .submit .left h4:first-of-type {
+    background-color: #EAEEF1;
+    color: #499647;
+  }
+}
 .submit .left h4:last-of-type {
   color: #499647;
 }
 @media screen and (max-width: 768px) {
   .submit .left h4:last-of-type {
-    background-color: #EAEEF1;
+    color: #909090;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3545,15 +3670,24 @@ h2 {
   border: none;
   border-bottom: 1px solid #EAEEF1;
 }
+.submit .right form .info:nth-of-type(3) {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .submit .right form .info:nth-of-type(3) {
-    margin-top: 24px;
+    display: block;
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .submit .right form .tel {
+    display: none;
   }
 }
 .submit .right form .task {
   line-height: 14px;
   padding-bottom: 2px;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 @media screen and (max-width: 480px) {
   .submit .right form .task {
@@ -3592,6 +3726,28 @@ h2 {
 @media screen and (max-width: 480px) {
   .submit .right form .button--green {
     margin-left: 0;
+  }
+}
+
+.double {
+  padding-top: 65px;
+}
+@media screen and (max-width: 768px) {
+  .double {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .double .right .request {
+    display: none;
+  }
+}
+.double .right .call {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .double .right .call {
+    display: block;
   }
 }
 
