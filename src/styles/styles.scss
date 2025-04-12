@@ -1908,11 +1908,12 @@ h2 {
 		gap: 24px;
 
 		@media screen and (max-width: 768px) {
+			@include scroll;
 			flex-direction: row;
 			gap: 0;
-			overflow-x: hidden;
+			overflow-x: scroll;
 			scroll-snap-type: x mandatory;
-			text-align: center;	
+			text-align: center;
 		}
 
 		h4 {

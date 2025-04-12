@@ -2113,9 +2113,13 @@ h2 {
   .container1 .opening {
     flex-direction: row;
     gap: 0;
-    overflow-x: hidden;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     text-align: center;
+  }
+  .container1 .opening::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }
 .container1 .opening h4 {
