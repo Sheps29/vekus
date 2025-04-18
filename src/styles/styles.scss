@@ -2740,9 +2740,363 @@ h2 {
 			}
 		}
 	}
+}
+
+.import {
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+	gap: 32px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+		grid-template-columns: auto;
 	}
 
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.back {
+		display: inline-block;
+		font-size: 13px;
+		color: $grey-300;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 42px;
+		}
+	}
+
+	h3 {
+		grid-column: 1 / span 1;
+		@include xl;
+		color: $grey-500;
+
+		@media screen and (max-width: 768px) {
+			@include l;
+			@include top-border;
+			padding-top: 10px;
+		}
+	}
+
+	p {
+		@include xs;
+		@include top-border;
+		color: $grey-400;
+		padding-top: 16px;
+
+		@media screen and (max-width: 768px) {
+			border: none;
+			padding-top: 0;
+		}
+	}
+
+	.layout {
+		grid-column: 2 / span 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		margin-top: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-column: auto;
+		}
+
+		@media screen and (max-width: 480px) {
+			align-items: baseline;
+			flex-direction: column;
+			margin-top: 0;
+		}
+
+		.filter {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: end;
+				width: 100%;
+				padding: 16px 8px 18px 0;
+				@include top-border;
+			}
+
+			div {
+				display: flex;
+				gap: 16px;
+				align-items: self-end;
+
+				picture {
+
+					img {
+						width: 18px;
+						height: 18px;
+					}
+				}
+
+				span {
+					@include xs;
+					color: $grey-400;
+					font-weight: 600;
+				}
+			}
+
+			picture {
+
+				img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		.popular {
+
+			@media screen and (max-width: 480px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: end;
+				width: 100%;
+				padding: 16px 8px 18px 0;
+				@include top-border;
+				border-bottom: 1px solid $grey-100;
+			}
+
+			span {
+				@include xs;
+				color: $grey-400;
+			}
+
+			picture {
+				vertical-align: bottom;
+
+				img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		.keyboard {
+			display: flex;
+			gap: 16px;
+
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+
+			picture {
+
+				img {
+					width: 36px;
+					height: 36px;
+				}
+			}
+		}
+	}
+
+	aside {
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
+
+		.filter {
+			display: flex;
+			justify-content: space-between;
+			align-items: end;
+			width: 100%;
+			padding: 16px 8px 18px 0;
+			@include top-border;
+			border-bottom: 1px solid $grey-100;
+
+			div {
+				display: flex;
+				gap: 16px;
+				align-items: self-end;
+
+				picture {
+
+					img {
+						width: 18px;
+						height: 18px;
+					}
+				}
+
+				span {
+					@include xs;
+					color: $grey-400;
+					font-weight: 600;
+				}
+			}
+
+			picture {
+
+				img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		.checkbox {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+			padding: 18px 0 32px;
+
+			.checkbox-container {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				user-select: none;
+				font-size: 14px;
+				color: $grey-500;
+			}
 	
+			/* Скрываем стандартный чекбокс */
+			.checkbox-container input[type="checkbox"] {
+				display: none;
+			}
+	
+			/* Стилизуем кастомный чекбокс */
+			.custom-checkbox {
+				width: 20px;
+				height: 20px;
+				border: 2px solid $grey-200;
+				border-radius: 2px;
+				background-color: white;
+				position: relative;
+				margin-right: 10px;
+				transition: all 0.2s ease;
+			}
+	
+			/* Галочка */
+			.custom-checkbox::after {
+				content: "";
+				position: absolute;
+				display: none;
+				left: 6px;
+				top: 2px;
+				width: 6px;
+				height: 12px;
+				border: solid white;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+			}
+	
+			/* Когда чекбокс активен */
+			.checkbox-container input:checked + .custom-checkbox {
+				background-color: $green;
+				border-color: $green;
+			}
+	
+			.checkbox-container input:checked + .custom-checkbox::after {
+				display: block;
+			}
+		}
+
+		.popular {
+			display: flex;
+			justify-content: space-between;
+			align-items: end;
+			width: 100%;
+			padding: 16px 8px 20px 0;
+			@include top-border;
+			border-bottom: 1px solid $grey-100;
+
+			span {
+				@include xs;
+				color: $grey-400;
+				padding-left: 20px;
+			}
+
+			picture {
+				vertical-align: bottom;
+
+				img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		.find {
+			@include top-border;
+			border-bottom: 1px solid $grey-100;
+			text-align: center;
+			padding: 22px 0 16px;
+			color: $grey-200;
+		}
+
+		button {
+			@include button-white;
+			margin-top: 30px;
+			width: 100%;
+			border-radius: 4px;
+			background-color: $grey-100;
+			border: none;
+		}
+	}
+
+	.product {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+		gap: 24px;
+
+		.item {
+			border: 1px solid $grey-100;
+			border-radius: 4px;
+
+			.icon {
+
+				img {
+					@include img;
+				}
+			}
+
+			.name {
+				display: flex;
+				justify-content: space-between;
+				padding: 16px 26px 28px 26px;
+				border-bottom: 1px solid $grey-100;
+
+				span {
+					@include s;
+				}
+			}
+
+			.button-box {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 24px;
+				padding: 24px 26px 32px;
+
+				button:first-of-type {
+					@include button-white;
+					border: 1px solid $grey-200;
+					border-radius: 4px;
+					padding: 17px 35px;
+	
+					span {
+						margin-right: 10px;
+						@include xs;
+					}
+				}
+
+				button:last-of-type {
+					@include button-green;
+					border-radius: 4px;
+					padding: 17px 55px;
+				}
+			}
+		}
+	}
+}	
 
 
 

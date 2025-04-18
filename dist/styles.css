@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3026,6 +3027,346 @@ h2 {
   font-weight: 400;
   padding: 0 10px 28px 16px;
   color: #3D4548;
+}
+
+.import {
+  margin: 40px 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 32px;
+}
+@media screen and (max-width: 768px) {
+  .import {
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .import {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.import .back {
+  display: inline-block;
+  font-size: 13px;
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .import .back {
+    margin-bottom: 42px;
+  }
+}
+.import h3 {
+  grid-column: 1/span 1;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .import h3 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    border-top: 1px solid #EAEEF1;
+    padding-top: 10px;
+  }
+}
+.import p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  border-top: 1px solid #EAEEF1;
+  color: #3D4548;
+  padding-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .import p {
+    border: none;
+    padding-top: 0;
+  }
+}
+.import .layout {
+  grid-column: 2/span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .import .layout {
+    grid-column: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .import .layout {
+    align-items: baseline;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+.import .layout .filter {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .import .layout .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    padding: 16px 8px 18px 0;
+    border-top: 1px solid #EAEEF1;
+  }
+}
+.import .layout .filter div {
+  display: flex;
+  gap: 16px;
+  align-items: self-end;
+}
+.import .layout .filter div picture img {
+  width: 18px;
+  height: 18px;
+}
+.import .layout .filter div span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  font-weight: 600;
+}
+.import .layout .filter picture img {
+  width: 14px;
+  height: 14px;
+}
+@media screen and (max-width: 480px) {
+  .import .layout .popular {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    padding: 16px 8px 18px 0;
+    border-top: 1px solid #EAEEF1;
+    border-bottom: 1px solid #EAEEF1;
+  }
+}
+.import .layout .popular span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.import .layout .popular picture {
+  vertical-align: bottom;
+}
+.import .layout .popular picture img {
+  width: 14px;
+  height: 14px;
+}
+.import .layout .keyboard {
+  display: flex;
+  gap: 16px;
+}
+@media screen and (max-width: 480px) {
+  .import .layout .keyboard {
+    display: none;
+  }
+}
+.import .layout .keyboard picture img {
+  width: 36px;
+  height: 36px;
+}
+@media screen and (max-width: 480px) {
+  .import aside {
+    display: none;
+  }
+}
+.import aside .filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  padding: 16px 8px 18px 0;
+  border-top: 1px solid #EAEEF1;
+  border-bottom: 1px solid #EAEEF1;
+}
+.import aside .filter div {
+  display: flex;
+  gap: 16px;
+  align-items: self-end;
+}
+.import aside .filter div picture img {
+  width: 18px;
+  height: 18px;
+}
+.import aside .filter div span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  font-weight: 600;
+}
+.import aside .filter picture img {
+  width: 14px;
+  height: 14px;
+}
+.import aside .checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 0 32px;
+  /* Скрываем стандартный чекбокс */
+  /* Стилизуем кастомный чекбокс */
+  /* Галочка */
+  /* Когда чекбокс активен */
+}
+.import aside .checkbox .checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  color: #282828;
+}
+.import aside .checkbox .checkbox-container input[type=checkbox] {
+  display: none;
+}
+.import aside .checkbox .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #A0A7AC;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+}
+.import aside .checkbox .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.import aside .checkbox .checkbox-container input:checked + .custom-checkbox {
+  background-color: #499647;
+  border-color: #499647;
+}
+.import aside .checkbox .checkbox-container input:checked + .custom-checkbox::after {
+  display: block;
+}
+.import aside .popular {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  padding: 16px 8px 20px 0;
+  border-top: 1px solid #EAEEF1;
+  border-bottom: 1px solid #EAEEF1;
+}
+.import aside .popular span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  padding-left: 20px;
+}
+.import aside .popular picture {
+  vertical-align: bottom;
+}
+.import aside .popular picture img {
+  width: 14px;
+  height: 14px;
+}
+.import aside .find {
+  border-top: 1px solid #EAEEF1;
+  border-bottom: 1px solid #EAEEF1;
+  text-align: center;
+  padding: 22px 0 16px;
+  color: #A0A7AC;
+}
+.import aside button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #EAEEF1;
+  border: none;
+}
+.import .product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+  gap: 24px;
+}
+.import .product .item {
+  border: 1px solid #EAEEF1;
+  border-radius: 4px;
+}
+.import .product .item .icon img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.import .product .item .name {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 26px 28px 26px;
+  border-bottom: 1px solid #EAEEF1;
+}
+.import .product .item .name span {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.import .product .item .button-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 26px 32px;
+}
+.import .product .item .button-box button:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border: 1px solid #A0A7AC;
+  border-radius: 4px;
+  padding: 17px 35px;
+}
+.import .product .item .button-box button:first-of-type span {
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+}
+.import .product .item .button-box button:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  padding: 17px 55px;
 }
 
 /*# sourceMappingURL=styles.css.map */
