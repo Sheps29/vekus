@@ -2948,7 +2948,7 @@ h2 {
 			gap: 14px;
 			padding: 18px 0 32px;
 
-			.checkbox-container {
+			.container {
 				display: flex;
 				align-items: center;
 				cursor: pointer;
@@ -2958,12 +2958,12 @@ h2 {
 			}
 	
 			/* Скрываем стандартный чекбокс */
-			.checkbox-container input[type="checkbox"] {
+			.container input[type="checkbox"] {
 				display: none;
 			}
 	
 			/* Стилизуем кастомный чекбокс */
-			.custom-checkbox {
+			.custom {
 				width: 20px;
 				height: 20px;
 				border: 2px solid $grey-200;
@@ -2975,12 +2975,12 @@ h2 {
 			}
 	
 			/* Галочка */
-			.custom-checkbox::after {
+			.custom::after {
 				content: "";
 				position: absolute;
 				display: none;
 				left: 6px;
-				top: 2px;
+				top: 0;
 				width: 6px;
 				height: 12px;
 				border: solid white;
@@ -2989,12 +2989,12 @@ h2 {
 			}
 	
 			/* Когда чекбокс активен */
-			.checkbox-container input:checked + .custom-checkbox {
+			.container input:checked + .custom {
 				background-color: $green;
 				border-color: $green;
 			}
 	
-			.checkbox-container input:checked + .custom-checkbox::after {
+			.container input:checked + .custom::after {
 				display: block;
 			}
 		}
