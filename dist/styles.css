@@ -1968,113 +1968,12 @@ h2 {
   background-color: #3498db;
 }
 
-.invitation {
-  position: relative;
-  padding: 0;
-  margin-top: 0;
-}
-.invitation picture {
-  display: block;
-  width: 100%;
-}
-.invitation picture img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-.invitation .box {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  max-width: 620px;
-  color: white;
-  left: 16px;
-  right: 16px;
-  bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .invitation .box {
-    left: 60px;
-    bottom: 65px;
-  }
-}
-.invitation .box h3 {
-  font-size: 26px;
-  line-height: 28px;
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .invitation .box h3 {
-    font-size: 40px;
-    line-height: 44px;
-    font-weight: 400;
-  }
-}
-.invitation .box p {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .invitation .box p {
-    margin-bottom: 16px;
-  }
-}
-.invitation .box div {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-@media screen and (min-width: 481px) {
-  .invitation .box div {
-    flex-direction: row;
-  }
-}
-.invitation .box div button:first-of-type {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 500;
-  padding: 17px 62px;
-  background-color: #499647;
-  border: 1px solid white;
-  color: white;
-  border: none;
-}
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .invitation .box div button:first-of-type {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-    padding: 10px 38px;
-  }
-}
-.invitation .box div button:last-of-type {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 500;
-  padding: 17px 62px;
-  background-color: white;
-  border: 1px solid #499647;
-  color: #282828;
-  color: #499647;
-}
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .invitation .box div button:last-of-type {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-    padding: 10px 38px;
-  }
-}
-
 .container1 {
   display: grid;
   grid-template-columns: 3fr 7fr;
   gap: 56px 24px;
   align-items: stretch;
-  margin: 40px 0;
+  margin: 0 0 40px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -2090,7 +1989,120 @@ h2 {
   .container1 {
     padding-left: 16px;
     padding-right: 16px;
-    margin-top: 46px;
+  }
+}
+.container1 .invitation {
+  position: relative;
+  grid-column: 1/span 2;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+@media screen and (max-width: 768px) {
+  .container1 .invitation {
+    grid-column: 1/span 1;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container1 .invitation {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+.container1 .invitation picture {
+  display: block;
+  width: 100%;
+}
+.container1 .invitation picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.container1 .invitation .box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  max-width: 620px;
+  color: white;
+  left: 16px;
+  right: 16px;
+  bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .container1 .invitation .box {
+    left: 60px;
+    bottom: 65px;
+  }
+}
+.container1 .invitation .box h3 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .container1 .invitation .box h3 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 400;
+  }
+}
+.container1 .invitation .box p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container1 .invitation .box p {
+    margin-bottom: 16px;
+  }
+}
+.container1 .invitation .box div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (min-width: 481px) {
+  .container1 .invitation .box div {
+    flex-direction: row;
+  }
+}
+.container1 .invitation .box div button:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border: none;
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container1 .invitation .box div button:first-of-type {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 10px 38px;
+  }
+}
+.container1 .invitation .box div button:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  color: #499647;
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container1 .invitation .box div button:last-of-type {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 10px 38px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2984,35 +2996,6 @@ h2 {
   }
 }
 
-.back {
-  padding-left: 60px;
-  margin: 24px 0 54px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .back {
-    padding-left: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .back {
-    padding-left: 16px;
-  }
-}
-.back picture img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  width: 30px;
-  height: 30px;
-}
-.back span {
-  font-size: 13px;
-  color: #909090;
-}
-
 .container {
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -3035,6 +3018,28 @@ h2 {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+.container .back {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  grid-column: 1/span 2;
+}
+@media screen and (max-width: 768px) {
+  .container .back {
+    grid-column: 1/span 1;
+  }
+}
+.container .back picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  width: 30px;
+  height: 30px;
+}
+.container .back span {
+  font-size: 13px;
+  color: #909090;
 }
 @media screen and (max-width: 768px) {
   .container .left {

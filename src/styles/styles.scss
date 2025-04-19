@@ -1789,91 +1789,14 @@ h2 {
   background-color: #3498db;
 }
 
-.invitation {
-	position: relative;
-	padding: 0;
-	margin-top: 0;
 
-	picture {
-		display: block;
-		width: 100%;
-
-		img {
-			@include img;
-		}
-	}
-
-	.box {
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		max-width: 620px;
-		color: $white;
-		left: 16px;
-		right: 16px;
-		bottom: 30px;
-
-		@media screen and (min-width: 768px) {
-			left: 60px;
-			bottom: 65px;
-		}
-
-		h3 {
-			@include l;
-			margin-bottom: 16px;
-
-			@media screen and (min-width: 768px) {
-				@include xxl;
-			}
-		}
-
-		p {
-			@include xs;
-			margin-bottom: 30px;
-
-			@media screen and (min-width: 481px) and (max-width: 767px) {
-				margin-bottom: 16px;
-			}
-		}
-
-		div {
-			display: flex;
-			flex-direction: column;
-			gap: 16px;
-
-			@media screen and (min-width: 481px) {
-				flex-direction: row;
-			}
-
-			button:first-of-type {
-				@include button-green;
-				border: none;
-
-				@media screen and (min-width: 481px) and (max-width: 767px) {
-					@include xxs;
-					padding: 10px 38px;
-				}
-			}
-
-			button:last-of-type {
-				@include button-white;
-				color: $green;
-
-				@media screen and (min-width: 481px) and (max-width: 767px) {
-					@include xxs;
-					padding: 10px 38px;
-				}
-			}
-		}
-	}
-}
 
 .container1 {
 	display: grid;
 	grid-template-columns: 3fr 7fr;
 	gap: 56px 24px;
 	align-items: stretch;
-	margin: 40px 0;
+	margin: 0 0 40px;
 	padding-left: 60px;
 	padding-right: 60px;
 
@@ -1887,7 +1810,97 @@ h2 {
 	@media screen and (max-width: 480px) {
 		padding-left: 16px;
 		padding-right: 16px;
-		margin-top: 46px;
+	}
+
+	.invitation {
+		position: relative;
+		grid-column: 1 / span 2;
+		margin-left: -60px;
+		margin-right: -60px;
+
+		@media screen and (max-width: 768px) {
+			grid-column: 1 / span 1;
+			margin-left: -24px;
+			margin-right: -24px;
+		}
+
+		@media screen and (max-width: 480px) {
+			margin-left: -16px;
+			margin-right: -16px;
+		}
+	
+		picture {
+			display: block;
+			width: 100%;
+	
+			img {
+				@include img;
+			}
+		}
+	
+		.box {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			max-width: 620px;
+			color: $white;
+			left: 16px;
+			right: 16px;
+			bottom: 30px;
+	
+			@media screen and (min-width: 768px) {
+				left: 60px;
+				bottom: 65px;
+			}
+	
+			h3 {
+				@include l;
+				margin-bottom: 16px;
+	
+				@media screen and (min-width: 768px) {
+					@include xxl;
+				}
+			}
+	
+			p {
+				@include xs;
+				margin-bottom: 30px;
+	
+				@media screen and (min-width: 481px) and (max-width: 767px) {
+					margin-bottom: 16px;
+				}
+			}
+	
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+	
+				@media screen and (min-width: 481px) {
+					flex-direction: row;
+				}
+	
+				button:first-of-type {
+					@include button-green;
+					border: none;
+	
+					@media screen and (min-width: 481px) and (max-width: 767px) {
+						@include xxs;
+						padding: 10px 38px;
+					}
+				}
+	
+				button:last-of-type {
+					@include button-white;
+					color: $green;
+	
+					@media screen and (min-width: 481px) and (max-width: 767px) {
+						@include xxs;
+						padding: 10px 38px;
+					}
+				}
+			}
+		}
 	}
 
 	.left {
@@ -2654,35 +2667,7 @@ h2 {
 	}
 }
 
-.back {
-	padding-left: 60px;
-	margin: 24px 0 54px;
-	display: flex;
-	gap: 8px;
-	align-items: center;
 
-	@media screen and (max-width: 768px) {
-		padding-left: 24px;
-	}
-
-	@media screen and (max-width: 480px) {
-		padding-left: 16px;
-	}
-
-	picture {
-
-		img {
-			@include img;
-			width: 30px;
-			height: 30px;
-		}
-	}
-
-	span {
-		font-size: 13px;
-		color: $grey-300;
-	}
-}
 
 .container {
 	display: grid;
@@ -2703,6 +2688,31 @@ h2 {
 	@media screen and (max-width: 480px) {
 		padding-left: 16px;
 		padding-right: 16px;
+	}
+
+	.back {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		grid-column: 1 / span 2;
+
+		@media screen and (max-width: 768px) {
+			grid-column: 1 / span 1;
+		}
+	
+		picture {
+	
+			img {
+				@include img;
+				width: 30px;
+				height: 30px;
+			}
+		}
+	
+		span {
+			font-size: 13px;
+			color: $grey-300;
+		}
 	}
 
 	.left {
