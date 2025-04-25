@@ -3223,7 +3223,7 @@ h2 {
   /* Галочка */
   /* Когда чекбокс активен */
 }
-.import aside .checkbox .checkbox-container {
+.import aside .checkbox .container {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -3231,10 +3231,10 @@ h2 {
   font-size: 14px;
   color: #282828;
 }
-.import aside .checkbox .checkbox-container input[type=checkbox] {
+.import aside .checkbox .container input[type=checkbox] {
   display: none;
 }
-.import aside .checkbox .custom-checkbox {
+.import aside .checkbox .custom {
   width: 20px;
   height: 20px;
   border: 2px solid #A0A7AC;
@@ -3244,23 +3244,23 @@ h2 {
   margin-right: 10px;
   transition: all 0.2s ease;
 }
-.import aside .checkbox .custom-checkbox::after {
+.import aside .checkbox .custom::after {
   content: "";
   position: absolute;
   display: none;
   left: 6px;
-  top: 2px;
+  top: 0;
   width: 6px;
   height: 12px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.import aside .checkbox .checkbox-container input:checked + .custom-checkbox {
+.import aside .checkbox .container input:checked + .custom {
   background-color: #499647;
   border-color: #499647;
 }
-.import aside .checkbox .checkbox-container input:checked + .custom-checkbox::after {
+.import aside .checkbox .container input:checked + .custom::after {
   display: block;
 }
 .import aside .popular {
@@ -3367,6 +3367,167 @@ h2 {
   color: white;
   border-radius: 4px;
   padding: 17px 55px;
+}
+
+.feedback {
+  padding: 0 60px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .feedback {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .feedback {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.feedback .back {
+  margin-bottom: 56px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 400;
+}
+.feedback .back picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  width: 30px;
+  height: 30px;
+}
+.feedback .back span {
+  font-size: 13px;
+  color: #909090;
+}
+.feedback .submit {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit {
+    grid-template-columns: auto;
+  }
+}
+.feedback .submit .left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .left {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.feedback .submit .left h4 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .left h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
+}
+.feedback .submit .left h4 {
+  color: #499647;
+  max-width: 172px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .left h4 {
+    background-color: #EAEEF1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .right {
+    margin-top: 54px;
+  }
+}
+.feedback .submit .right h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .right h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.feedback .submit .right p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .right p {
+    margin-bottom: 32px;
+  }
+}
+.feedback .submit .right form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.feedback .submit .right form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.feedback .submit .right form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3D4548;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .submit .right form label {
+    margin-top: -16px;
+  }
+}
+.feedback .submit .right form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.feedback .submit .right form .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  .feedback .submit .right form .button--green {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

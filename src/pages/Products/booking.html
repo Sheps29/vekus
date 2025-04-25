@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказать продукт</title>
+  <link rel="stylesheet" href="../Products/styles/products.scss">
+  <link rel="stylesheet" href="../../../dist/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<main class="feedback">
+    <div class="back">
+      <picture>
+        <img src="images/left.svg" alt="left">
+      </picture>
+      <span>Вернуться назад</span>
+    </div>
+    <div class="submit">
+      <div class="left">
+        <h4>Заказать продукт</h4>
+      </div>
+      <div class="right">
+        <h3>Заказать продукт</h3>
+        <p>Введите контактные данные для заявки. Наши специалисты свяжутся с вами в ближайшее время.</p>
+        <form action="#">
+          <input type="text" placeholder="Ваше имя*" name="name" class="info">
+          <input type="tel" placeholder="Телефон*" name="tel" class="info">
+					<input type="email" placeholder="E-mail*" name="email" class="info">
+          <input type="text" placeholder="Продукт" name="product" class="info">
+          <label for="assent"><input type="checkbox"  id="assent">Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></label>
+          <button class="button--green">Заказать продукт</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
