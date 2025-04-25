@@ -3050,11 +3050,16 @@ h2 {
 		.item {
 			border: 1px solid $grey-100;
 			border-radius: 4px;
+			text-align: center;
 
 			.icon {
 
 				img {
 					@include img;
+				}
+
+				.comp {
+					max-width: 240px;
 				}
 			}
 
@@ -3063,9 +3068,23 @@ h2 {
 				justify-content: space-between;
 				padding: 16px 26px 28px 26px;
 				border-bottom: 1px solid $grey-100;
+				text-align: left;
 
 				span {
 					@include s;
+					display: block;
+				}
+			}
+
+			.model {
+				flex-direction: column;
+
+				.order {
+					color: $red;
+					font-size: 12px;
+					font-weight: 700;
+					display: block;
+					padding-top: 10px;
 				}
 			}
 

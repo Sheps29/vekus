@@ -3315,22 +3315,38 @@ h2 {
 .import .product .item {
   border: 1px solid #EAEEF1;
   border-radius: 4px;
+  text-align: center;
 }
 .import .product .item .icon img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
+.import .product .item .icon .comp {
+  max-width: 240px;
+}
 .import .product .item .name {
   display: flex;
   justify-content: space-between;
   padding: 16px 26px 28px 26px;
   border-bottom: 1px solid #EAEEF1;
+  text-align: left;
 }
 .import .product .item .name span {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
+  display: block;
+}
+.import .product .item .model {
+  flex-direction: column;
+}
+.import .product .item .model .order {
+  color: #CD0000;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  padding-top: 10px;
 }
 .import .product .item .button-box {
   display: flex;
