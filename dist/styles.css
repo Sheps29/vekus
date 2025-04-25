@@ -3168,79 +3168,74 @@ h2 {
   margin: 40px 80px;
 }
 
-.back {
+.feedback {
+  padding: 0 60px;
+  margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .feedback {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .feedback {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.feedback .back {
   font-family: "Inria Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
-  padding-left: 60px;
-  margin: 32px 0 56px;
+  margin-bottom: 56px;
   display: flex;
   gap: 8px;
   align-items: center;
   font-weight: 400;
 }
-@media screen and (max-width: 768px) {
-  .back {
-    padding-left: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .back {
-    padding-left: 16px;
-  }
-}
-.back picture img {
+.feedback .back picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
   width: 30px;
   height: 30px;
 }
-.back span {
+.feedback .back span {
   font-size: 13px;
   color: #909090;
 }
-
-.submit {
+.feedback .submit {
   font-family: "Inria Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
   display: grid;
   grid-template-columns: 3fr 7fr;
-  padding: 0 60px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  .submit {
-    padding-left: 24px;
-    padding-right: 24px;
+  .feedback .submit {
     grid-template-columns: auto;
   }
 }
-@media screen and (max-width: 480px) {
-  .submit {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-.submit .left {
+.feedback .submit .left {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 @media screen and (max-width: 768px) {
-  .submit .left {
+  .feedback .submit .left {
     flex-direction: row;
     gap: 0;
   }
 }
-.submit .left h4 {
+.feedback .submit .left h4 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  .submit .left h4 {
+  .feedback .submit .left h4 {
     font-size: 16px;
     line-height: 21px;
     font-weight: 500;
@@ -3251,23 +3246,23 @@ h2 {
     border: 1px solid #EAEEF1;
   }
 }
-.submit .left h4:first-of-type {
+.feedback .submit .left h4:first-of-type {
   color: #909090;
 }
-.submit .left h4:last-of-type {
+.feedback .submit .left h4:last-of-type {
   color: #499647;
 }
 @media screen and (max-width: 768px) {
-  .submit .left h4:last-of-type {
+  .feedback .submit .left h4:last-of-type {
     background-color: #EAEEF1;
   }
 }
 @media screen and (max-width: 768px) {
-  .submit .right {
+  .feedback .submit .right {
     margin-top: 54px;
   }
 }
-.submit .right h3 {
+.feedback .submit .right h3 {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
@@ -3275,14 +3270,14 @@ h2 {
   color: #282828;
 }
 @media screen and (max-width: 768px) {
-  .submit .right h3 {
+  .feedback .submit .right h3 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 16px;
   }
 }
-.submit .right p {
+.feedback .submit .right p {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3290,16 +3285,16 @@ h2 {
   margin-bottom: 42px;
 }
 @media screen and (max-width: 768px) {
-  .submit .right p {
+  .feedback .submit .right p {
     margin-bottom: 32px;
   }
 }
-.submit .right form {
+.feedback .submit .right form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.submit .right form .info {
+.feedback .submit .right form .info {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3309,22 +3304,22 @@ h2 {
   border-bottom: 1px solid #EAEEF1;
 }
 @media screen and (max-width: 768px) {
-  .submit .right form .info:nth-of-type(3) {
+  .feedback .submit .right form .info:nth-of-type(3) {
     margin-top: 24px;
   }
 }
-.submit .right form .task {
+.feedback .submit .right form .task {
   line-height: 14px;
   padding-bottom: 2px;
   margin-top: 24px;
 }
 @media screen and (max-width: 480px) {
-  .submit .right form .task {
+  .feedback .submit .right form .task {
     padding-bottom: 8px;
     line-height: 20px;
   }
 }
-.submit .right form label {
+.feedback .submit .right form label {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -3333,15 +3328,15 @@ h2 {
   margin-top: -8px;
 }
 @media screen and (max-width: 768px) {
-  .submit .right form label {
+  .feedback .submit .right form label {
     margin-top: -16px;
   }
 }
-.submit .right form label a {
+.feedback .submit .right form label a {
   text-decoration: none;
   color: #499647;
 }
-.submit .right form .button--green {
+.feedback .submit .right form .button--green {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3353,7 +3348,7 @@ h2 {
   margin-top: 10px;
 }
 @media screen and (max-width: 480px) {
-  .submit .right form .button--green {
+  .feedback .submit .right form .button--green {
     margin-left: 0;
   }
 }
