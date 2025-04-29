@@ -3170,7 +3170,6 @@ h2 {
   
       h4 {
         color: $green;
-				max-width: 172px;
   
         @media screen and (max-width: 768px) {
           background-color: $grey-100;
@@ -3246,6 +3245,418 @@ h2 {
       }
     }
   } 
+}
+
+.cart {
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.back {
+		display: inline-block;
+		font-size: 13px;
+		color: $grey-300;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 42px;
+		}
+	}
+
+	.product {
+		@include xl;
+		color: $grey-500;
+		margin: 32px 0 56px;
+
+		@media screen and (max-width: 768px) {
+			@include l;
+		}
+
+		@media screen and (max-width: 480px) {
+			@include top-border;
+			padding-top: 10px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.merchandise {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+		margin-bottom: 22px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			margin-top: 70px;
+		}
+
+		@media screen and (max-width: 480px) {
+			gap: 32px;
+		}
+
+		.sistem {
+
+			@media screen and (max-width: 768px) {
+				grid-row: 2 / span 1;
+			}
+
+			p {
+				@include xs;
+				@include top-border;
+				color: $grey-400;
+				padding-top: 16px;
+				margin-bottom: 24px;
+	
+				@media screen and (max-width: 768px) {
+					border: none;
+					margin-bottom: 20px;
+				}
+			}
+
+			ul {
+				@include top-border;
+				@include m;
+				padding-top: 16px;
+				margin-bottom: 40px;
+				color: $grey-400;
+				list-style-type: disc;
+				list-style-position: inside;
+
+				li {
+					@include xs;
+					padding-top: 16px;
+					text-indent: -1.3em;
+					padding-left: 1.5em;
+					margin-left: 5px;
+				}
+			}
+
+			.button-box {
+				display: flex;
+				gap: 24px;
+
+				@media screen and (max-width: 768px) {
+					gap: 16px;
+					flex-direction: column-reverse;
+				}
+
+				button:first-of-type {
+					@include button-white;
+					border: 1px solid $grey-200;
+					border-radius: 4px;
+					padding: 17px 30px;
+				}
+
+				button:last-of-type {
+					@include button-green;
+					border-radius: 4px;
+				}
+			}
+
+			.more {
+				display: flex;
+				gap: 8px;
+				margin-top: 48px;
+				padding-bottom: 50px;
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+
+				span {
+					@include xxs;
+					font-size: 13px;
+					color: $grey-300;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}		
+
+		.linux {
+			border: 1px solid $grey-100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (max-width: 768px) {
+				border: none;
+			}
+
+			img {
+				@include img;
+				max-width: 336px;
+				max-height: 336px;
+
+				@media screen and (max-width: 768px) {
+					max-width: 375px;
+					max-height: 275px;
+				}
+			}
+		}
+	}
+
+	.property {
+		@include top-border;
+
+		.header {
+			display: flex;
+			gap: 24px;
+			padding-top: 55px;
+
+			@media screen and (max-width: 480px) {
+				gap: 0;
+				padding-top: 32px;
+			}
+
+			h5 {
+				@include xs;
+				flex: 1;
+				padding: 13px 0;
+				max-width: 200px;
+				border: 1px solid $grey-100;
+				text-align: center;
+			}
+
+			h5:first-of-type {
+				color: $green;
+				background-color: $grey-100;
+			}
+
+			h5:last-of-type {
+				color: $grey-400;
+			} 
+		}
+
+		.info {
+			border: 1px solid $grey-100;
+			margin-top: 22px;
+			display: flex;
+			gap: 28px;
+			padding: 48px 0 40px 28px;
+
+			@media screen and (max-width: 480px) {
+				margin-top: 32px;
+				padding: 29px 1px 25px 27px;
+			}
+
+			span {
+				@include xs;
+				color: $grey-300;
+			}
+
+			div {
+				border-bottom: 1px dotted $grey-300;
+				max-width: 284px;
+				flex: 1;
+				height: 1em;
+				min-width: 16px;
+			}
+		}
+	}
+
+	.partner {
+		margin: 70px 0;
+
+		@media screen and (max-width: 480px) {
+			margin: 90px 0;
+		}
+
+		h4 {
+			@include m;
+			color: $grey-500;
+		}
+
+		.astra {
+			display: flex;
+			border: 1px solid $grey-100;
+			max-width: 872px;
+			margin-top: 32px;
+
+			@media screen and (max-width: 480px) {
+				flex-direction: column;
+			}
+
+			picture:first-of-type {
+				text-align: center;
+			}
+
+			.contact {
+				display: flex;
+				justify-content: space-between;
+				flex: 1;
+				padding: 0 20px 0 24px;
+				border-left: 1px solid $grey-100;
+
+				@media screen and (max-width: 480px) {
+					padding-bottom: 22px;
+					border-left: none;
+				}
+
+				div {
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					padding-top: 45px;
+
+					span:first-of-type {
+						@include s;
+					}
+
+					span:last-of-type {
+						@include xxs;
+						font-size: 12px;
+						color: $grey-300;
+					}
+
+					a {
+						text-decoration: none;
+						@include s;
+						font-size: 20px;
+						color: $grey-400;
+					}
+				}
+
+				picture {
+					padding-top: 20px;
+
+					@media screen and (max-width: 480px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.reservation {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+
+		@media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+  
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        gap: 0;
+      }
+  
+      h4 {
+        @include m;
+  
+        @media screen and (max-width: 768px) {
+          @include xs;
+          display: flex;
+          flex: 1;
+          padding: 13px 0;
+          justify-content: center;
+          border: 1px solid $grey-100;
+        }
+      }
+  
+      h4:first-of-type {
+        color: $green;
+  
+        @media screen and (max-width: 768px) {
+          background-color: $grey-100;
+        }
+      }
+
+			h4:last-of-type {
+				color: $grey-300;
+			}
+    }
+
+		.right {
+  
+      @media screen and (max-width: 768px) {
+        margin-top: 54px;
+      }
+  
+      h3 {
+        @include xl;
+        margin-bottom: 10px;
+        color: $grey-500;
+  
+        @media screen and (max-width: 768px) {
+          @include m;
+          margin-bottom: 16px;
+        }
+      }
+  
+      p {
+        @include xs;
+        color: $grey-400;
+        margin-bottom: 42px;
+  
+        @media screen and (max-width: 768px) {
+          margin-bottom: 32px;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+  
+        .info {
+          @include xs;
+          color: $grey-300;
+          padding-bottom: 8px;
+          border: none;
+          border-bottom: 1px solid $grey-100;
+        }
+
+				.company {
+					line-height: 0.8em;
+					
+					@media screen and (max-width: 480px) {
+						margin-top: 24px;
+					}
+				}
+  
+        label {
+          @include xxs;
+          font-size: 12px;
+          color: $grey-400;
+          margin-top: -8px;
+  
+          @media screen and (max-width: 768px) {
+            margin-top: -16px;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $green;
+          }
+        }
+  
+        .button--green {
+          @include button-green;
+          margin-left: auto;
+          margin-top: 10px;
+  
+          @media screen and (max-width: 480px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+	}
 }
 
 
