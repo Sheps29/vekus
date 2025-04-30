@@ -3845,10 +3845,12 @@ h2 {
 .cart .reservation {
   display: grid;
   grid-template-columns: 3fr 7fr;
+  padding-top: 65px;
 }
 @media screen and (max-width: 768px) {
   .cart .reservation {
     grid-template-columns: auto;
+    padding-top: 20px;
   }
 }
 .cart .reservation .left {
@@ -3976,6 +3978,36 @@ h2 {
   .cart .reservation .right form .button--green {
     margin-left: 0;
   }
+}
+
+.cart .description .header h5:first-of-type {
+  color: #3D4548;
+  background-color: white;
+}
+.cart .description .header h5:last-of-type {
+  background-color: #EAEEF1;
+  color: #499647;
+}
+.cart .description .specification {
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  max-width: 872px;
+}
+@media screen and (max-width: 480px) {
+  .cart .description .specification {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+.cart .description .specification p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
 }
 
 /*# sourceMappingURL=styles.css.map */

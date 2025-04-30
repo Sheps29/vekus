@@ -3540,9 +3540,11 @@ h2 {
 	.reservation {
 		display: grid;
 		grid-template-columns: 3fr 7fr;
+		padding-top: 65px;
 
 		@media screen and (max-width: 768px) {
       grid-template-columns: auto;
+			padding-top: 20px;
     }
   
     .left {
@@ -3656,6 +3658,45 @@ h2 {
         }
       }
     }
+	}
+}
+
+.cart {
+
+	.description {
+		
+		.header {
+
+			h5:first-of-type {
+				color: $grey-400;
+				background-color: $white;
+			}
+
+			h5:last-of-type {
+				background-color: $grey-100;
+				color: $green;
+			}
+		}
+
+		.specification {
+			flex-direction: column;
+			gap: 16px;
+			padding-top: 16px;
+			border-left: none;
+			border-bottom: none;
+			border-right: none;
+			max-width: 872px;
+
+			@media screen and (max-width: 480px) {
+				border-top: none;
+				padding-top: 0;
+			}
+
+			p {
+				@include xs;
+				color: $grey-400;
+			}
+		}
 	}
 }
 
