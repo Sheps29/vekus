@@ -3267,6 +3267,223 @@ h2 {
   } 
 }
 
+.computer {
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.back {
+		display: inline-block;
+		font-size: 13px;
+		color: $grey-300;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 32px;
+		}
+	}
+
+	h3 {
+		@include xl;
+		color: $grey-500;
+
+		@media screen and (max-width: 768px) {
+			@include l;
+			@include top-border;
+			padding-top: 10px;
+		}
+	}
+
+	.product {
+		margin: 56px 0 16px;
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 40px;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 16px 0 54px;
+			@include top-border;
+
+			@media screen and (max-width: 768px) {
+				grid-row: 2 / span 1;
+				justify-content: baseline;
+				gap: 72px;
+			}
+
+			.name {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				span:first-of-type {
+					@include xs;
+					color: $grey-400;
+				}
+
+				span:last-of-type {
+					@include xxs;
+					font-size: 12px;
+					font-weight: 700;
+					color: $red;
+				}
+			}
+
+			.booking {
+				display: flex;
+				flex-direction: column;
+				gap: 56px;
+
+				.button-box {
+					display: flex;
+					gap: 24px;
+					flex-wrap: wrap;
+
+					@media screen and (max-width: 768px) {
+						gap: 16px;
+						flex-direction: column-reverse;
+					}
+
+					button {
+						flex: 1;
+					}
+
+					button:first-of-type {
+						@include button-white;
+						border: 1px solid $grey-200;
+						padding: 17px 30px;
+						white-space: nowrap;
+					}
+
+					button:last-of-type {
+						@include button-green;
+					}
+				}
+
+				.more {
+					display: flex;
+					gap: 8px;
+
+					@media screen and (max-width: 768px) {
+						display: none;
+					}
+
+					span {
+						@include xxs;
+						font-size: 13px;
+						color: $grey-300;
+						display: flex;
+						align-items: center;
+					}
+
+					picture {
+
+						img {
+							rotate: -90deg;
+						}
+					}
+				}
+			}
+		}
+
+		.vector {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			border: 1px solid $grey-100;
+
+			@media screen and (max-width: 768px) {
+				border: none;
+			}
+
+			.center {
+
+				img {
+					@include img;
+				}
+			}
+
+			.right {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 12px;
+				position: absolute;
+				right: 28px;
+				top: 50%;
+				transform: translateY(-50%);
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+
+				.arrow {
+					rotate: 180deg;
+				}
+			}
+		}
+	}
+
+	.characteristic {
+		@include top-border;
+		margin-top: 23px;
+		padding-top: 16px;
+
+		@media screen and (max-width: 768px) {
+			padding-top: 32px;
+		}
+
+		.header {
+			display: flex;
+			gap: 24px;
+
+			@media screen and (max-width: 768px) {
+				gap: 0;
+			}
+
+			h5 {
+				@include xxs;
+				padding: 13px 44px;
+				border: 1px solid $grey-100;
+				color: $grey-400;
+			}
+
+			h5:first-of-type {
+				background-color: $grey-100;
+				border-top: 2px solid $green;
+
+				@media screen and (max-width: 480px) {
+					border-top: none;
+					color: $green;
+				}
+			}
+
+			h5:last-of-type {
+
+				@media screen and (max-width: 480px) {
+					color: $grey-300;
+				}
+			}
+		}
+	}
+}
+
 
 
 

@@ -3546,4 +3546,229 @@ h2 {
   }
 }
 
+.computer {
+  margin: 40px 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media screen and (max-width: 768px) {
+  .computer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .computer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.computer .back {
+  display: inline-block;
+  font-size: 13px;
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .computer .back {
+    margin-bottom: 32px;
+  }
+}
+.computer h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .computer h3 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    border-top: 1px solid #EAEEF1;
+    padding-top: 10px;
+  }
+}
+.computer .product {
+  margin: 56px 0 16px;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .computer .product {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+}
+.computer .product .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 0 54px;
+  border-top: 1px solid #EAEEF1;
+}
+@media screen and (max-width: 768px) {
+  .computer .product .info {
+    grid-row: 2/span 1;
+    justify-content: baseline;
+    gap: 72px;
+  }
+}
+.computer .product .info .name {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.computer .product .info .name span:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.computer .product .info .name span:last-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  font-weight: 700;
+  color: #CD0000;
+}
+.computer .product .info .booking {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.computer .product .info .booking .button-box {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .computer .product .info .booking .button-box {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+}
+.computer .product .info .booking .button-box button {
+  flex: 1;
+}
+.computer .product .info .booking .button-box button:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border: 1px solid #A0A7AC;
+  padding: 17px 30px;
+  white-space: nowrap;
+}
+.computer .product .info .booking .button-box button:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+}
+.computer .product .info .booking .more {
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .computer .product .info .booking .more {
+    display: none;
+  }
+}
+.computer .product .info .booking .more span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #909090;
+  display: flex;
+  align-items: center;
+}
+.computer .product .info .booking .more picture img {
+  rotate: -90deg;
+}
+.computer .product .vector {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #EAEEF1;
+}
+@media screen and (max-width: 768px) {
+  .computer .product .vector {
+    border: none;
+  }
+}
+.computer .product .vector .center img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.computer .product .vector .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .computer .product .vector .right {
+    display: none;
+  }
+}
+.computer .product .vector .right .arrow {
+  rotate: 180deg;
+}
+.computer .characteristic {
+  border-top: 1px solid #EAEEF1;
+  margin-top: 23px;
+  padding-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .computer .characteristic {
+    padding-top: 32px;
+  }
+}
+.computer .characteristic .header {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .computer .characteristic .header {
+    gap: 0;
+  }
+}
+.computer .characteristic .header h5 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  padding: 13px 44px;
+  border: 1px solid #EAEEF1;
+  color: #3D4548;
+}
+.computer .characteristic .header h5:first-of-type {
+  background-color: #EAEEF1;
+  border-top: 2px solid #499647;
+}
+@media screen and (max-width: 480px) {
+  .computer .characteristic .header h5:first-of-type {
+    border-top: none;
+    color: #499647;
+  }
+}
+@media screen and (max-width: 480px) {
+  .computer .characteristic .header h5:last-of-type {
+    color: #909090;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
