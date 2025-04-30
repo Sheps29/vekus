@@ -4009,5 +4009,21 @@ h2 {
   font-weight: 500;
   color: #3D4548;
 }
+.cart .request .left h4:first-of-type {
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .cart .request .left h4:first-of-type {
+    background-color: white;
+  }
+}
+.cart .request .left h4:last-of-type {
+  color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .cart .request .left h4:last-of-type {
+    background-color: #EAEEF1;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

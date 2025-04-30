@@ -3698,6 +3698,28 @@ h2 {
 			}
 		}
 	}
+
+	.request {
+
+		.left {
+
+			h4:first-of-type {
+				color: $grey-300;
+
+				@media screen and (max-width: 768px) {
+					background-color: $white;
+				}
+			}
+
+			h4:last-of-type {
+				color: $green;
+
+				@media screen and (max-width: 768px) {
+					background-color: $grey-100;
+				}
+			}
+		}
+	}
 }
 
 
