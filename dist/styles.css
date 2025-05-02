@@ -3802,7 +3802,7 @@ h2 {
 }
 .computer .characteristic .info .row .left div {
   margin: 0 10px;
-  border-bottom: 2px solid #909090;
+  border-bottom: 2px dotted #909090;
   height: 1em;
   flex-grow: 1;
   min-width: 5px;
@@ -3846,6 +3846,393 @@ h2 {
   color: #A0A7AC;
   display: flex;
   align-items: center;
+}
+.computer .reservation {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding-top: 65px;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation {
+    grid-template-columns: auto;
+    padding-top: 20px;
+  }
+}
+.computer .reservation .left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .left {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.computer .reservation .left h4 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .left h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
+}
+.computer .reservation .left h4:first-of-type {
+  color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .left h4:first-of-type {
+    background-color: #EAEEF1;
+  }
+}
+.computer .reservation .left h4:last-of-type {
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .right {
+    margin-top: 54px;
+  }
+}
+.computer .reservation .right h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .right h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.computer .reservation .right p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .right p {
+    margin-bottom: 32px;
+  }
+}
+.computer .reservation .right form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.computer .reservation .right form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.computer .reservation .right form .company {
+  line-height: 0.8em;
+}
+@media screen and (max-width: 480px) {
+  .computer .reservation .right form .company {
+    margin-top: 24px;
+  }
+}
+.computer .reservation .right form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3D4548;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .computer .reservation .right form label {
+    margin-top: -16px;
+  }
+}
+.computer .reservation .right form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.computer .reservation .right form .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  .computer .reservation .right form .button--green {
+    margin-left: 0;
+  }
+}
+
+.pc {
+  margin: 40px 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media screen and (max-width: 768px) {
+  .pc {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pc {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.pc .back {
+  display: inline-block;
+  font-size: 13px;
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .pc .back {
+    margin-bottom: 32px;
+  }
+}
+.pc h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+  margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .pc h3 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    border-top: 1px solid #EAEEF1;
+    padding-top: 10px;
+    margin-top: 40px;
+  }
+}
+.pc .configurator {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 24px;
+  margin-top: 56px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator {
+    grid-template-columns: auto;
+  }
+}
+.pc .configurator .header {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  border-bottom: 1px solid #EAEEF1;
+  border-top: 1px solid #EAEEF1;
+  max-height: 115px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator .header {
+    display: none;
+  }
+}
+.pc .configurator .header h5 {
+  padding: 16px 0 16px 20px;
+}
+.pc .configurator .header h5:first-of-type {
+  font-weight: 700;
+  border-bottom: 1px solid #EAEEF1;
+}
+.pc .configurator .heading h5:first-of-type {
+  font-weight: 400;
+}
+.pc .configurator .heading h5:last-of-type {
+  font-weight: 700;
+  border-top: 1px solid #EAEEF1;
+}
+.pc .configurator .variability {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EAEEF1;
+  border-radius: 10px;
+  padding: 30px 30px 72px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator .variability {
+    padding: 0;
+    border: none;
+  }
+}
+.pc .configurator .variability p {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #3D4548;
+  margin-bottom: 56px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator .variability p {
+    display: none;
+  }
+}
+.pc .configurator .variability h4 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #282828;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator .variability h4 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+.pc .configurator .variability form label {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+}
+.pc .configurator .variability form .select-wrapper {
+  position: relative;
+  margin: 16px 0 24px;
+}
+.pc .configurator .variability form .select-wrapper select {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  appearance: none;
+  width: 100%;
+  padding: 14px 0 14px 20px;
+  border: 1px solid #EAEEF1;
+  border-radius: 3px;
+  color: #909090;
+  white-space: normal;
+}
+.pc .configurator .variability form .select-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  right: 17px;
+}
+.pc .configurator .variability form .select-wrapper::after {
+  outline: none;
+  border-color: #EAEEF1;
+  width: 100%;
+}
+.pc .configurator .cost {
+  display: flex;
+  flex-direction: column;
+}
+.pc .configurator .cost .price {
+  border: 1px solid #EAEEF1;
+  border-radius: 10px;
+  padding: 20px 14px;
+  margin-bottom: 40px;
+}
+.pc .configurator .cost .price h5 {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-weight: 700;
+  color: #3D4548;
+  border-bottom: 1px solid #EAEEF1;
+  margin: 0 -16px;
+  padding: 0 16px 10px;
+}
+.pc .configurator .cost .price .box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .pc .configurator .cost .price .box {
+    padding-left: 48px;
+  }
+}
+.pc .configurator .cost .price .box .info {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 24px;
+}
+.pc .configurator .cost .price .box .info .choice {
+  color: #909090;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.pc .configurator .cost .price .box .info .part {
+  font-weight: 700;
+}
+.pc .configurator .cost .price .box .info .part span {
+  font-weight: 400;
+}
+.pc .configurator .cost .price .box .count {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.pc .configurator .cost .price .box .count span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.pc .configurator .cost .price .box .count div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pc .configurator .cost .price .total {
+  padding-top: 20px;
+  border-top: 1px solid #EAEEF1;
+  margin: 0 -16px;
+  padding: 20px 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.pc .configurator .cost .price .total span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-weight: 700;
+  color: #3D4548;
+}
+.pc .configurator button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=styles.css.map */

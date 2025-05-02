@@ -3512,7 +3512,7 @@ h2 {
 
 					div {
 						margin: 0 10px;
-						border-bottom: 2px solid $grey-300;
+						border-bottom: 2px dotted $grey-300;
 						height: 1em;
 						flex-grow: 1;
 						min-width: 5px;
@@ -3558,8 +3558,375 @@ h2 {
 			}
 		}
 	}
+
+	.reservation {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    padding-top: 65px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+      padding-top: 20px;
+    }
+  
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        gap: 0;
+      }
+  
+      h4 {
+        @include m;
+  
+        @media screen and (max-width: 768px) {
+          @include xs;
+          display: flex;
+          flex: 1;
+          padding: 13px 0;
+          justify-content: center;
+          border: 1px solid $grey-100;
+        }
+      }
+  
+      h4:first-of-type {
+        color: $green;
+  
+        @media screen and (max-width: 768px) {
+          background-color: $grey-100;
+        }
+      }
+
+      h4:last-of-type {
+        color: $grey-300;
+      }
+    }
+
+    .right {
+  
+      @media screen and (max-width: 768px) {
+        margin-top: 54px;
+      }
+  
+      h3 {
+        @include xl;
+        margin-bottom: 10px;
+        color: $grey-500;
+  
+        @media screen and (max-width: 768px) {
+          @include m;
+          margin-bottom: 16px;
+        }
+      }
+  
+      p {
+        @include xs;
+        color: $grey-400;
+        margin-bottom: 42px;
+  
+        @media screen and (max-width: 768px) {
+          margin-bottom: 32px;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+  
+        .info {
+          @include xs;
+          color: $grey-300;
+          padding-bottom: 8px;
+          border: none;
+          border-bottom: 1px solid $grey-100;
+        }
+
+        .company {
+          line-height: 0.8em;
+          
+          @media screen and (max-width: 480px) {
+            margin-top: 24px;
+          }
+        }
+  
+        label {
+          @include xxs;
+          font-size: 12px;
+          color: $grey-400;
+          margin-top: -8px;
+  
+          @media screen and (max-width: 768px) {
+            margin-top: -16px;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $green;
+          }
+        }
+  
+        .button--green {
+          @include button-green;
+          margin-left: auto;
+          margin-top: 10px;
+  
+          @media screen and (max-width: 480px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
+.pc {
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
 
+	@media screen and (max-width: 768px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.back {
+		display: inline-block;
+		font-size: 13px;
+		color: $grey-300;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 32px;
+		}
+	}
+
+	h3 {
+		@include xl;
+		color: $grey-500;
+		margin-top: 24px;
+
+		@media screen and (max-width: 768px) {
+			@include l;
+			@include top-border;
+			padding-top: 10px;
+			margin-top: 40px;
+		}
+	}
+
+	.configurator {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		gap: 24px;
+		margin-top: 56px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+		}
+
+		.header {
+			@include xs;
+			color: $grey-400;
+			border-bottom: 1px solid $grey-100;
+			border-top: 1px solid $grey-100;
+			max-height: 115px;
+
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+
+			h5 {
+				padding: 16px 0 16px 20px;
+			}
+
+			h5:first-of-type {
+				font-weight: 700;
+				border-bottom: 1px solid $grey-100;
+			}
+		}
+
+		.heading {
+
+			h5:first-of-type {
+				font-weight: 400;
+			}
+
+			h5:last-of-type {
+				font-weight: 700;
+				border-top: 1px solid $grey-100;
+			}
+		}
+
+		.variability {
+			display: flex;
+			flex-direction: column;
+			border: 1px solid $grey-100;
+			border-radius: 10px;
+			padding: 30px 30px 72px;
+
+			@media screen and (max-width: 768px) {
+				padding: 0;
+				border: none;
+			}
+
+			p {
+				@include s;
+				color: $grey-400;
+				margin-bottom: 56px;
+
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
+
+			h4 {
+				@include l;
+				color: $grey-500;
+				margin-bottom: 32px;
+
+				@media screen and (max-width: 768px) {
+					@include m;
+					margin-bottom: 20px;
+				}
+			}
+
+			form {
+
+				label {
+					@include xs;
+					color: $grey-300;
+				}
+
+				.select-wrapper {
+					position: relative;
+					margin: 16px 0 24px;
+
+					select {
+						@include xs;
+						appearance: none;
+						width: 100%;
+						padding: 14px 0 14px 20px;
+						border: 1px solid $grey-100;
+						border-radius: 3px;
+						color: $grey-300;
+						white-space: normal;
+					}
+
+					.arrow {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						pointer-events: none;
+						right: 17px;
+					}
+				}
+
+				.select-wrapper::after {
+					outline: none;
+					border-color: $grey-100;
+					width: 100%;
+				}
+			}
+		}
+
+		.cost {
+			display: flex;
+			flex-direction: column;
+
+			.price {
+				border: 1px solid $grey-100;
+				border-radius: 10px;
+				padding: 20px 14px;
+				margin-bottom: 40px;
+
+				h5 {
+					@include xs;
+					font-weight: 700;
+					color: $grey-400;
+					border-bottom: 1px solid $grey-100;
+					margin: 0 -16px;
+					padding: 0 16px 10px;
+				}
+
+				.box {
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+
+					@media screen and (max-width: 768px) {
+						padding-left: 48px;
+					}
+
+					.info {
+						@include xxs;
+						display: flex;
+						flex-direction: column;
+						gap: 8px;
+						padding-top: 24px;
+	
+						.choice {
+							color: $grey-300;
+							display: inline-block;
+							margin-bottom: 20px;
+						}
+	
+						.part {
+							font-weight: 700;
+	
+							span {
+								font-weight: 400;
+							}
+						}
+					}
+
+					.count {
+						display: flex;
+						justify-content: space-between;
+						padding-bottom: 24px;
+
+						span {
+							@include xxs;
+							display: flex;
+							align-items: center;
+						}
+
+						div {
+							display: flex;
+							align-items: center;
+							gap: 10px;
+						}
+					}
+				}
+
+				.total {
+					padding-top: 20px;
+					border-top: 1px solid $grey-100;
+					margin: 0 -16px;
+					padding: 20px 16px 0;
+					display: flex;
+					justify-content: space-between;
+
+					span {
+						@include xs;
+						font-weight: 700;
+						color: $grey-400;
+					}
+				}
+			}
+		}
+
+		button {
+			@include button-green;
+			border-radius: 4px;
+		}
+	}
+}
 
 

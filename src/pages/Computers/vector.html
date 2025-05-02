@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Компьютеры</title>
+  <title>Вектор</title>
   <link rel="stylesheet" href="../Products/styles/products.scss">
 	<link rel="stylesheet" href="../../../dist/styles.css">
 </head>
@@ -183,7 +183,22 @@
 			<span>Назад к каталогу</span>
 		</div>
 	</div>
-	<div>
-		
-	</div>
+	<div class="reservation">
+    <div class="left">
+      <h4>Заказать продукт</h4>
+      <h4>Оставить заявку</h4>
+    </div>
+    <div class="right">
+      <h3>Заказать звонок</h3>
+      <p>Напишите нам или закажите звонок — мы поможем. Выслушаем ваши задачи для бизнеса, и на их основе предложим варианты развития.</p>
+      <form action="#">
+        <input type="text" placeholder="Ваше имя*" name="name" class="info">
+        <input type="tel" placeholder="Телефон*" name="tel" class="info">
+        <input type="text" placeholder="Название компании" name="company" class="info">
+        <textarea name="task" class="info">Расскажите, пожалуйста, какие задачи вам необходимо решить</textarea>
+        <label for="assent"><input type="checkbox"  id="assent">Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></label>
+        <button class="button--green">Заказать продукт</button>
+      </form>
+    </div>
+  </div>
 </main>
