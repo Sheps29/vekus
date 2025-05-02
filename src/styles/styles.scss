@@ -2290,3 +2290,24 @@ h2 {
 	}
 }
 
+.news {
+	margin: 40px 0;
+	padding-left: 60px;
+	padding-right: 60px;
+
+	@media screen and (max-width: 678px) {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.back {
+		display: inline-block;
+    font-size: 13px;
+    color: #909090;
+	}
+}
