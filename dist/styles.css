@@ -3770,5 +3770,82 @@ h2 {
     color: #909090;
   }
 }
+.computer .characteristic .info {
+  max-width: 872px;
+  border: 1px solid #EAEEF1;
+  margin-top: 24px;
+  padding: 48px 32px 78px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media screen and (max-width: 768px) {
+  .computer .characteristic .info {
+    margin-top: 20px;
+    padding: 48px 10px 0;
+  }
+}
+.computer .characteristic .info .row {
+  display: flex;
+  gap: 16px;
+}
+.computer .characteristic .info .row .left {
+  display: flex;
+  flex-grow: 1;
+  gap: 16px;
+}
+.computer .characteristic .info .row .left .label {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.computer .characteristic .info .row .left div {
+  margin: 0 10px;
+  border-bottom: 2px solid #909090;
+  height: 1em;
+  flex-grow: 1;
+  min-width: 5px;
+}
+.computer .characteristic .info .row .value {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  flex: 0 0 300px;
+}
+@media screen and (max-width: 768px) {
+  .computer .characteristic .info .row .value {
+    flex: 0 0 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .computer .characteristic .info .row .value {
+    flex: 0 0 150px;
+  }
+}
+.computer .characteristic .info .row:nth-of-type(3), .computer .characteristic .info .row:nth-of-type(12) {
+  margin-bottom: 18px;
+}
+.computer .characteristic .catalog {
+  margin: 32px 0 72px;
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .computer .characteristic .catalog {
+    display: none;
+  }
+}
+.computer .characteristic .catalog span {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
+  color: #A0A7AC;
+  display: flex;
+  align-items: center;
+}
 
 /*# sourceMappingURL=styles.css.map */
