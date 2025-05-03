@@ -2771,7 +2771,7 @@ h2 {
 		}
 	}
 
-	h3 {
+	h1 {
 		grid-column: 1 / span 1;
 		@include xl;
 		color: $grey-500;
@@ -3064,20 +3064,24 @@ h2 {
 			}
 
 			.name {
-				display: flex;
-				justify-content: space-between;
+				@include s;
 				padding: 16px 26px 28px 26px;
 				border-bottom: 1px solid $grey-100;
 				text-align: left;
-
-				span {
-					@include s;
-					display: block;
-				}
 			}
 
 			.model {
+				display: flex;
 				flex-direction: column;
+				align-items: baseline;
+				padding: 16px 26px 28px 26px;
+				border-bottom: 1px solid $grey-100;
+
+				.name {
+					@include s;
+					border-bottom: none;
+					padding: 0;
+				}
 
 				.order {
 					color: $red;
