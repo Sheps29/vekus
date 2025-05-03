@@ -2,7 +2,7 @@
 @import 'reset';
 @import 'colors';
 
-section {
+.wrapper {
 	margin: 40px 0;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -3247,32 +3247,37 @@ h2 {
   } 
 }
 
-.cart {
+.card {
 	margin: 40px 0;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding: 0 60px;
 
 	@media screen and (max-width: 768px) {
-		padding-left: 24px;
-		padding-right: 24px;
+		padding: 0 24px;
 	}
 
 	@media screen and (max-width: 480px) {
-		padding-left: 16px;
-		padding-right: 16px;
+		padding: 0 16px;
 	}
 
-	.back {
-		display: inline-block;
-		font-size: 13px;
-		color: $grey-300;
+	.breadcrumbs {
+		display: flex;
 
 		@media screen and (max-width: 768px) {
 			margin-bottom: 42px;
 		}
+
+		li {
+			font-size: 13px;
+			color: $grey-300;
+		}
+
+		li:first-of-type::after, li:nth-of-type(2)::after {
+			content: '\2014';
+			margin: 0 5px;
+		}
 	}
 
-	.product {
+	.header {
 		@include xl;
 		color: $grey-500;
 		margin: 32px 0 56px;
@@ -3288,7 +3293,7 @@ h2 {
 		}
 	}
 
-	.merchandise {
+	.description {
 		display: grid;
 		grid-template-columns: 3fr 7fr;
 		gap: 24px;
@@ -3303,7 +3308,7 @@ h2 {
 			gap: 32px;
 		}
 
-		.sistem {
+		& > div {
 
 			@media screen and (max-width: 768px) {
 				grid-row: 2 / span 1;
@@ -3382,7 +3387,7 @@ h2 {
 			}
 		}		
 
-		.linux {
+		& > picture {
 			border: 1px solid $grey-100;
 			display: flex;
 			justify-content: center;
@@ -3405,10 +3410,10 @@ h2 {
 		}
 	}
 
-	.property {
+	.characteristics {
 		@include top-border;
 
-		.header {
+		.tabs-characteristics {
 			display: flex;
 			gap: 24px;
 			padding-top: 55px;
@@ -3418,7 +3423,7 @@ h2 {
 				padding-top: 32px;
 			}
 
-			h5 {
+			button {
 				@include xs;
 				flex: 1;
 				padding: 13px 0;
@@ -3427,13 +3432,14 @@ h2 {
 				text-align: center;
 			}
 
-			h5:first-of-type {
+			button:first-of-type {
 				color: $green;
 				background-color: $grey-100;
 			}
 
-			h5:last-of-type {
+			button:last-of-type {
 				color: $grey-400;
+				background-color: $white;
 			} 
 		}
 
@@ -3464,7 +3470,7 @@ h2 {
 		}
 	}
 
-	.partner {
+	.partners {
 		margin: 70px 0;
 
 		@media screen and (max-width: 480px) {
@@ -3547,7 +3553,7 @@ h2 {
 			padding-top: 20px;
     }
   
-    .left {
+    .tabs-reservation {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -3557,7 +3563,7 @@ h2 {
         gap: 0;
       }
   
-      h4 {
+      button {
         @include m;
   
         @media screen and (max-width: 768px) {
@@ -3570,7 +3576,7 @@ h2 {
         }
       }
   
-      h4:first-of-type {
+      button:first-of-type {
         color: $green;
   
         @media screen and (max-width: 768px) {
@@ -3578,12 +3584,12 @@ h2 {
         }
       }
 
-			h4:last-of-type {
+			button:last-of-type {
 				color: $grey-300;
 			}
     }
 
-		.right {
+		.form {
   
       @media screen and (max-width: 768px) {
         margin-top: 54px;

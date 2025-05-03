@@ -48,19 +48,19 @@ table {
   border-spacing: 0;
 }
 
-section {
+.wrapper {
   margin: 40px 0;
   padding-left: 60px;
   padding-right: 60px;
 }
 @media screen and (max-width: 768px) {
-  section {
+  .wrapper {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  section {
+  .wrapper {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -3529,34 +3529,37 @@ h2 {
   }
 }
 
-.cart {
+.card {
   margin: 40px 0;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding: 0 60px;
 }
 @media screen and (max-width: 768px) {
-  .cart {
-    padding-left: 24px;
-    padding-right: 24px;
+  .card {
+    padding: 0 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  .cart {
-    padding-left: 16px;
-    padding-right: 16px;
+  .card {
+    padding: 0 16px;
   }
 }
-.cart .back {
-  display: inline-block;
-  font-size: 13px;
-  color: #909090;
+.card .breadcrumbs {
+  display: flex;
 }
 @media screen and (max-width: 768px) {
-  .cart .back {
+  .card .breadcrumbs {
     margin-bottom: 42px;
   }
 }
-.cart .product {
+.card .breadcrumbs li {
+  font-size: 13px;
+  color: #909090;
+}
+.card .breadcrumbs li:first-of-type::after, .card .breadcrumbs li:nth-of-type(2)::after {
+  content: "—";
+  margin: 0 5px;
+}
+.card .header {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
@@ -3564,42 +3567,42 @@ h2 {
   margin: 32px 0 56px;
 }
 @media screen and (max-width: 768px) {
-  .cart .product {
+  .card .header {
     font-size: 26px;
     line-height: 28px;
     font-weight: 400;
   }
 }
 @media screen and (max-width: 480px) {
-  .cart .product {
+  .card .header {
     border-top: 1px solid #EAEEF1;
     padding-top: 10px;
     margin-bottom: 40px;
   }
 }
-.cart .merchandise {
+.card .description {
   display: grid;
   grid-template-columns: 3fr 7fr;
   gap: 24px;
   margin-bottom: 22px;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise {
+  .card .description {
     grid-template-columns: auto;
     margin-top: 70px;
   }
 }
 @media screen and (max-width: 480px) {
-  .cart .merchandise {
+  .card .description {
     gap: 32px;
   }
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .sistem {
+  .card .description > div {
     grid-row: 2/span 1;
   }
 }
-.cart .merchandise .sistem p {
+.card .description > div p {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3609,12 +3612,12 @@ h2 {
   margin-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .sistem p {
+  .card .description > div p {
     border: none;
     margin-bottom: 20px;
   }
 }
-.cart .merchandise .sistem ul {
+.card .description > div ul {
   border-top: 1px solid #EAEEF1;
   font-size: 24px;
   line-height: 28px;
@@ -3625,7 +3628,7 @@ h2 {
   list-style-type: disc;
   list-style-position: inside;
 }
-.cart .merchandise .sistem ul li {
+.card .description > div ul li {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3634,17 +3637,17 @@ h2 {
   padding-left: 1.5em;
   margin-left: 5px;
 }
-.cart .merchandise .sistem .button-box {
+.card .description > div .button-box {
   display: flex;
   gap: 24px;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .sistem .button-box {
+  .card .description > div .button-box {
     gap: 16px;
     flex-direction: column-reverse;
   }
 }
-.cart .merchandise .sistem .button-box button:first-of-type {
+.card .description > div .button-box button:first-of-type {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3656,7 +3659,7 @@ h2 {
   border-radius: 4px;
   padding: 17px 30px;
 }
-.cart .merchandise .sistem .button-box button:last-of-type {
+.card .description > div .button-box button:last-of-type {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3666,18 +3669,18 @@ h2 {
   color: white;
   border-radius: 4px;
 }
-.cart .merchandise .sistem .more {
+.card .description > div .more {
   display: flex;
   gap: 8px;
   margin-top: 48px;
   padding-bottom: 50px;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .sistem .more {
+  .card .description > div .more {
     display: none;
   }
 }
-.cart .merchandise .sistem .more span {
+.card .description > div .more span {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -3686,18 +3689,18 @@ h2 {
   display: flex;
   align-items: center;
 }
-.cart .merchandise .linux {
+.card .description > picture {
   border: 1px solid #EAEEF1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .linux {
+  .card .description > picture {
     border: none;
   }
 }
-.cart .merchandise .linux img {
+.card .description > picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
@@ -3705,26 +3708,26 @@ h2 {
   max-height: 336px;
 }
 @media screen and (max-width: 768px) {
-  .cart .merchandise .linux img {
+  .card .description > picture img {
     max-width: 375px;
     max-height: 275px;
   }
 }
-.cart .property {
+.card .characteristics {
   border-top: 1px solid #EAEEF1;
 }
-.cart .property .header {
+.card .characteristics .tabs-characteristics {
   display: flex;
   gap: 24px;
   padding-top: 55px;
 }
 @media screen and (max-width: 480px) {
-  .cart .property .header {
+  .card .characteristics .tabs-characteristics {
     gap: 0;
     padding-top: 32px;
   }
 }
-.cart .property .header h5 {
+.card .characteristics .tabs-characteristics button {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3734,14 +3737,15 @@ h2 {
   border: 1px solid #EAEEF1;
   text-align: center;
 }
-.cart .property .header h5:first-of-type {
+.card .characteristics .tabs-characteristics button:first-of-type {
   color: #499647;
   background-color: #EAEEF1;
 }
-.cart .property .header h5:last-of-type {
+.card .characteristics .tabs-characteristics button:last-of-type {
   color: #3D4548;
+  background-color: white;
 }
-.cart .property .info {
+.card .characteristics .info {
   border: 1px solid #EAEEF1;
   margin-top: 22px;
   display: flex;
@@ -3749,53 +3753,53 @@ h2 {
   padding: 48px 0 40px 28px;
 }
 @media screen and (max-width: 480px) {
-  .cart .property .info {
+  .card .characteristics .info {
     margin-top: 32px;
     padding: 29px 1px 25px 27px;
   }
 }
-.cart .property .info span {
+.card .characteristics .info span {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
   color: #909090;
 }
-.cart .property .info div {
+.card .characteristics .info div {
   border-bottom: 1px dotted #909090;
   max-width: 284px;
   flex: 1;
   height: 1em;
   min-width: 16px;
 }
-.cart .partner {
+.card .partners {
   margin: 70px 0;
 }
 @media screen and (max-width: 480px) {
-  .cart .partner {
+  .card .partners {
     margin: 90px 0;
   }
 }
-.cart .partner h4 {
+.card .partners h4 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   color: #282828;
 }
-.cart .partner .astra {
+.card .partners .astra {
   display: flex;
   border: 1px solid #EAEEF1;
   max-width: 872px;
   margin-top: 32px;
 }
 @media screen and (max-width: 480px) {
-  .cart .partner .astra {
+  .card .partners .astra {
     flex-direction: column;
   }
 }
-.cart .partner .astra picture:first-of-type {
+.card .partners .astra picture:first-of-type {
   text-align: center;
 }
-.cart .partner .astra .contact {
+.card .partners .astra .contact {
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -3803,30 +3807,30 @@ h2 {
   border-left: 1px solid #EAEEF1;
 }
 @media screen and (max-width: 480px) {
-  .cart .partner .astra .contact {
+  .card .partners .astra .contact {
     padding-bottom: 22px;
     border-left: none;
   }
 }
-.cart .partner .astra .contact div {
+.card .partners .astra .contact div {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-top: 45px;
 }
-.cart .partner .astra .contact div span:first-of-type {
+.card .partners .astra .contact div span:first-of-type {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
 }
-.cart .partner .astra .contact div span:last-of-type {
+.card .partners .astra .contact div span:last-of-type {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   font-size: 12px;
   color: #909090;
 }
-.cart .partner .astra .contact div a {
+.card .partners .astra .contact div a {
   text-decoration: none;
   font-size: 21px;
   line-height: 23px;
@@ -3834,43 +3838,43 @@ h2 {
   font-size: 20px;
   color: #3D4548;
 }
-.cart .partner .astra .contact picture {
+.card .partners .astra .contact picture {
   padding-top: 20px;
 }
 @media screen and (max-width: 480px) {
-  .cart .partner .astra .contact picture {
+  .card .partners .astra .contact picture {
     display: none;
   }
 }
-.cart .reservation {
+.card .reservation {
   display: grid;
   grid-template-columns: 3fr 7fr;
   padding-top: 65px;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation {
+  .card .reservation {
     grid-template-columns: auto;
     padding-top: 20px;
   }
 }
-.cart .reservation .left {
+.card .reservation .tabs-reservation {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .left {
+  .card .reservation .tabs-reservation {
     flex-direction: row;
     gap: 0;
   }
 }
-.cart .reservation .left h4 {
+.card .reservation .tabs-reservation button {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .left h4 {
+  .card .reservation .tabs-reservation button {
     font-size: 16px;
     line-height: 21px;
     font-weight: 500;
@@ -3881,23 +3885,23 @@ h2 {
     border: 1px solid #EAEEF1;
   }
 }
-.cart .reservation .left h4:first-of-type {
+.card .reservation .tabs-reservation button:first-of-type {
   color: #499647;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .left h4:first-of-type {
+  .card .reservation .tabs-reservation button:first-of-type {
     background-color: #EAEEF1;
   }
 }
-.cart .reservation .left h4:last-of-type {
+.card .reservation .tabs-reservation button:last-of-type {
   color: #909090;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .right {
+  .card .reservation .form {
     margin-top: 54px;
   }
 }
-.cart .reservation .right h3 {
+.card .reservation .form h3 {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
@@ -3905,14 +3909,14 @@ h2 {
   color: #282828;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .right h3 {
+  .card .reservation .form h3 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 16px;
   }
 }
-.cart .reservation .right p {
+.card .reservation .form p {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3920,16 +3924,16 @@ h2 {
   margin-bottom: 42px;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .right p {
+  .card .reservation .form p {
     margin-bottom: 32px;
   }
 }
-.cart .reservation .right form {
+.card .reservation .form form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.cart .reservation .right form .info {
+.card .reservation .form form .info {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3938,15 +3942,15 @@ h2 {
   border: none;
   border-bottom: 1px solid #EAEEF1;
 }
-.cart .reservation .right form .company {
+.card .reservation .form form .company {
   line-height: 0.8em;
 }
 @media screen and (max-width: 480px) {
-  .cart .reservation .right form .company {
+  .card .reservation .form form .company {
     margin-top: 24px;
   }
 }
-.cart .reservation .right form label {
+.card .reservation .form form label {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -3955,15 +3959,15 @@ h2 {
   margin-top: -8px;
 }
 @media screen and (max-width: 768px) {
-  .cart .reservation .right form label {
+  .card .reservation .form form label {
     margin-top: -16px;
   }
 }
-.cart .reservation .right form label a {
+.card .reservation .form form label a {
   text-decoration: none;
   color: #499647;
 }
-.cart .reservation .right form .button--green {
+.card .reservation .form form .button--green {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -3975,7 +3979,7 @@ h2 {
   margin-top: 10px;
 }
 @media screen and (max-width: 480px) {
-  .cart .reservation .right form .button--green {
+  .card .reservation .form form .button--green {
     margin-left: 0;
   }
 }
