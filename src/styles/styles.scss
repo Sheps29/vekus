@@ -2295,7 +2295,7 @@ h2 {
 	padding-left: 60px;
 	padding-right: 60px;
 
-	@media screen and (max-width: 678px) {
+	@media screen and (max-width: 768px) {
 		padding-left: 24px;
 		padding-right: 24px;
 	}
@@ -2309,5 +2309,129 @@ h2 {
 		display: inline-block;
     font-size: 13px;
     color: #909090;
+	}
+
+	h3 {
+		@include xxl;
+		margin: 32px 0 56px;
+
+		@media screen and (max-width: 768px) {
+			margin: 20px 0 32px;
+		}
+	}
+
+	.general {
+
+		.nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			border: 1px solid #EAEEF1;
+			border-radius: 4px;
+
+			div:first-of-type {
+				display: flex;
+				align-items: center;
+				overflow-x: scroll;
+				scrollbar-width: none;
+
+				span {
+					@include xxs;
+					color: #282828;
+					display: block;
+					padding: 13px 28px;
+					border-right: 1px solid #EAEEF1;
+				}
+
+				span:first-of-type {
+					background-color: #EAEEF1;
+				}
+			}
+
+			div:last-of-type {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				padding-right: 30px;
+
+				span {
+					@include s;
+				}
+			}
+		}
+
+		.info {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+			margin: 32px 0 40px;
+
+			@media screen and (max-width: 768px) {
+				grid-template-columns: auto;
+				gap: 20px;
+			}
+
+			.item {
+				position: relative;
+
+				picture {
+					
+					img {
+						@include img;
+					}
+				}
+
+				.box {
+					position: absolute;
+					right: 24px;
+					left: 20px;
+					bottom: 10%;
+					color: white;
+
+					div {
+						display: flex;
+						justify-content: space-between;
+						padding-bottom: 12px;
+
+						span {
+							@include xxs;
+							opacity: 80%;
+						}
+					}
+
+					p {
+						@include s;
+					}
+				}
+			}
+
+			.item:nth-of-type(4) {
+				grid-column: 1 / span 2;
+			}
+
+			.item:nth-of-type(4), .item:nth-of-type(5) {
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
+		}
+
+		button {
+			@include button-white;
+			border-color: $grey;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			justify-content: center;
+			width: 100%;
+
+			picture {
+
+				img {
+					@include img;
+				}
+			}
+		}
 	}
 }
