@@ -2330,11 +2330,23 @@ h2 {
 			border: 1px solid #EAEEF1;
 			border-radius: 4px;
 
+			@media screen and (max-width: 768px) {
+				border: none;
+				flex-direction: column-reverse;
+				gap: 24px;
+			}
+
 			div:first-of-type {
 				display: flex;
 				align-items: center;
 				overflow-x: scroll;
 				scrollbar-width: none;
+				scroll-snap-type: x mandatory;
+
+				@media screen and (max-width: 768px) {
+					border: 1px solid #EAEEF1;
+					width: 100%;
+				}
 
 				span {
 					@include xxs;
@@ -2346,6 +2358,14 @@ h2 {
 
 				span:first-of-type {
 					background-color: #EAEEF1;
+					min-width: 80px;
+				}
+
+				span:last-of-type {
+
+					@media screen and (max-width: 768px) {
+						border-right: none;
+					}					
 				}
 			}
 
@@ -2355,8 +2375,20 @@ h2 {
 				gap: 20px;
 				padding-right: 30px;
 
+				@media screen and (max-width: 768px) {
+					flex-direction: row-reverse;
+					width: 100%;
+					justify-content: center;
+					border: 1px solid #EAEEF1;
+					padding: 14px 0;
+				}
+
 				span {
 					@include s;
+
+					@media screen and (max-width: 768px) {
+						@include xs;
+					}
 				}
 			}
 		}
