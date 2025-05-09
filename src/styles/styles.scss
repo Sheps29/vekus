@@ -2761,13 +2761,21 @@ h2 {
 		padding-right: 16px;
 	}
 
-	.back {
-		display: inline-block;
-		font-size: 13px;
-		color: $grey-300;
+	.breadcrumbs {
+		display: flex;
 
 		@media screen and (max-width: 768px) {
 			margin-bottom: 42px;
+		}
+
+		li {
+			font-size: 13px;
+			color: $grey-300;
+		}
+
+		li:first-of-type::after, li:nth-of-type(2)::after {
+			content: '\2014';
+			margin: 0 5px;
 		}
 	}
 
@@ -3430,18 +3438,28 @@ h2 {
 				max-width: 200px;
 				border: 1px solid $grey-100;
 				text-align: center;
-			}
-
-			button:first-of-type {
-				color: $green;
-				background-color: $grey-100;
-			}
-
-			button:last-of-type {
-				color: $grey-400;
-				background-color: $white;
-			} 
+			}	
 		}
+
+		.tabs--green-white button:first-of-type {
+			color: $green;
+			background-color: $grey-100;
+		}
+
+		.tabs--green-white button:last-of-type {
+			color: $grey-400;
+			background-color: $white;
+		} 
+
+		.tabs--white-green button:first-of-type {
+			color: $grey-400;
+			background-color: $white;
+		}
+
+		.tabs--white-green button:last-of-type {
+			color: $green;
+			background-color: $grey-100;
+		} 
 
 		.info {
 			border: 1px solid $grey-100;
@@ -3468,9 +3486,26 @@ h2 {
 				min-width: 16px;
 			}
 		}
+
+		.specification {
+			@include xs;
+			max-width: 872px;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			padding-top: 16px;
+			border-top: 1px solid $grey-100;
+			color: $grey-400;
+			margin-top: 26px;
+
+			@media screen and (max-width: 768px) {
+				border-top: none;
+				margin-top: 24;
+			}
+		}
 	}
 
-	.partners {
+	.card-partners {
 		margin: 70px 0;
 
 		@media screen and (max-width: 480px) {
@@ -3565,6 +3600,9 @@ h2 {
   
       button {
         @include m;
+				border: none;
+				background-color: $white;
+				text-align: left;
   
         @media screen and (max-width: 768px) {
           @include xs;
@@ -3575,21 +3613,33 @@ h2 {
           border: 1px solid $grey-100;
         }
       }
-  
-      button:first-of-type {
-        color: $green;
-  
-        @media screen and (max-width: 768px) {
-          background-color: $grey-100;
-        }
-      }
-
-			button:last-of-type {
-				color: $grey-300;
-			}
     }
 
-		.form {
+		.reservation--green-white button:first-of-type {
+			color: $green;
+
+			@media screen and (max-width: 768px) {
+				background-color: $grey-100;
+			}
+		}
+
+		.reservation--green-white button:last-of-type {
+			color: $grey-300;
+		}
+
+		.reservation--white-green button:first-of-type {
+			color: $grey-300;
+		}
+
+		.reservation--white-green button:last-of-type {
+			color: $green;
+
+			@media screen and (max-width: 768px) {
+				background-color: $grey-100;
+			}
+		}
+
+		.form-container {
   
       @media screen and (max-width: 768px) {
         margin-top: 54px;
