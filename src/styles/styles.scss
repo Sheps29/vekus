@@ -2761,15 +2761,23 @@ h2 {
 		padding-right: 16px;
 	}
 
-	.back {
-		display: inline-block;
-		font-size: 13px;
-		color: $grey-300;
+	.breadcrumbs {
+    display: flex;
 
-		@media screen and (max-width: 768px) {
-			margin-bottom: 42px;
-		}
-	}
+    @media screen and (max-width: 768px) {
+      margin-bottom: 42px;
+    }
+
+    li {
+      font-size: 13px;
+      color: $grey-300;
+    }
+
+    li:first-of-type::after {
+      content: '\2014';
+      margin: 0 5px;
+    }
+  }
 
 	h1 {
 		grid-column: 1 / span 1;
@@ -3286,19 +3294,28 @@ h2 {
 		padding-right: 16px;
 	}
 
-	.back {
-		display: inline-block;
-		font-size: 13px;
-		color: $grey-300;
+	.breadcrumbs {
+    display: flex;
 
-		@media screen and (max-width: 768px) {
-			margin-bottom: 32px;
-		}
-	}
+    @media screen and (max-width: 768px) {
+      margin-bottom: 42px;
+    }
 
-	h3 {
+    li {
+      font-size: 13px;
+      color: $grey-300;
+    }
+
+    li:first-of-type::after, li:nth-of-type(2) {
+      content: '\2014';
+      margin: 0 5px;
+    }
+  }
+
+	h1 {
 		@include xl;
 		color: $grey-500;
+		margin-top: 32px;
 
 		@media screen and (max-width: 768px) {
 			@include l;
@@ -3702,17 +3719,25 @@ h2 {
 		padding-right: 16px;
 	}
 
-	.back {
-		display: inline-block;
-		font-size: 13px;
-		color: $grey-300;
+	.breadcrumbs {
+    display: flex;
 
-		@media screen and (max-width: 768px) {
-			margin-bottom: 32px;
-		}
-	}
+    @media screen and (max-width: 768px) {
+      margin-bottom: 42px;
+    }
 
-	h3 {
+    li {
+      font-size: 13px;
+      color: $grey-300;
+    }
+
+    li:first-of-type::after {
+      content: '\2014';
+      margin: 0 5px;
+    }
+  }
+
+	h1 {
 		@include xl;
 		color: $grey-500;
 		margin-top: 24px;

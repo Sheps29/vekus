@@ -3050,15 +3050,21 @@ h2 {
     padding-right: 16px;
   }
 }
-.import .back {
-  display: inline-block;
+.import .breadcrumbs {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .import .breadcrumbs {
+    margin-bottom: 42px;
+  }
+}
+.import .breadcrumbs li {
   font-size: 13px;
   color: #909090;
 }
-@media screen and (max-width: 768px) {
-  .import .back {
-    margin-bottom: 42px;
-  }
+.import .breadcrumbs li:first-of-type::after {
+  content: "—";
+  margin: 0 5px;
 }
 .import h1 {
   grid-column: 1/span 1;
@@ -3569,24 +3575,31 @@ h2 {
     padding-right: 16px;
   }
 }
-.computer .back {
-  display: inline-block;
+.computer .breadcrumbs {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .computer .breadcrumbs {
+    margin-bottom: 42px;
+  }
+}
+.computer .breadcrumbs li {
   font-size: 13px;
   color: #909090;
 }
-@media screen and (max-width: 768px) {
-  .computer .back {
-    margin-bottom: 32px;
-  }
+.computer .breadcrumbs li:first-of-type::after, .computer .breadcrumbs li:nth-of-type(2) {
+  content: "—";
+  margin: 0 5px;
 }
-.computer h3 {
+.computer h1 {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
   color: #282828;
+  margin-top: 32px;
 }
 @media screen and (max-width: 768px) {
-  .computer h3 {
+  .computer h1 {
     font-size: 26px;
     line-height: 28px;
     font-weight: 400;
@@ -4008,17 +4021,23 @@ h2 {
     padding-right: 16px;
   }
 }
-.pc .back {
-  display: inline-block;
+.pc .breadcrumbs {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .pc .breadcrumbs {
+    margin-bottom: 42px;
+  }
+}
+.pc .breadcrumbs li {
   font-size: 13px;
   color: #909090;
 }
-@media screen and (max-width: 768px) {
-  .pc .back {
-    margin-bottom: 32px;
-  }
+.pc .breadcrumbs li:first-of-type::after {
+  content: "—";
+  margin: 0 5px;
 }
-.pc h3 {
+.pc h1 {
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
@@ -4026,7 +4045,7 @@ h2 {
   margin-top: 24px;
 }
 @media screen and (max-width: 768px) {
-  .pc h3 {
+  .pc h1 {
     font-size: 26px;
     line-height: 28px;
     font-weight: 400;
