@@ -1,0 +1,14 @@
+.product {
+	display: flex;
+	gap: 24px;
+
+	h4 {
+		@include h4;
+		color: #282828;
+	}
+
+	p {
+		@include p;
+		
+	}
+}
