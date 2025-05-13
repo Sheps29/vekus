@@ -4260,40 +4260,51 @@ h2 {
   border-radius: 4px;
 }
 
-.news {
+.events {
   margin: 40px 0;
   padding-left: 60px;
   padding-right: 60px;
 }
 @media screen and (max-width: 768px) {
-  .news {
+  .events {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  .news {
+  .events {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
-.news .back {
-  display: inline-block;
+.events .breadcrumbs {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .events .breadcrumbs {
+    margin-bottom: 42px;
+  }
+}
+.events .breadcrumbs li {
   font-size: 13px;
   color: #909090;
 }
-.news h3 {
+.events .breadcrumbs li:first-of-type::after {
+  content: "—";
+  margin: 0 5px;
+}
+.events h1 {
   font-size: 40px;
   line-height: 44px;
   font-weight: 400;
   margin: 32px 0 56px;
 }
 @media screen and (max-width: 768px) {
-  .news h3 {
+  .events h1 {
     margin: 20px 0 32px;
   }
 }
-.news .general .nav {
+.events .general .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4302,13 +4313,13 @@ h2 {
   border-radius: 4px;
 }
 @media screen and (max-width: 768px) {
-  .news .general .nav {
+  .events .general .nav {
     border: none;
     flex-direction: column-reverse;
     gap: 24px;
   }
 }
-.news .general .nav div:first-of-type {
+.events .general .nav div:first-of-type {
   display: flex;
   align-items: center;
   overflow-x: scroll;
@@ -4316,12 +4327,12 @@ h2 {
   scroll-snap-type: x mandatory;
 }
 @media screen and (max-width: 768px) {
-  .news .general .nav div:first-of-type {
+  .events .general .nav div:first-of-type {
     border: 1px solid #EAEEF1;
     width: 100%;
   }
 }
-.news .general .nav div:first-of-type span {
+.events .general .nav div:first-of-type span {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -4330,23 +4341,23 @@ h2 {
   padding: 13px 28px;
   border-right: 1px solid #EAEEF1;
 }
-.news .general .nav div:first-of-type span:first-of-type {
+.events .general .nav div:first-of-type span:first-of-type {
   background-color: #EAEEF1;
   min-width: 80px;
 }
 @media screen and (max-width: 768px) {
-  .news .general .nav div:first-of-type span:last-of-type {
+  .events .general .nav div:first-of-type span:last-of-type {
     border-right: none;
   }
 }
-.news .general .nav div:last-of-type {
+.events .general .nav div:last-of-type {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-right: 30px;
 }
 @media screen and (max-width: 768px) {
-  .news .general .nav div:last-of-type {
+  .events .general .nav div:last-of-type {
     flex-direction: row-reverse;
     width: 100%;
     justify-content: center;
@@ -4354,70 +4365,168 @@ h2 {
     padding: 14px 0;
   }
 }
-.news .general .nav div:last-of-type span {
+.events .general .nav div:last-of-type span {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  .news .general .nav div:last-of-type span {
+  .events .general .nav div:last-of-type span {
     font-size: 16px;
     line-height: 21px;
     font-weight: 500;
   }
 }
-.news .general .info {
+.events .general .info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin: 32px 0 40px;
 }
-@media screen and (max-width: 768px) {
-  .news .general .info {
+@media screen and (max-width: 991px) {
+  .events .general .info {
     grid-template-columns: auto;
     gap: 20px;
   }
 }
-.news .general .info .item {
+.events .general .info .item {
   position: relative;
 }
-.news .general .info .item picture img {
+.events .general .info .item picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.news .general .info .item .box {
+.events .general .info .item .box {
   position: absolute;
   right: 24px;
   left: 20px;
   bottom: 10%;
   color: white;
 }
-.news .general .info .item .box div {
+.events .general .info .item .box div {
   display: flex;
   justify-content: space-between;
   padding-bottom: 12px;
 }
-.news .general .info .item .box div span {
+.events .general .info .item .box div span {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   opacity: 80%;
 }
-.news .general .info .item .box p {
+.events .general .info .item .box p {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
 }
-.news .general .info .item:nth-of-type(4) {
+.events .general .info .item:nth-of-type(4) {
   grid-column: 1/span 2;
 }
 @media screen and (max-width: 768px) {
-  .news .general .info .item:nth-of-type(4), .news .general .info .item:nth-of-type(5) {
+  .events .general .info .item:nth-of-type(4), .events .general .info .item:nth-of-type(5) {
     display: none;
   }
 }
-.news .general button {
+.events .general .info .element {
+  position: relative;
+}
+.events .general .info .element picture {
+  display: block;
+  position: relative;
+}
+.events .general .info .element picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.events .general .info .element picture::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to top, black, transparent);
+  inset: 0;
+  opacity: 80%;
+}
+.events .general .info .element .marker {
+  display: block;
+  position: absolute;
+  padding: 13px 21px;
+  top: 7%;
+  right: 0;
+  color: white;
+  background-color: #499647;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .events .general .info .element .marker {
+    top: 3%;
+    padding: 13px;
+  }
+}
+.events .general .info .element .box {
+  position: absolute;
+  right: 24px;
+  left: 20px;
+  bottom: 10%;
+  color: white;
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .events .general .info .element .box {
+    left: 16px;
+    right: 16px;
+    bottom: 3%;
+  }
+}
+.events .general .info .element .box div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.events .general .info .element .box div span:first-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  opacity: 80%;
+}
+.events .general .info .element .box div span:nth-of-type(2) {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .events .general .info .element .box div span:nth-of-type(2) {
+    font-size: 18px;
+  }
+}
+.events .general .info .element .box div span:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  opacity: 80%;
+}
+@media screen and (max-width: 768px) {
+  .events .general .info .element .box div span:last-of-type {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+.events .general .info .element:first-of-type {
+  grid-column: 1/span 2;
+}
+@media screen and (max-width: 480px) {
+  .events .general .info .element:first-of-type {
+    grid-column: 1/span 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .events .general .info .element:nth-of-type(4), .events .general .info .element:nth-of-type(5) {
+    display: none;
+  }
+}
+.events .general .loading {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -4432,10 +4541,150 @@ h2 {
   justify-content: center;
   width: 100%;
 }
-.news .general button picture img {
+.events .general .loading picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
+}
+.events .reservation {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding-top: 65px;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation {
+    grid-template-columns: auto;
+    padding-top: 20px;
+  }
+}
+.events .reservation .header-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .header-tabs {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.events .reservation .header-tabs button {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  border: none;
+  background-color: white;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .header-tabs button {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
+}
+.events .reservation .header-tabs button:first-of-type {
+  color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .header-tabs button:first-of-type {
+    background-color: #EAEEF1;
+  }
+}
+.events .reservation .header-tabs button:last-of-type {
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .application {
+    margin-top: 54px;
+  }
+}
+.events .reservation .application h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .application h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.events .reservation .application p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .application p {
+    margin-bottom: 32px;
+  }
+}
+.events .reservation .application form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.events .reservation .application form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.events .reservation .application form .company {
+  line-height: 0.8em;
+}
+@media screen and (max-width: 480px) {
+  .events .reservation .application form .company {
+    margin-top: 24px;
+  }
+}
+.events .reservation .application form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3D4548;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .events .reservation .application form label {
+    margin-top: -16px;
+  }
+}
+.events .reservation .application form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.events .reservation .application form .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  .events .reservation .application form .button--green {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

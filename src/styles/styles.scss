@@ -3959,7 +3959,7 @@ h2 {
 }
 
 
-.news {
+.events {
 	margin: 40px 0;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -3974,13 +3974,25 @@ h2 {
 		padding-right: 16px;
 	}
 
-	.back {
-		display: inline-block;
-    font-size: 13px;
-    color: #909090;
-	}
+	.breadcrumbs {
+    display: flex;
 
-	h3 {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 42px;
+    }
+
+    li {
+      font-size: 13px;
+      color: $grey-300;
+    }
+
+    li:first-of-type::after {
+      content: '\2014';
+      margin: 0 5px;
+    }
+  }
+
+	h1 {
 		@include xxl;
 		margin: 32px 0 56px;
 
@@ -4013,20 +4025,20 @@ h2 {
 				scroll-snap-type: x mandatory;
 
 				@media screen and (max-width: 768px) {
-					border: 1px solid #EAEEF1;
+					border: 1px solid $grey-100;
 					width: 100%;
 				}
 
 				span {
 					@include xxs;
-					color: #282828;
+					color: $grey-500;
 					display: block;
 					padding: 13px 28px;
-					border-right: 1px solid #EAEEF1;
+					border-right: 1px solid $grey-100;
 				}
 
 				span:first-of-type {
-					background-color: #EAEEF1;
+					background-color: $grey-100;
 					min-width: 80px;
 				}
 
@@ -4048,7 +4060,7 @@ h2 {
 					flex-direction: row-reverse;
 					width: 100%;
 					justify-content: center;
-					border: 1px solid #EAEEF1;
+					border: 1px solid $grey-100;
 					padding: 14px 0;
 				}
 
@@ -4068,7 +4080,7 @@ h2 {
 			gap: 24px;
 			margin: 32px 0 40px;
 
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 991px) {
 				grid-template-columns: auto;
 				gap: 20px;
 			}
@@ -4116,9 +4128,104 @@ h2 {
 					display: none;
 				}
 			}
+
+			.element {
+				position: relative;
+
+				picture {
+					display: block;
+					position: relative;
+					
+					img {
+						@include img;
+					}
+				}
+
+				picture::after {
+					content: '';
+					position: absolute;
+					background-image: linear-gradient(to top, black, transparent);
+					inset: 0;
+					opacity: 80%;
+				}
+
+				.marker {
+					display: block;
+					position: absolute;
+					padding: 13px 21px;
+					top: 7%;
+					right: 0;
+					color: $white;
+					background-color: $green;
+					border-top-left-radius: 4px;
+					border-bottom-left-radius: 4px;
+					white-space: nowrap;
+
+					@media screen and (max-width: 768px) and (min-width: 480px) {
+						top: 3%;
+						padding: 13px;
+					}
+				}
+
+				.box {
+					position: absolute;
+					right: 24px;
+					left: 20px;
+					bottom: 10%;
+					color: white;
+
+					@media screen and (max-width: 768px) and (min-width: 480px) {
+						left: 16px;
+						right: 16px;
+						bottom: 3%;
+					}
+
+					div {
+						display: flex;
+						flex-direction: column;
+						gap: 8px;
+
+						span:first-of-type {
+							@include xxs;
+							opacity: 80%;
+						}
+
+						span:nth-of-type(2) {
+							@include s;
+
+							@media screen and (max-width: 768px) {
+								font-size: 18px;
+							}
+						}
+
+						span:last-of-type {
+							@include xs;
+							opacity: 80%;
+
+							@media screen and (max-width: 768px) {
+								@include xxs;
+							}
+						}
+					}
+				}
+			}
+
+			.element:first-of-type {
+				grid-column: 1 / span 2;
+
+				@media screen and (max-width: 480px) {
+					grid-column: 1 / span 1;
+				}
+			}
+
+			.element:nth-of-type(4), .element:nth-of-type(5) {
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
 		}
 
-		button {
+		.loading {
 			@include button-white;
 			border-color: $grey-100;
 			display: flex;
@@ -4135,4 +4242,130 @@ h2 {
 			}
 		}
 	}
+
+	.reservation {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    padding-top: 65px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+      padding-top: 20px;
+    }
+  
+    .header-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        gap: 0;
+      }
+  
+      button {
+        @include m;
+				border: none;
+				background-color: $white;
+				text-align: left;
+  
+        @media screen and (max-width: 768px) {
+          @include xs;
+          display: flex;
+          flex: 1;
+          padding: 13px 0;
+          justify-content: center;
+          border: 1px solid $grey-100;
+        }
+      }
+  
+      button:first-of-type {
+        color: $green;
+  
+        @media screen and (max-width: 768px) {
+          background-color: $grey-100;
+        }
+      }
+
+      button:last-of-type {
+        color: $grey-300;
+      }
+    }
+
+    .application {
+  
+      @media screen and (max-width: 768px) {
+        margin-top: 54px;
+      }
+  
+      h3 {
+        @include xl;
+        margin-bottom: 10px;
+        color: $grey-500;
+  
+        @media screen and (max-width: 768px) {
+          @include m;
+          margin-bottom: 16px;
+        }
+      }
+  
+      p {
+        @include xs;
+        color: $grey-400;
+        margin-bottom: 42px;
+  
+        @media screen and (max-width: 768px) {
+          margin-bottom: 32px;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+  
+        .info {
+          @include xs;
+          color: $grey-300;
+          padding-bottom: 8px;
+          border: none;
+          border-bottom: 1px solid $grey-100;
+        }
+
+        .company {
+          line-height: 0.8em;
+          
+          @media screen and (max-width: 480px) {
+            margin-top: 24px;
+          }
+        }
+  
+        label {
+          @include xxs;
+          font-size: 12px;
+          color: $grey-400;
+          margin-top: -8px;
+  
+          @media screen and (max-width: 768px) {
+            margin-top: -16px;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $green;
+          }
+        }
+  
+        .button--green {
+          @include button-green;
+          margin-left: auto;
+          margin-top: 10px;
+  
+          @media screen and (max-width: 480px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
