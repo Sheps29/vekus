@@ -63,7 +63,7 @@
 }
 
 @mixin button-white {
-  	@include xs;
+  @include xs;
 	padding: 17px 62px;
 	background-color: $white;
 	border: 1px solid $green;

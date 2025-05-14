@@ -2,7 +2,7 @@
 @import 'reset';
 @import 'colors';
 
-section {
+main {
 	margin: 40px 0;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -846,6 +846,10 @@ h2 {
 		border: 1px solid #A0A7AC;
 		box-sizing: border-box;
 	}
+}
+
+.office {
+	
 }
 
 .about {
@@ -4368,4 +4372,97 @@ h2 {
       }
     }
   }
+}
+
+.migrate {
+	
+
+	.breadcrumbs {
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 42px;
+    }
+
+    li {
+      font-size: 13px;
+      color: $grey-300;
+    }
+
+    li:first-of-type::after {
+      content: '\2014';
+      margin: 0 5px;
+    }
+  }
+
+	h1 {
+		@include xxl;
+		margin: 32px 0 56px;
+
+		@media screen and (max-width: 768px) {
+			margin: 20px 0 32px;
+		}
+	}
+
+	.replation {
+		display: grid;
+		grid-template-columns: 3.5fr 6.5fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+		}
+
+		@media screen and (max-width: 768px) {
+			gap: 90px;
+		}
+
+		.transition {
+
+			span {
+				@include m;
+				color: $grey-300;
+				display: block;
+				margin-bottom: 40px;
+			}
+
+			div {
+				display: flex;
+				gap: 24px;
+				flex-wrap: wrap;
+
+				@media screen and (max-width: 768px) {
+					gap: 20px;
+					flex-direction: column;
+				}
+
+				button {
+					border-radius: 4px;
+					white-space: nowrap;
+				}
+
+				button:first-of-type {
+					@include button-green;
+					border: none;
+					padding: 17px 13px;
+				}
+
+				button:last-of-type {
+					@include button-white;
+					border-color: $grey-200;
+					padding: 17px 13px;
+				}
+			}
+		}
+
+		.integration {
+
+			picture {
+
+				img {
+					@include img;
+				}
+			}
+		}
+	}
 }
