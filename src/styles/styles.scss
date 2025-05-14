@@ -4375,7 +4375,6 @@ h2 {
 }
 
 .migrate {
-	
 
 	.breadcrumbs {
     display: flex;
@@ -4406,15 +4405,29 @@ h2 {
 
 	.replation {
 		display: grid;
-		grid-template-columns: 3.5fr 6.5fr;
+		grid-template-columns: 3fr 7fr;
 		gap: 24px;
 
 		@media screen and (max-width: 768px) {
 			grid-template-columns: auto;
 		}
 
-		@media screen and (max-width: 768px) {
-			gap: 90px;
+		@media screen and (max-width: 480px) {
+			gap: 32px;
+		}
+
+		.mobile {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: block;
+				margin-left: -16px;
+				margin-right: -16px;
+			}
+
+			img {
+				@include img;
+			}
 		}
 
 		.transition {
@@ -4424,6 +4437,13 @@ h2 {
 				color: $grey-300;
 				display: block;
 				margin-bottom: 40px;
+			}
+
+			.connection {
+				@include button-green;
+				border: none;
+				border-radius: 4px;
+				white-space: nowrap;
 			}
 
 			div {
@@ -4439,6 +4459,7 @@ h2 {
 				button {
 					border-radius: 4px;
 					white-space: nowrap;
+					flex: 1;
 				}
 
 				button:first-of-type {
@@ -4458,11 +4479,319 @@ h2 {
 		.integration {
 
 			picture {
+				display: block;
+				margin-bottom: 24px;
+
+				img {
+					@include img;
+				}
+
+				@media screen and (max-width: 480px) {
+					display: none;
+				}
+			}
+
+			p {
+				@include xl;
+				color: $grey-500;
+
+				@media screen and (max-width: 768px) {
+					@include l;
+				}
+			}
+
+			p:first-of-type {
+				margin-bottom: 32px;
+
+				@media screen and (max-width: 480px) {
+					margin-top: 58px;
+				}
+			}
+
+			p span {
+				color: $green;
+			}
+
+			.buy {
+				@include xs;
+				color: $grey-400;
+				margin-bottom: 24px;
+			}
+
+			.buy:first-of-type {
+				padding-top: 16px;
+				border-top: 1px solid $grey-100;
+			}
+
+			button {
+				@include button-green;
+				border: none;
+				border-radius: 4px;
+				white-space: nowrap;
+				margin-top: 32px;
+			}
+		}
+	}
+
+	.position {
+		margin-top: 130px;
+		margin-bottom: 130px;
+
+		@media screen and (max-width: 768px) {
+			margin-top: 90px;
+		}
+
+		.header {
+			@include l;
+			color: $grey-300;
+			margin-bottom: 32px;
+		}
+
+		.leasing {
+			max-width: 424px;
+		}
+
+		.list {
+			display: flex;
+			gap: 24px;
+			flex-wrap: wrap;
+
+			.item {
+				padding-top: 32px;
+				border-top: 1px solid $grey-100;
+				flex-basis: 30%;
+
+				@media screen and (max-width: 768px) {
+					flex-basis: 45%;
+				}
+
+				@media screen and (max-width: 480px) {
+					flex-basis: 100%;
+				}
+
+				.number {
+					@include m;
+					background-color: $green;
+					color: $white;
+					border-radius: 50%;
+					padding: 14px;
+				}
+
+				span:last-of-type {
+					@include s;
+					display: block;
+					color: $grey-500;
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+
+	.roster {
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+			margin: 64px 0 30px;
+
+			@media screen and (max-width: 480px) {
+				@include m;
+			}
+		}
+
+		.makers {
+			display: flex;
+			align-items: center;
+
+			@media screen and (max-width: 480px) {
+				overflow-x: scroll;
+			}
+
+			picture {
+				display: block;
 
 				img {
 					@include img;
 				}
 			}
+
+			picture:first-of-type, picture:last-of-type{
+
+				@media screen and (max-width: 480px) {
+					display: none;
+				}
+			}
+
+			picture:last-of-type {
+
+				img {
+					rotate: 180deg;
+				}
+			}
+
+			.maker {
+				border-right: 1px solid $grey-100;
+
+				@media screen and (max-width: 480px) {
+					min-width: 165px;
+				}
+			}
+
+			.maker:last-of-type {
+				border-right: none;
+			}
+		}
+
+		.tabs {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: flex;
+				justify-content: center;
+				gap: 18px;
+			}
+
+			button {
+				background-color: $white;
+				border: none;
+			}
+
+			button:last-of-type {
+
+				picture {
+
+					img {
+						rotate: 180deg;
+					}
+				}
+			}
 		}
 	}
+
+	.reservation {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    padding-top: 65px;
+		margin-top: 130px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+      padding-top: 20px;
+    }
+  
+    .header-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        gap: 0;
+      }
+  
+      button {
+        @include m;
+				border: none;
+				background-color: $white;
+				text-align: left;
+  
+        @media screen and (max-width: 768px) {
+          @include xs;
+          display: flex;
+          flex: 1;
+          padding: 13px 0;
+          justify-content: center;
+          border: 1px solid $grey-100;
+        }
+      }
+  
+      button:first-of-type {
+        color: $green;
+  
+        @media screen and (max-width: 768px) {
+          background-color: $grey-100;
+        }
+      }
+
+      button:last-of-type {
+        color: $grey-300;
+      }
+    }
+
+    .application {
+  
+      @media screen and (max-width: 768px) {
+        margin-top: 54px;
+      }
+  
+      h3 {
+        @include xl;
+        margin-bottom: 10px;
+        color: $grey-500;
+  
+        @media screen and (max-width: 768px) {
+          @include m;
+          margin-bottom: 16px;
+        }
+      }
+  
+      p {
+        @include xs;
+        color: $grey-400;
+        margin-bottom: 42px;
+  
+        @media screen and (max-width: 768px) {
+          margin-bottom: 32px;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+  
+        .info {
+          @include xs;
+          color: $grey-300;
+          padding-bottom: 8px;
+          border: none;
+          border-bottom: 1px solid $grey-100;
+        }
+
+        .company {
+          line-height: 0.8em;
+          
+          @media screen and (max-width: 480px) {
+            margin-top: 24px;
+          }
+        }
+  
+        label {
+          @include xxs;
+          font-size: 12px;
+          color: $grey-400;
+          margin-top: -8px;
+  
+          @media screen and (max-width: 768px) {
+            margin-top: -16px;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $green;
+          }
+        }
+  
+        .button--green {
+          @include button-green;
+          margin-left: auto;
+          margin-top: 10px;
+  
+          @media screen and (max-width: 480px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }

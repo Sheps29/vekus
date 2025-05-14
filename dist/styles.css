@@ -4716,7 +4716,7 @@ h2 {
 }
 .migrate .replation {
   display: grid;
-  grid-template-columns: 3.5fr 6.5fr;
+  grid-template-columns: 3fr 7fr;
   gap: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -4724,10 +4724,25 @@ h2 {
     grid-template-columns: auto;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .migrate .replation {
-    gap: 90px;
+    gap: 32px;
   }
+}
+.migrate .replation .mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .migrate .replation .mobile {
+    display: block;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+.migrate .replation .mobile img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 .migrate .replation .transition span {
   font-size: 24px;
@@ -4736,6 +4751,18 @@ h2 {
   color: #909090;
   display: block;
   margin-bottom: 40px;
+}
+.migrate .replation .transition .connection {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 .migrate .replation .transition div {
   display: flex;
@@ -4751,6 +4778,7 @@ h2 {
 .migrate .replation .transition div button {
   border-radius: 4px;
   white-space: nowrap;
+  flex: 1;
 }
 .migrate .replation .transition div button:first-of-type {
   font-size: 16px;
@@ -4774,10 +4802,331 @@ h2 {
   border-color: #A0A7AC;
   padding: 17px 13px;
 }
+.migrate .replation .integration picture {
+  display: block;
+  margin-bottom: 24px;
+}
 .migrate .replation .integration picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 480px) {
+  .migrate .replation .integration picture {
+    display: none;
+  }
+}
+.migrate .replation .integration p {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .migrate .replation .integration p {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.migrate .replation .integration p:first-of-type {
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 480px) {
+  .migrate .replation .integration p:first-of-type {
+    margin-top: 58px;
+  }
+}
+.migrate .replation .integration p span {
+  color: #499647;
+}
+.migrate .replation .integration .buy {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 24px;
+}
+.migrate .replation .integration .buy:first-of-type {
+  padding-top: 16px;
+  border-top: 1px solid #EAEEF1;
+}
+.migrate .replation .integration button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-top: 32px;
+}
+.migrate .position {
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+@media screen and (max-width: 768px) {
+  .migrate .position {
+    margin-top: 90px;
+  }
+}
+.migrate .position .header {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #909090;
+  margin-bottom: 32px;
+}
+.migrate .position .leasing {
+  max-width: 424px;
+}
+.migrate .position .list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.migrate .position .list .item {
+  padding-top: 32px;
+  border-top: 1px solid #EAEEF1;
+  flex-basis: 30%;
+}
+@media screen and (max-width: 768px) {
+  .migrate .position .list .item {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .migrate .position .list .item {
+    flex-basis: 100%;
+  }
+}
+.migrate .position .list .item .number {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  background-color: #499647;
+  color: white;
+  border-radius: 50%;
+  padding: 14px;
+}
+.migrate .position .list .item span:last-of-type {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  display: block;
+  color: #282828;
+  padding-top: 20px;
+}
+.migrate .roster h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+  margin: 64px 0 30px;
+}
+@media screen and (max-width: 480px) {
+  .migrate .roster h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.migrate .roster .makers {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .migrate .roster .makers {
+    overflow-x: scroll;
+  }
+}
+.migrate .roster .makers picture {
+  display: block;
+}
+.migrate .roster .makers picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 480px) {
+  .migrate .roster .makers picture:first-of-type, .migrate .roster .makers picture:last-of-type {
+    display: none;
+  }
+}
+.migrate .roster .makers picture:last-of-type img {
+  rotate: 180deg;
+}
+.migrate .roster .makers .maker {
+  border-right: 1px solid #EAEEF1;
+}
+@media screen and (max-width: 480px) {
+  .migrate .roster .makers .maker {
+    min-width: 165px;
+  }
+}
+.migrate .roster .makers .maker:last-of-type {
+  border-right: none;
+}
+.migrate .roster .tabs {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .migrate .roster .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+}
+.migrate .roster .tabs button {
+  background-color: white;
+  border: none;
+}
+.migrate .roster .tabs button:last-of-type picture img {
+  rotate: 180deg;
+}
+.migrate .reservation {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding-top: 65px;
+  margin-top: 130px;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation {
+    grid-template-columns: auto;
+    padding-top: 20px;
+  }
+}
+.migrate .reservation .header-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .header-tabs {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.migrate .reservation .header-tabs button {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  border: none;
+  background-color: white;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .header-tabs button {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
+}
+.migrate .reservation .header-tabs button:first-of-type {
+  color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .header-tabs button:first-of-type {
+    background-color: #EAEEF1;
+  }
+}
+.migrate .reservation .header-tabs button:last-of-type {
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .application {
+    margin-top: 54px;
+  }
+}
+.migrate .reservation .application h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .application h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.migrate .reservation .application p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .application p {
+    margin-bottom: 32px;
+  }
+}
+.migrate .reservation .application form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.migrate .reservation .application form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.migrate .reservation .application form .company {
+  line-height: 0.8em;
+}
+@media screen and (max-width: 480px) {
+  .migrate .reservation .application form .company {
+    margin-top: 24px;
+  }
+}
+.migrate .reservation .application form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3D4548;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .migrate .reservation .application form label {
+    margin-top: -16px;
+  }
+}
+.migrate .reservation .application form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.migrate .reservation .application form .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  .migrate .reservation .application form .button--green {
+    margin-left: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
