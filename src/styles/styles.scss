@@ -1092,25 +1092,332 @@ h2 {
 	}
 }
 
-.box-promo {
-	@include box-with-left-header;
+.business {
 
-	@media screen and (max-width: 678px) {
-		flex-direction: column;
-	}
+	.info {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+		padding-bottom: 24px;
 
-	.activity-header {
-		@include xxl;
-		margin: 0;
-
-		@media screen and (max-width: 678px) {
-			@include l;
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
 		}
 
-		.about {
-			@include top-border;
+		@media screen and (max-width: 480px) {
+			gap: 16px;
+		}
+
+		h1 {
+			@include xxl;
+			color: $grey-400;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		p {
 			@include xs;
-			max-width: 872px;
+			@include top-border;
+			padding-top: 16px;
+		}
+	}
+
+	.tabs {
+			
+		input[type="radio"] {
+			display: none;
+		}
+
+		.headers {
+			display: flex;
+			list-style: none;
+			padding: 0;
+			margin: 32px 0;
+			overflow-x: scroll;
+			overflow-y: hidden;
+
+			&::-webkit-scrollbar {
+				width: 0;
+			}
+
+			li {
+				border: 1px solid $grey-100;
+
+				label {
+					display: inline-block;
+					padding: 13px 21px;
+					cursor: pointer;
+					background: $white;
+					color: $grey-200;
+					transition-duration: 0.3s;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		.content {
+			display: none;
+			padding: 40px;
+
+			@media screen and (max-width: 768px) {
+				padding: 24px;
+			}
+
+			@media screen and (max-width: 480px) {
+				padding: 16px;
+			}
+			
+			.logo {
+				display: flex;
+				justify-content: space-between;
+				gap: 24px;
+				align-items: center;
+				margin-bottom: 56px;
+
+				@media screen and (max-width: 480px) {
+					flex-direction: column;
+					gap: 56px;
+				}
+
+				picture {
+					display: block;
+
+					img {
+						@include img;
+					}
+				}
+
+				div {
+					display: flex;
+					gap: 24px;
+					flex-wrap: wrap;
+
+					button {
+						border-radius: 4px;
+						flex: 1;
+						white-space: nowrap;
+					}
+
+					button:first-of-type {
+						@include button-green;
+					}
+
+					button:last-of-type {
+						@include button-white;
+						border-color: $grey-200;
+					}
+				}
+			}
+
+			.menu {
+				display: flex;
+				flex-direction: column;
+
+				.item {
+					position: relative;
+					width: 100%;
+
+					input[type="checkbox"] {
+						display: none;
+					}
+
+					.listing {
+						@include s;
+
+						.number {
+							@include xs;
+							color: $grey-200;
+							vertical-align: super;
+						}
+					}
+
+					ul {
+						padding-left: 8px;
+						margin-top: 18px;
+
+						li {
+							@include xs;
+							font-size: 18px;
+							list-style-type: square;
+							list-style-position: inside;
+							padding-bottom: 0.25em;
+							color: $grey-400;
+						}
+
+						li::marker {
+							font-size: 0.5em;
+						}
+					}
+
+					.sub {
+						display: flex;
+						gap: 72px;
+						margin-top: 18px;
+
+						@media screen and (max-width: 768px) {
+							flex-direction: column;
+							gap: 0;
+						}
+
+						ul {
+							padding-left: 8px;
+
+							li {
+								@include xs;
+								font-size: 18px;
+								list-style-type: square;
+								list-style-position: inside;
+								padding-bottom: 0.25em;
+								color: $grey-400;
+							}
+
+							li::marker {
+								font-size: 0.5em;
+							}
+						}
+					}
+
+					.title {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						.listing {
+							@include s;
+
+							.number {
+								@include xs;
+								color: $grey-200;
+								vertical-align: super;
+							}
+						}
+
+						.symbol::before {
+							content: '+';
+							background-color: $green;
+							color: $white;
+							border-radius: 50%;
+							padding: 4px 8px;
+							text-align: center;
+						}
+					}
+
+					input:checked + .title .symbol::before {
+						content: '-';
+						padding: 4px 10px;
+					}
+
+					.list {
+						display: none;
+
+						li {
+							@include xs;
+							font-size: 18px;
+							list-style-type: disc;
+							list-style-position: inside;
+							padding-bottom: 0.25em;
+							color: $grey-400;
+						}
+					}
+
+					
+				}
+
+				.item input:checked + .title + .list {
+					display: block;
+					padding: 20px;
+					margin-top: 18px;
+					background-color: $grey-100;
+					border-radius: 10px;
+				}
+			}
+		}
+
+		// Отображение контента при выборе radio
+		#tab1:checked ~ #content1,
+		#tab2:checked ~ #content2,
+		#tab3:checked ~ #content3,
+		#tab4:checked ~ #content4,
+		#tab5:checked ~ #content5,
+		#tab6:checked ~ #content6,
+		#tab7:checked ~ #content7,
+		#tab8:checked ~ #content8,
+		#tab9:checked ~ #content9,
+		#tab10:checked ~ #content10, {
+			display: block;
+		}
+
+		// Активная вкладка
+		#tab1:checked ~ .headers {
+			li:nth-child(1) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab2:checked ~ .headers {
+			li:nth-child(2) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab3:checked ~ .headers {
+			li:nth-child(3) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab4:checked ~ .headers {
+			li:nth-child(4) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab5:checked ~ .headers {
+			li:nth-child(5) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab6:checked ~ .headers {
+			li:nth-child(6) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab7:checked ~ .headers {
+			li:nth-child(7) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab8:checked ~ .headers {
+			li:nth-child(8) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab9:checked ~ .headers {
+			li:nth-child(9) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
+		}
+
+		#tab10:checked ~ .headers {
+			li:nth-child(10) label {
+				background: $grey-100;
+				color: $grey-500;
+			}
 		}
 	}
 }

@@ -1234,34 +1234,299 @@ h2 {
   height: auto;
 }
 
-.box-promo {
-  display: flex;
-  justify-content: space-between;
+.business .info {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+  padding-bottom: 24px;
 }
-@media screen and (max-width: 678px) {
-  .box-promo {
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .business .info {
+    grid-template-columns: auto;
   }
 }
-.box-promo .activity-header {
+@media screen and (max-width: 480px) {
+  .business .info {
+    gap: 16px;
+  }
+}
+.business .info h1 {
   font-size: 40px;
   line-height: 44px;
   font-weight: 400;
-  margin: 0;
+  color: #3D4548;
 }
-@media screen and (max-width: 678px) {
-  .box-promo .activity-header {
+@media screen and (max-width: 768px) {
+  .business .info h1 {
     font-size: 26px;
     line-height: 28px;
     font-weight: 400;
   }
 }
-.box-promo .activity-header .about {
-  border-top: 1px solid #EAEEF1;
+.business .info p {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
-  max-width: 872px;
+  border-top: 1px solid #EAEEF1;
+  padding-top: 16px;
+}
+.business .tabs input[type=radio] {
+  display: none;
+}
+.business .tabs .headers {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.business .tabs .headers::-webkit-scrollbar {
+  width: 0;
+}
+.business .tabs .headers li {
+  border: 1px solid #EAEEF1;
+}
+.business .tabs .headers li label {
+  display: inline-block;
+  padding: 13px 21px;
+  cursor: pointer;
+  background: white;
+  color: #A0A7AC;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+}
+.business .tabs .content {
+  display: none;
+  padding: 40px;
+}
+@media screen and (max-width: 768px) {
+  .business .tabs .content {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .business .tabs .content {
+    padding: 16px;
+  }
+}
+.business .tabs .content .logo {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+@media screen and (max-width: 480px) {
+  .business .tabs .content .logo {
+    flex-direction: column;
+    gap: 56px;
+  }
+}
+.business .tabs .content .logo picture {
+  display: block;
+}
+.business .tabs .content .logo picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.business .tabs .content .logo div {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.business .tabs .content .logo div button {
+  border-radius: 4px;
+  flex: 1;
+  white-space: nowrap;
+}
+.business .tabs .content .logo div button:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+}
+.business .tabs .content .logo div button:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border-color: #A0A7AC;
+}
+.business .tabs .content .menu {
+  display: flex;
+  flex-direction: column;
+}
+.business .tabs .content .menu .item {
+  position: relative;
+  width: 100%;
+}
+.business .tabs .content .menu .item input[type=checkbox] {
+  display: none;
+}
+.business .tabs .content .menu .item .listing {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.business .tabs .content .menu .item .listing .number {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #A0A7AC;
+  vertical-align: super;
+}
+.business .tabs .content .menu .item ul {
+  padding-left: 8px;
+  margin-top: 18px;
+}
+.business .tabs .content .menu .item ul li {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 18px;
+  list-style-type: square;
+  list-style-position: inside;
+  padding-bottom: 0.25em;
+  color: #3D4548;
+}
+.business .tabs .content .menu .item ul li::marker {
+  font-size: 0.5em;
+}
+.business .tabs .content .menu .item .sub {
+  display: flex;
+  gap: 72px;
+  margin-top: 18px;
+}
+@media screen and (max-width: 768px) {
+  .business .tabs .content .menu .item .sub {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.business .tabs .content .menu .item .sub ul {
+  padding-left: 8px;
+}
+.business .tabs .content .menu .item .sub ul li {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 18px;
+  list-style-type: square;
+  list-style-position: inside;
+  padding-bottom: 0.25em;
+  color: #3D4548;
+}
+.business .tabs .content .menu .item .sub ul li::marker {
+  font-size: 0.5em;
+}
+.business .tabs .content .menu .item .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.business .tabs .content .menu .item .title .listing {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.business .tabs .content .menu .item .title .listing .number {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #A0A7AC;
+  vertical-align: super;
+}
+.business .tabs .content .menu .item .title .symbol::before {
+  content: "+";
+  background-color: #499647;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  text-align: center;
+}
+.business .tabs .content .menu .item input:checked + .title .symbol::before {
+  content: "-";
+  padding: 4px 10px;
+}
+.business .tabs .content .menu .item .list {
+  display: none;
+}
+.business .tabs .content .menu .item .list li {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 18px;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-bottom: 0.25em;
+  color: #3D4548;
+}
+.business .tabs .content .menu .item input:checked + .title + .list {
+  display: block;
+  padding: 20px;
+  margin-top: 18px;
+  background-color: #EAEEF1;
+  border-radius: 10px;
+}
+.business .tabs #tab1:checked ~ #content1,
+.business .tabs #tab2:checked ~ #content2,
+.business .tabs #tab3:checked ~ #content3,
+.business .tabs #tab4:checked ~ #content4,
+.business .tabs #tab5:checked ~ #content5,
+.business .tabs #tab6:checked ~ #content6,
+.business .tabs #tab7:checked ~ #content7,
+.business .tabs #tab8:checked ~ #content8,
+.business .tabs #tab9:checked ~ #content9,
+.business .tabs #tab10:checked ~ #content10 {
+  display: block;
+}
+.business .tabs #tab1:checked ~ .headers li:nth-child(1) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab2:checked ~ .headers li:nth-child(2) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab3:checked ~ .headers li:nth-child(3) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab4:checked ~ .headers li:nth-child(4) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab5:checked ~ .headers li:nth-child(5) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab6:checked ~ .headers li:nth-child(6) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab7:checked ~ .headers li:nth-child(7) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab8:checked ~ .headers li:nth-child(8) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab9:checked ~ .headers li:nth-child(9) label {
+  background: #EAEEF1;
+  color: #282828;
+}
+.business .tabs #tab10:checked ~ .headers li:nth-child(10) label {
+  background: #EAEEF1;
+  color: #282828;
 }
 
 .activity__list {
