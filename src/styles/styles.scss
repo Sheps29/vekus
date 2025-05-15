@@ -850,31 +850,166 @@ h2 {
 
 .office {
 	
-}
+	.about {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
 
-.about {
-	@include box-with-left-header;
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+		}
 
-	@media screen and (max-width: 678px) {
-		flex-direction: column;
-	}
+		@media screen and (max-width: 480px) {
+			gap: 20px;
+		}
 
-	.left-header {
-		@include left-header;
-		@include m; 
+		h4 {
+			@include m;
+			color: $grey-300;
+			margin-bottom: 24px;
 
-		@media screen and (max-width: 678px) {
-			font-size: 18px;
-			line-height: 21px;
-			margin-bottom: 20px;
+			@media screen and (max-width: 480px) {
+				margin-bottom: 20px;
+			}
+		}
+
+		.information {
+
+			p:first-of-type {
+				@include xl;
+				color: $grey-500;
+
+				@media screen and (max-width: 768px) {
+					@include l;
+				}
+			}
+
+			p:nth-of-type(2) {
+				@include top-border;
+				@include xs;
+				padding-top: 16px;
+			}
+
+			p:last-of-type {
+				@include xs;
+				margin: 24px 0;
+			}
+
+			.buttons {
+				display: flex;
+				gap: 24px;
+
+				@media screen and (max-width: 768px) {
+					flex-direction: column;
+				}
+
+				button:first-of-type {
+					@include button-green;
+				}
+
+				button:last-of-type {
+					@include button-white;
+					border-color: $grey-200;
+				}
+			}
 		}
 	}
 
-	&__info {
-		@include right-box;
+	.comment{
 
-		p:first-of-type {
-			@include big-p;
+		.header{
+			@include xl;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.list {
+			display: flex;
+			gap: 24px;
+			flex-wrap: wrap;
+
+			.topic {
+				@include top-border;
+				padding-top: 28px;
+				flex: 1;
+				flex-basis: 30%;
+
+				@media screen and (max-width: 768px) {
+					flex-basis: 40%;
+				}
+
+				@media screen and (max-width: 480px) {
+					flex-basis: 100%;
+				}
+
+				.number {
+					@include m;
+					background-color: $green;
+					color: $white;
+					border-radius: 50%;
+					padding: 14px;
+				}
+
+				p {
+					@include s;
+					margin-top: 20px;
+				}
+
+				div {
+					display: flex;
+
+					@media screen and (max-width: 768px) {
+						flex-direction: column;
+					}
+
+					.item {
+						flex-basis: 50%;
+					}
+
+					.item:first-of-type {
+						@media screen and (max-width: 768px) {
+							margin-bottom: 0;
+						}
+					}
+
+					.item:last-of-type {
+						@media screen and (max-width: 768px) {
+							margin-top: 0;
+						}
+					}
+				}
+
+				.item {
+					list-style-type: disc;
+					margin: 10px 20px;
+
+					li {
+						line-height: 18px;
+					}
+				}
+			}
+
+			.topic:nth-of-type(1), .topic:nth-of-type(3) {
+				flex: 2;
+				flex-basis: 60%;
+
+				@media screen and (max-width: 768px) {
+					flex: 1;
+					flex-basis: 40%;
+				}
+
+				@media screen and (max-width: 480px) {
+					flex-basis: 100%;
+				}
+			}
+		}
+	}
+	.media {
+
+		.header {
+			@include l;
 
 			@media screen and (max-width: 678px) {
 				font-size: 26px;
@@ -882,200 +1017,73 @@ h2 {
 			}
 		}
 
-		p:nth-of-type(2) {
-			@include top-border;
-			@include xs;
-			padding-top: 16px;
-		}
+		.list {
+			padding: 0;
 
-		p:last-of-type {
-			@include xs;
-			margin: 24px 0;
-		}
+			.item-media {
+				width: 100%;
 
-		.button-box {
-			display: flex;
-			gap: 24px;
-
-			@media screen and (max-width: 480px) {
-				flex-direction: column;
-			}
-
-			.button--green {
-				@include button-green;
-			}
-
-			.button--white {
-				@include button-white;
-			}
-		}
-	}
-}
-
-.comment{
-
-	.header{
-		@include xl;
-
-		@media screen and (max-width: 768px) {
-			@include l;
-		}
-	}
-
-	.list {
-		display: flex;
-		gap: 24px;
-		flex-wrap: wrap;
-
-		.topic {
-			@include top-border;
-			padding-top: 28px;
-			flex: 1;
-			flex-basis: 30%;
-
-			@media screen and (max-width: 768px) {
-				flex-basis: 40%;
-			}
-
-			@media screen and (max-width: 480px) {
-				flex-basis: 100%;
-			}
-
-			.number {
-				@include m;
-				background-color: $green;
-				color: $white;
-				border-radius: 50%;
-				padding: 14px;
-			}
-
-			p {
-				@include s;
-				margin-top: 20px;
-			}
-
-			div {
-				display: flex;
-
-				@media screen and (max-width: 768px) {
-					flex-direction: column;
+				.item-header {
+					@include s;
+					@include top-border;
+					margin-bottom: 20px;
+					padding-top: 20px;
+					color: $grey-200;
 				}
 
-				.item {
-					flex-basis: 50%;
-				}
-
-				.item:first-of-type {
-					@media screen and (max-width: 768px) {
-						margin-bottom: 0;
-					}
-				}
-
-				.item:last-of-type {
-					@media screen and (max-width: 768px) {
-						margin-top: 0;
-					}
-				}
-			}
-
-			.item {
-				list-style-type: disc;
-				margin: 10px 20px;
-
-				li {
-					line-height: 18px;
-				}
-			}
-		}
-
-		.topic:nth-of-type(1), .topic:nth-of-type(3) {
-			flex: 2;
-			flex-basis: 60%;
-
-			@media screen and (max-width: 768px) {
-				flex: 1;
-				flex-basis: 40%;
-			}
-
-			@media screen and (max-width: 480px) {
-				flex-basis: 100%;
-			}
-		}
-	}
-}
-
-.media {
-
-	.header {
-		@include l;
-
-		@media screen and (max-width: 678px) {
-			font-size: 26px;
-			line-height: 28px;
-		}
-	}
-
-	.list {
-		padding: 0;
-
-		.item-media {
-
-			.item-header {
-				@include s;
-				margin: 20px 0;
-				color: $grey-100;
-			}
-
-			.item-list {
-				padding: 0;
-				display: flex;
-				flex-wrap: wrap;
-				gap: 20px 24px;
-
-				@media screen and (max-width: 678px) {
-					justify-content: space-between;
-				}
-
-				@media screen and (max-width: 480px) {
-					flex-wrap: nowrap;
-					overflow-x: scroll;
-					overflow-y: hidden;
-				}
-
-				&::-webkit-scrollbar {
-					width: 6px;
-					height: 6px;
-				}
-		
-				&::-webkit-scrollbar-track {
-					height: 10px;
-					background-color: $grey-100;
-				}
-		
-				&::-webkit-scrollbar-thumb {
-					height: 10px;
-					background-color: $grey-100;
-				}
-
-				.point {
+				.item-list {
+					padding: 0;
 					display: flex;
-	
-					flex-basis: 30%;
+					flex-wrap: wrap;
+					gap: 20px 24px;
+					
 
-					@media screen and (max-width: 678px) {
-						flex-basis: 45%;
+					@media screen and (max-width: 768px) {
+						justify-content: space-between;
 					}
 
-					picture {
-						display: block;
-						width: 100%;
+					@media screen and (max-width: 480px) {
+						flex-wrap: nowrap;
+						overflow-x: scroll;
+						overflow-y: hidden;
+						
+					}
 
-						@media screen and (max-width: 480px) {
-							min-width: 165px;
+					&::-webkit-scrollbar {
+						width: 6px;
+						height: 6px;
+					}
+			
+					&::-webkit-scrollbar-track {
+						height: 10px;
+						background-color: $grey-100;
+					}
+			
+					&::-webkit-scrollbar-thumb {
+						height: 10px;
+						background-color: $grey-100;
+					}
+
+					.point {
+						display: flex;
+		
+						flex-basis: 30%;
+
+						@media screen and (max-width: 768px) {
+							flex-basis: 45%;
 						}
 
-						img {
-							@include img;
+						picture {
+							display: block;
+							width: 100%;
+
+							@media screen and (max-width: 480px) {
+								min-width: 165px;
+							}
+
+							img {
+								@include img;
+							}
 						}
 					}
 				}
