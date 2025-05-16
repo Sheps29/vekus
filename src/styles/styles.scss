@@ -24,11 +24,6 @@ main {
 	margin-bottom: 32px;
 }
 
-h2 {
-	@include xl;
-	margin: 24px 0;
-}
-
 .list {
 	display: flex;
 	flex-wrap: wrap;
@@ -97,68 +92,68 @@ h2 {
 	}
 }
 
-.promo {
-    display: flex;
-    flex-direction: column;
-    max-width: 375px;
-		width: 100%;
-    background-image: url("src/images/background.png");
-    background-color: rgb(4, 106, 4);
+// .promo {
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 375px;
+// 		width: 100%;
+//     background-image: url("src/images/background.png");
+//     background-color: rgb(4, 106, 4);
 
-  p {
-		color: white;
-		font-weight: 400;
-		display: block;
+//   p {
+// 		color: white;
+// 		font-weight: 400;
+// 		display: block;
 		
 
-		@media screen and (max-width: 1440px) {
-			max-width: 701px;
-			margin: 48px 18px 18px 60px;
-			font-size: 40px;
-			line-height: 40px;
-		}
+// 		@media screen and (max-width: 1440px) {
+// 			max-width: 701px;
+// 			margin: 48px 18px 18px 60px;
+// 			font-size: 40px;
+// 			line-height: 40px;
+// 		}
 
-		@media screen and (max-width: 375px) {
-			max-width: 343px;
-			margin: 48px 18px 18px 16px;
-			font-size: 28px;
-			line-height: 30px;
-		}
-	}
+// 		@media screen and (max-width: 375px) {
+// 			max-width: 343px;
+// 			margin: 48px 18px 18px 16px;
+// 			font-size: 28px;
+// 			line-height: 30px;
+// 		}
+// 	}
 
-	span {
-		display: block;
-		color: white;
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 20px;
+// 	span {
+// 		display: block;
+// 		color: white;
+// 		font-size: 18px;
+// 		font-weight: 400;
+// 		line-height: 20px;
 
-		@media screen and (max-width: 1440px) {
-			margin: 0 18px 32px 60px;
-		}
+// 		@media screen and (max-width: 1440px) {
+// 			margin: 0 18px 32px 60px;
+// 		}
 
-		@media screen and (max-width: 375px) {
-			margin: 0 18px 32px 16px;
-		}
-	}
+// 		@media screen and (max-width: 375px) {
+// 			margin: 0 18px 32px 16px;
+// 		}
+// 	}
 
-	button {
-		@include button-white;
-		padding: 18px 48px;
+// 	button {
+// 		@include button-white;
+// 		padding: 18px 48px;
 
-		@media screen and (max-width: 1440px) {
-			margin-left: 60px;
-		}
+// 		@media screen and (max-width: 1440px) {
+// 			margin-left: 60px;
+// 		}
 
-		@media screen and (max-width: 375px) {
-			margin-left: 16px;
-		}
-	}
+// 		@media screen and (max-width: 375px) {
+// 			margin-left: 16px;
+// 		}
+// 	}
 
-	@media screen and (max-width: 1440px) {
-		max-width: 1440px;
-	}
-}
+// 	@media screen and (max-width: 1440px) {
+// 		max-width: 1440px;
+// 	}
+// }
 
 .news {
 	max-width: 1440px;
@@ -1345,7 +1340,7 @@ h2 {
 		#tab7:checked ~ #content7,
 		#tab8:checked ~ #content8,
 		#tab9:checked ~ #content9,
-		#tab10:checked ~ #content10, {
+		#tab10:checked ~ #content10 {
 			display: block;
 		}
 
@@ -1555,104 +1550,135 @@ h2 {
 	}
 }
 
-.direction {
+.directions {
+	display: flex;
+	flex-direction: column;
+	gap: 130px;
 
-	&__header {
-		@include left-header;
-		@include m;
-		margin: 50px 0;
+	@media screen and (max-width: 768px) {
+		gap: 90px;
 	}
 
-	&__box {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 40px 24px;
-		padding: 0;
+	.promo {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
 
-		.direction-item {
-			flex: 1 1 33%;
-			max-width: 424px;
-			@include top-border;
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
 
-			@media screen and (max-width: 1439px) {
-				max-width: 50%;
+		h2 {
+			@include l;
+			color: $grey-200;
+
+			@media screen and (max-width: 768px) {
+				@include m;
 			}
+		}
 
-			@media screen and (max-width: 678px) {
-				flex: 1 1 100%;
-				max-width: 100%;
-			}
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
 
-			picture {
-				@include icon;
-				margin-top: 20px;
+			p:first-of-type {
+				@include xl;
+				color: $grey-500;
 
-				img {
-					@include img;
+				@media screen and (max-width: 768px) {
+					@include l;
 				}
 			}
 
-			h6 {
-				@include s;
-				color: $grey-500;
-				margin: 10px 0;
+			p:nth-of-type(2), p:last-of-type {
+				@include xs;
+				color: $grey-400;
 			}
 
-			p {
+			p:nth-of-type(2) {
+				@include top-border;
+				padding-top: 16px;
+			}
+
+			button {
+				@include button-white;
+				border-color: $grey-200;
+				margin-top: 24px;
+				margin-left: auto;
+			}
+		}
+
+		.info {
+
+			p:nth-of-type(3) {
 				@include xs;
-				margin: 0;
+				color: $grey-400;
+			}
+
+			p:last-of-type {
+				font-weight: 700;
 			}
 		}
 	}
-}
 
-.image {
-	display: block;
+	.direction {
 
-	.adaptive {
-		@include img;
-	}
-}
+		h2 {
+			@include l;
+			color: $grey-200;
+			margin-bottom: 24px;
 
-.products {
-	display: flex;
-	justify-content: space-between;
-	gap: 50px;
-
-	@media screen and (max-width: 992px) {
-		flex-wrap: wrap;
-		gap: 0;
-	}
-
-	&__description {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 3;
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
 
 		.list {
+			display: flex;
+			gap: 40px 24px;
+			padding: 0;
 
-
-			&__item {
-				flex-basis: 50%;
-				margin: 12px 0 24px 0;
-				padding-top: 20px;
+			.item {
 				@include top-border;
-
-				@media screen and (max-width: 678px) {
-					flex: 0 0 100%;
+				flex-basis: 30%;
+				
+				@media screen and (max-width: 768px) {
+					flex-basis: 45%;
 				}
 
-				span {
-					@include m;
-					background-color: #499647;
-					color: $white;
-					border-radius: 50%;
-					padding: 10px;
+				@media screen and (max-width: 480px) {
+					flex-basis: 100%;
+				}
+
+				picture {
+					@include icon;
+					margin-top: 20px;
+
+					img {
+						@include img;
+					}
 				}
 
 				h3 {
 					@include s;
-					margin: 20px 0 10px;
+					color: $grey-500;
+					margin: 10px 0;
+				}
+
+				p {
+					@include xs;
+					margin: 0;
+					color: $grey-400;
+				}
+			}
+
+			.mining {
+				flex-basis: 45%;
+
+				@media screen and (max-width: 480px) {
+					flex-basis: 100%;
 				}
 
 				ul {
@@ -1661,443 +1687,949 @@ h2 {
 				}
 			}
 
-			.list__item:nth-of-type(3), .list__item:nth-of-type(5) {
-				@media screen and (max-width: 678px) {
+			.mining:first-of-type {
+				
+				@media screen and (max-width: 768px) {
 					margin-bottom: 0;
 				}
 			}
 
-			.list__item:nth-of-type(4), .list__item:nth-of-type(6) {
+			.mining:nth-of-type(2) {
+				padding-left: 24px;
 				display: flex;
 				align-items: end;
 
-				@media screen and (max-width: 678px) {
+				@media screen and (max-width: 768px) {
 					margin-top: 0;
 					padding-top: 0;
+				}
+
+				@media screen and (max-width: 480px) {
+					padding-left: 0;
 					border-top: none;
 				}
 			}
 		}
+	}
 
-		.leasing {
-			@include top-border;
-			margin: 12px 0 24px 0;
-			padding-top: 20px;
+	.line {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
 
-			span {
-				@include m;
-				background-color: $green;
-				color: $white;
-				border-radius: 50%;
-				padding: 10px;
-			}
-
-			h3 {
-				@include s;
-				margin: 20px 0 10px;
-			}
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
 		}
 
-		.button--white {
-			@include button-white;
-			margin-left: auto;
-			border-color: $grey-100;
+		.list {
+			gap: 40px 0;
 
 			@media screen and (max-width: 480px) {
-				margin-left: 0;
+				gap: 0;
 			}
 		}
 	}
-}
 
-.clients {
+	.image {
+		display: block;
+		margin: -58px -60px;
 
-	&__box {
-		display: flex;
-		justify-content: center;
-
-
-		@media screen and (max-width: 992px) {
-			overflow-x: scroll;
-			overflow-y: hidden;
+		@media screen and (max-width: 768px) {
+			margin: -58px -24px;
 		}
 
-		@media screen and (max-width: 678px) {
-			justify-content: flex-start;
+		@media screen and (max-width: 480px) {
+			margin: -18px -16px;
 		}
 
-		@media screen and (max-width: 468px) {
-			overflow: hidden;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		picture {
-			max-width: 312px;
-			min-width: 165px;
-			height: 141px;
-
-			img {
-				@include img;
-			}
-		}
-
-		&::-webkit-scrollbar {
-			width: 6px;
-			height: 6px;
-		}
-
-		&::-webkit-scrollbar-track {
-			height: 10px;
-			background-color: $grey-100;
-		}
-
-		&::-webkit-scrollbar-thumb {
-			height: 10px;
-			background-color: $grey-100;
+		img {
+			@include img;
 		}
 	}
-}
 
-.project {
-
-	&__box {
-		display: flex;
+	.services {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
 		gap: 24px;
 
-		@media screen and (max-width: 590px) {
-			flex-wrap: wrap;
-			justify-content: center;
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 32px;
 		}
 
-		.project__item {
-			position: relative;
-			width: 100%;
+		h2 {
+			@include l;
+			color: $grey-200;
 
-			picture {
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
 
-				img {
-					@include img;
+		.description {
+			display: flex;
+			flex-direction: column;
+
+			.list {
+				display: flex;
+				gap: 40px 0;
+				padding: 0;
+
+				@media screen and (max-width: 480px) {
+					gap: 0;
+				}
+
+				.item {
+					@include top-border;
+					flex-basis: 45%;
+					padding-top: 20px;
+
+					@media screen and (max-width: 480px) {
+						flex-basis: 100%;
+					}
+
+					span {
+						@include m;
+						background-color: $green;
+						color: $white;
+						border-radius: 50%;
+						padding: 10px;
+					}
+
+					h3 {
+						@include s;
+						margin: 20px 0 10px;
+					}
+
+					ul {
+						list-style-type: disc;
+						padding-left: 20px;
+					}
+				}
+
+				.item:nth-of-type(1), .item:nth-of-type(2), .item:nth-of-type(4), .item:nth-of-type(6) {
+
+					@media screen and (max-width: 768px) {
+						margin-bottom: 24px;
+					}
+				}
+
+				.item:nth-of-type(3), .item:nth-of-type(5) {
+
+					@media screen and (max-width: 768px) {
+						margin-bottom: 0;
+					}
+				}
+
+				.item:nth-of-type(4), .item:nth-of-type(6) {
+					display: flex;
+					align-items: end;
+
+					@media screen and (max-width: 768px) {
+						margin-top: 0;
+						padding-top: 0;
+						border-top: none;
+					}
+				}
+
+				.item:nth-of-type(2), .item:nth-of-type(4), .item:nth-of-type(6) {
+					padding-left: 24px;
+
+					@media screen and (max-width: 480px) {
+						padding-left: 0;
+					}
+				}
+
+				.item:nth-of-type(7) {
+					flex-basis: 100%;
 				}
 			}
-			
-			div {
+
+			.dev {
+				display: flex;
+				gap: 40px 24px;
+				flex-wrap: wrap;
+
+				.element {
+					@include top-border;
+					flex-basis: 45%;
+					padding-top: 20px;
+
+					@media screen and (max-width: 480px) {
+						flex-basis: 100%;
+					}
+
+					span {
+						@include m;
+						background-color: $green;
+						color: $white;
+						border-radius: 50%;
+						padding: 10px;
+					}
+
+					h3 {
+						@include s;
+						margin: 20px 0 10px;
+					}
+				}
+			}
+
+			button {
+				@include button-white;
+				border-color: $grey-200;
+				margin-left: auto;
+				margin-top: 48px;
+
+				@media screen and (max-width: 768px) {
+					margin-top: 40px;
+				}
+
+				@media screen and (max-width: 480px) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.products {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 32px;
+		}
+
+		h4 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}	
+		}
+
+		.right {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+
+			p {
+				@include xs;
+				margin: 0;
+				max-width: 872px;
+			}
+		
+			.box {
 				display: flex;
 				flex-direction: column;
-				gap: 10px;
-				position: absolute;
-				color: $white;
-				bottom: 50px;
-				left: 20px;
+				gap: 20px;
+				max-width: 872px;
 
-				span {
-					@include xxs;
-					opacity: 80%;
-				}
-	
-				p {
-					@include xs;
-					color: $white;
-					
-					@media screen and (max-width: 900px) {
-						@include xxs;
+				@media screen and (min-width: 481px) {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}	
+
+				@media screen and (min-width: 481px) and (max-width: 768px) {
+					justify-content: space-between;
+				}	
+				
+				.item {
+					display: flex;
+					flex-direction: column;
+					border: 1px solid $grey-100;
+
+					@media screen and (min-width: 481px) {
+						flex-basis: 40%;
+					}		
+		
+					picture {
+						display: block;
+		
+						img {
+							@include img;
+						}
 					}
-	
-					@media screen and (max-width: 590px) {
-						font-size: 18px;
-						line-height: 21px;
+		
+					.header {
+						display: flex;
+						justify-content: space-between;
+						padding: 10px 10px 8px 16px;
+		
+						h6 {
+							@include s;
+						}
+		
+						picture {
+							display: block;
+		
+							img {
+								@include img;
+							}
+						}
+					}
+		
+					p {
+						@include xxs;
+						padding: 0 10px 28px 16px;
+						color: $grey-400;
 					}
 				}
 			}
 		}
 	}
 
-	.button--white {
-		@include button-white;
-		border-color: $grey-100;
-		margin-top: 40px;
-		width: 100%;
-	}
-}
-
-.team {
-
-	&__box {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+	.clients {
+		display: flex;
+		flex-direction: column;
 		gap: 24px;
 
-		@media screen and (max-width: 1100px) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(4, 1fr);
+		@media screen and (max-width: 768px) {
+			gap: 32px;
 		}
 
-		@media screen and (max-width: 576px) {
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(3, 1fr);
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
 		}
 
-		.team__item {
+		div{
 			display: flex;
-
-			@media screen and (max-width: 576px) {
-				display: none;
+			justify-content: center;
+			
+			@media screen and (max-width: 768px) {
+				overflow-x: scroll;
+				overflow-y: hidden;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
 			}
 
 			picture {
-				display: flex;
-				width: 100%;
+				display: block;
+
+				@media screen and (max-width: 768px) {
+					min-width: 165px;
+				}
 
 				img {
 					@include img;
 				}
 			}
 
-			div {
-				padding: 34px 10px 10px 17px;
-				background-color: $grey-100;
-				width: -webkit-fill-available;
+			&::-webkit-scrollbar {
+				width: 6px;
+				height: 6px;
+			}
 
-				h3 {
-					@include s;
+			&::-webkit-scrollbar-track {
+				height: 10px;
+				background-color: $grey-100;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				height: 10px;
+				background-color: $grey-100;
+			}
+		}
+	}
+
+	.customers {
+
+		div {
+			justify-content: end;
+		}
+	}
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.list {
+			display: flex;
+			gap: 24px;
+			flex-wrap: nowrap;
+
+			@media screen and (max-width: 590px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.item {
+				position: relative;
+				width: 100%;
+
+				picture {
+
+					img {
+						@include img;
+					}
+				}
+				
+				div {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					position: absolute;
+					color: $white;
+					bottom: 50px;
+					left: 20px;
+
+					span {
+						@include xxs;
+						opacity: 80%;
+					}
+		
+					p {
+						@include xs;
+						color: $white;
+						
+						@media screen and (max-width: 900px) {
+							@include xxs;
+						}
+		
+						@media screen and (max-width: 590px) {
+							font-size: 18px;
+							line-height: 21px;
+						}
+					}
+				}
+			}
+		}
+
+		button {
+			@include button-white;
+			border-color: $grey-100;
+			margin-top: 40px;
+			width: 100%;
+		}
+	}
+
+	.team {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.list {
+			display: flex;
+
+			
+		}
+
+		&__box {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			gap: 24px;
+
+			@media screen and (max-width: 1100px) {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+			}
+
+			@media screen and (max-width: 576px) {
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(3, 1fr);
+			}
+
+			.team__item {
+				display: flex;
+
+				@media screen and (max-width: 576px) {
+					display: none;
+				}
+
+				picture {
+					display: flex;
+					width: 100%;
+
+					img {
+						@include img;
+					}
+				}
+
+				div {
+					padding: 34px 10px 10px 17px;
+					background-color: $grey-100;
+					width: -webkit-fill-available;
+
+					h3 {
+						@include s;
+
+						@media screen and (max-width: 576px) {
+							@include l;
+						}
+					}
+
+					span {
+						display: block;
+						padding: 8px 0 32px 0;
+						@include xxs;	
+
+						@media screen and (max-width: 576px) {
+							@include s;
+						}
+					}
+
+					a {
+						display: block;
+						padding: 5px 0;
+						@include xxs;
+						text-decoration: none;
+						word-break: break-all;
+
+						@media screen and (max-width: 576px) {
+							@include s;
+						}
+
+						img {
+							margin-right: 5px;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.left {
+				display: grid;
+				grid-row: 1 / 3;
+
+				@media screen and (max-width: 576px) {
+					grid-row: auto;
+				}
+			
+				picture {
+					grid-area: 1 / 1;
+					grid-row: 1 / 3;
+				}
+
+				div {
+					grid-area: 1 / 1;
+					grid-row: 2 / 3;
+				}
+			}
+
+			.right {
+				display: grid;
+				grid-row: 1 / 3;
+				grid-column: 3 / 3;
+
+				@media screen and (max-width: 1100px) {
+					grid-column: auto;
+				}
+
+				@media screen and (max-width: 576px) {
+					grid-row: auto;
+				}
+
+				picture {
+					grid-row: 1 / 2;
+				}
+
+				div {
+					grid-row: 2 / 3;
+				}
+			}
+
+			.join {
+				flex-direction: column;
+				@include join;
+
+				@media screen and (max-width: 576px) {
+					display: flex;
+					justify-content: center;
+				}
+
+				p {
+					@include m;
 
 					@media screen and (max-width: 576px) {
 						@include l;
 					}
 				}
 
-				span {
-					display: block;
-					padding: 8px 0 32px 0;
-					@include xxs;	
-
-					@media screen and (max-width: 576px) {
-						@include s;
-					}
-				}
-
-				a {
-					display: block;
-					padding: 5px 0;
+				p:last-of-type {
 					@include xxs;
-					text-decoration: none;
-					word-break: break-all;
+					margin: 6px 0 32px 0;
 
 					@media screen and (max-width: 576px) {
 						@include s;
 					}
-
-					img {
-						margin-right: 5px;
-						vertical-align: middle;
-					}
 				}
-			}
-		}
 
-		.left {
-			display: grid;
-			grid-row: 1 / 3;
-
-			@media screen and (max-width: 576px) {
-				grid-row: auto;
-			}
-		
-			picture {
-				grid-area: 1 / 1;
-				grid-row: 1 / 3;
-			}
-
-			div {
-				grid-area: 1 / 1;
-				grid-row: 2 / 3;
-			}
-		}
-
-		.right {
-			display: grid;
-			grid-row: 1 / 3;
-			grid-column: 3 / 3;
-
-			@media screen and (max-width: 1100px) {
-				grid-column: auto;
-			}
-
-			@media screen and (max-width: 576px) {
-				grid-row: auto;
-			}
-
-			picture {
-				grid-row: 1 / 2;
-			}
-
-			div {
-				grid-row: 2 / 3;
-			}
-		}
-
-		.join {
-			flex-direction: column;
-			@include join;
-
-			@media screen and (max-width: 576px) {
-				display: flex;
-				justify-content: center;
-			}
-
-			p {
-				@include m;
-
-				@media screen and (max-width: 576px) {
-					@include l;
+				button {
+					@include button-green;
+					display: flex;
+					justify-content: center;
 				}
-			}
-
-			p:last-of-type {
-				@include xxs;
-				margin: 6px 0 32px 0;
-
-				@media screen and (max-width: 576px) {
-					@include s;
-				}
-			}
-
-			button {
-				@include button-green;
-				display: flex;
-				justify-content: center;
 			}
 		}
 	}
-}
 
-.media {
-
-	&__box {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+	.party {
+		display: flex;
+		flex-direction: column;
 		gap: 24px;
 
-		@media screen and (max-width: 1100px) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(3, 1fr);
+		@media screen and (max-width: 768px) {
+			gap: 32px;
 		}
 
-		@media screen and (max-width: 576px) {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-			gap: 20px;
-		}
+		h2 {
+			@include xl;
+			color: $grey-500;
 
-		.media__item:first-of-type {
-			grid-column: 1 / 3;
-
-			@media screen and (max-width: 576px) {
-				grid-column: 1 / 1;
+			@media screen and (max-width: 768px) {
+				@include l;
 			}
 		}
 
-		.media__item {
+		.list {
 			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
 
-			picture {
-				grid-area: 1 / 1;
-				grid-row: 1 / 3;
-
-				img {
-					@include img;
-				}
+			@media screen and (max-width: 991px) {
+				grid-template-columns: repeat(2, 1fr);
 			}
 
-			div {
-				grid-area: 1 / 1;
-				grid-row: 2 / 3;
-				padding-left: 20px;
-				padding-bottom: 20px;
+			@media screen and (max-width: 768px) {
+				grid-template-columns: auto;
+			}
 
-				time {
-					@include xs;
-					color: $grey-100;
+			.item {
+				display: flex;
 
-					@media screen and (max-width: 576px) {
-						@include s;
+				picture {
+					display: flex;
+					width: 100%;
+
+					img {
+						@include img;
 					}
 				}
 
-				blockquote {
-					p {
+				div {
+					padding: 34px 10px 10px 17px;
+					background-color: $grey-100;
+					width: -webkit-fill-available;
+
+					h3 {
 						@include s;
-						color: $white;
-						margin: 8px 0;
-	
+
 						@media screen and (max-width: 576px) {
-							@include m;
+							@include l;
 						}
 					}
-	
+
 					span {
-						@include xs;
-						color: $grey-100;
-	
+						display: block;
+						padding: 8px 0 32px 0;
+						@include xxs;	
+
 						@media screen and (max-width: 576px) {
 							@include s;
 						}
 					}
+
+					a {
+						display: block;
+						padding: 5px 0;
+						@include xxs;
+						text-decoration: none;
+						word-break: break-all;
+
+						@media screen and (max-width: 576px) {
+							@include s;
+						}
+
+						img {
+							margin-right: 5px;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.item:first-of-type {
+				display: grid;
+				grid-row: 1 / 3;
+
+				@media screen and (max-width: 768px) {
+					grid-row: 1 / 2;
+				}
+			
+				picture {
+					grid-area: 1 / 1;
+					grid-row: 1 / 3;
+				}
+
+				div {
+					grid-area: 1 / 1;
+					grid-row: 2 / 3;
+				}
+			}
+
+			.item:nth-of-type(2) {
+				grid-row: 1 / 3;
+				grid-column: 2 / 3;
+				flex-direction: column;
+				justify-content: end;
+				@include join;
+
+				@media screen and (max-width: 991px) {
+					grid-row: 3 / 4;
+					grid-column: 1 / 3;
+				}
+
+				@media screen and (max-width: 768px) {
+					grid-column: auto;
+					grid-row: 3 / 3;
+				}
+
+				@media screen and (max-width: 480px) {
+					display: flex;
+					justify-content: center;
+					margin: 0 -16px;
+				}
+
+				p {
+					@include m;
+
+					@media screen and (max-width: 576px) {
+						@include l;
+					}
+				}
+
+				p:last-of-type {
+					@include xxs;
+					margin: 6px 0 32px 0;
+
+					@media screen and (max-width: 576px) {
+						@include s;
+					}
+				}
+
+				button {
+					@include button-green;
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			.item:last-of-type {
+				display: grid;
+				grid-row: 1 / 3;
+				grid-column: 3 / 3;
+
+				@media screen and (max-width: 991px) {
+					grid-column: 2 / 3;
+				}
+
+				@media screen and (max-width: 768px) {
+					grid-column: auto;
+					grid-row: 2 / 3;
+				}
+
+				picture {
+					grid-row: 1 / 2;
+				}
+
+				div {
+					grid-row: 2 / 3;
+				}
+			}
+		}
+	}
+
+	.media {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+
+			@media screen and (max-width: 991px) {
+				grid-template-columns: auto;
+				gap: 20px;
+			}
+
+			.item:first-of-type {
+				grid-column: 1 / span 2;
+
+				@media screen and (max-width: 480px) {
+					grid-column: auto;
+				}
+			}
+
+			.item {
+				position: relative;
+
+				picture {
+					display: block;
+
+					img {
+						@include img;
+					}
+				}
+
+				picture::after {
+					content: "";
+					position: absolute;
+					background-image: linear-gradient(to top, black, transparent);
+					inset: 0;
+					opacity: 80%;
+				}
+
+				div {
+					position: absolute;
+					right: 24px;
+					left: 20px;
+					bottom: 10%;
+					color: $white;
+					display: flex;
+					flex-direction: column;
+
+					@media screen and (max-width: 768px) {
+						bottom: 5%;
+					}
+
+					time {
+						@include xs;
+						color: $grey-100;
+					}
+
+					blockquote {
+						p {
+							@include s;
+							color: $white;
+							margin: 8px 0;
+
+							@media screen and (max-width: 768px) and (min-width: 480px){
+								@include xs;
+							}
+						}
+		
+						span {
+							@include xs;
+							color: $grey-100;
+						}
+					}
+				}
+			}
+
+			.item:nth-of-type(4), .item:nth-of-type(5) {
+
+				@media screen and (max-width: 768px) {
+					display: none;
 				}
 			}
 		}
 
-		&--item:nth-of-type(4) {
-			@media screen and (max-width: 576px) {
-				display: none;
-			}
-		}
-
-		&--item:last-of-type {
-			@media screen and (max-width: 576px) {
-				display: none;
-			}
+		button {
+			@include button-white;
+			border-color: $grey-100;
+			margin-top: 40px;
+			width: 100%;
 		}
 	}
 
-	.more {
-		@include button-white;
-		border-color: $grey-100;
-		margin-top: 40px;
-		width: 100%;
-	}
-}
+	.partners {
+		background-color: $grey-100;
+		margin: 0 -60px;
+		padding: 60px;
 
-.partners {
-	background-color: $grey-100;
-	padding-top: 60px;
-	padding-bottom: 60px;
-
-	&__box {
-		padding-top: 50px;
-
-		h3 {
-			@include l;
-			color: $grey-300;
-			max-width: 370px;
-			padding-bottom: 32px;
+		@media screen and (max-width: 768px) {
+			margin: 0 -24px;
+			padding: 60px 24px;
 		}
 
-		div {
-			display: flex;
-			gap: 8px;
-			overflow-x: scroll;
-			scrollbar-width: none;
+		@media screen and (max-width: 480px) {
+			margin: 0 -16px;
+			padding: 60px 16px;
+		}
 
-			picture {
-				max-width: 312px;
-				max-height: 141px;
-				min-width: 165px;
+		h2 {
+			@include xl;
+			color: $grey-500;
 
-				img {
-					@include img;
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.counterparts {
+			padding-top: 50px;
+
+			h3 {
+				@include l;
+				color: $grey-300;
+				max-width: 370px;
+				padding-bottom: 32px;
+			}
+
+			div {
+				display: flex;
+				gap: 8px;
+				overflow-x: scroll;
+				scrollbar-width: none;
+
+				picture {
+					max-width: 312px;
+					max-height: 141px;
+					min-width: 165px;
+
+					img {
+						@include img;
+					}
 				}
 			}
 		}
