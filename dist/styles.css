@@ -1574,6 +1574,137 @@ main {
     gap: 90px;
   }
 }
+.directions .identity {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  margin: 0 -60px;
+  padding: 130px 60px;
+  background-color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity {
+    gap: 8px;
+    margin: 0 -24px;
+    padding: 60px 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .identity {
+    margin: 0 -16px;
+    padding: 32px 16px 0 16px;
+  }
+}
+.directions .identity .breadcrumbs {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .breadcrumbs {
+    margin-bottom: 42px;
+  }
+}
+.directions .identity .breadcrumbs li {
+  font-size: 13px;
+  color: white;
+  opacity: 50%;
+}
+.directions .identity .breadcrumbs li:first-of-type::after {
+  content: "—";
+  margin: 0 5px;
+}
+.directions .identity .summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .summary {
+    padding: 0 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .identity .summary {
+    flex-direction: column;
+    margin: 0 -16px;
+    padding: 16px 16px 0;
+  }
+}
+.directions .identity .summary picture {
+  display: block;
+  flex-basis: 35%;
+}
+.directions .identity .summary picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .identity .summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 37px 60px 37px 41px;
+  background-color: white;
+  border-radius: 10px;
+  flex-basis: 35%;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .summary div {
+    padding: 24px 40px 24px 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .identity .summary div {
+    padding: 28px 16px 48px 16px;
+    border-bottom: 1px solid #EAEEF1;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.directions .identity .summary div h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .summary div h3 {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.directions .identity .summary div a {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #282828;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .summary div a {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+}
+.directions .identity .summary div a img {
+  margin-right: 14px;
+  width: 47px;
+  height: 47px;
+}
+@media screen and (max-width: 768px) {
+  .directions .identity .summary div a img {
+    width: 32px;
+    height: 32px;
+  }
+}
 .directions .promo {
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -1603,6 +1734,20 @@ main {
   flex-direction: column;
   gap: 24px;
 }
+.directions .promo div p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+}
+.directions .promo div .nevateka {
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 768px) {
+  .directions .promo div .nevateka {
+    margin-bottom: 24px;
+  }
+}
 .directions .promo div p:first-of-type {
   font-size: 32px;
   line-height: 35px;
@@ -1615,12 +1760,6 @@ main {
     line-height: 28px;
     font-weight: 400;
   }
-}
-.directions .promo div p:nth-of-type(2), .directions .promo div p:last-of-type {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 500;
-  color: #3D4548;
 }
 .directions .promo div p:nth-of-type(2) {
   border-top: 1px solid #EAEEF1;
@@ -1646,6 +1785,41 @@ main {
 }
 .directions .promo .info p:last-of-type {
   font-weight: 700;
+}
+.directions .slogan {
+  position: relative;
+  margin: 0 -60px;
+  padding: 236px 60px 50px 60px;
+  background-color: black;
+  padding-right: 20%;
+}
+.directions .slogan picture {
+  display: block;
+  position: absolute;
+  right: 48px;
+  top: -50px;
+}
+@media screen and (max-width: 768px) {
+  .directions .slogan picture {
+    right: 0;
+    left: 0;
+  }
+}
+.directions .slogan picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .slogan p {
+  color: white;
+  font-size: 128px;
+}
+@media screen and (max-width: 768px) {
+  .directions .slogan p {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 400;
+  }
 }
 .directions .direction h2 {
   font-size: 26px;
@@ -1904,6 +2078,10 @@ main {
   line-height: 23px;
   font-weight: 400;
   margin: 20px 0 10px;
+}
+.directions .services .description .dev .item {
+  border-bottom: 1px solid #EAEEF1;
+  flex: 1;
 }
 .directions .services .description button {
   font-size: 16px;
@@ -2200,6 +2378,59 @@ main {
 }
 .directions .team .list {
   display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.directions .team .list .item {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 424px;
+}
+.directions .team .list .item picture {
+  display: block;
+}
+.directions .team .list .item picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .team .list .item div {
+  position: absolute;
+  bottom: 0;
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+  opacity: 80%;
+}
+.directions .team .list .item div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .list .item div h3 {
+    font-size: 18px;
+  }
+}
+.directions .team .list .item div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.directions .team .list .item div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+}
+.directions .team .list .item div a img {
+  margin-right: 5px;
+  vertical-align: middle;
 }
 .directions .team__box {
   display: grid;
@@ -2397,26 +2628,32 @@ main {
   }
 }
 .directions .party .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 24px;
+  flex-wrap: nowrap;
 }
 @media screen and (max-width: 991px) {
   .directions .party .list {
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 768px) {
-  .directions .party .list {
-    grid-template-columns: auto;
+@media screen and (max-width: 991px) {
+  .directions .party .list .item:first-of-type {
+    order: 1;
+  }
+}
+@media screen and (max-width: 991px) {
+  .directions .party .list .item:last-of-type {
+    order: 2;
   }
 }
 .directions .party .list .item {
-  display: flex;
+  position: relative;
+  flex: 1 1 300px;
 }
 .directions .party .list .item picture {
-  display: flex;
-  width: 100%;
+  display: block;
 }
 .directions .party .list .item picture img {
   object-fit: cover;
@@ -2424,6 +2661,8 @@ main {
   height: auto;
 }
 .directions .party .list .item div {
+  position: absolute;
+  bottom: 0;
   padding: 34px 10px 10px 17px;
   background-color: #EAEEF1;
   width: -webkit-fill-available;
@@ -2433,26 +2672,12 @@ main {
   line-height: 23px;
   font-weight: 400;
 }
-@media screen and (max-width: 576px) {
-  .directions .party .list .item div h3 {
-    font-size: 26px;
-    line-height: 28px;
-    font-weight: 400;
-  }
-}
 .directions .party .list .item div span {
   display: block;
   padding: 8px 0 32px 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-}
-@media screen and (max-width: 576px) {
-  .directions .party .list .item div span {
-    font-size: 21px;
-    line-height: 23px;
-    font-weight: 400;
-  }
 }
 .directions .party .list .item div a {
   display: block;
@@ -2463,37 +2688,12 @@ main {
   text-decoration: none;
   word-break: break-all;
 }
-@media screen and (max-width: 576px) {
-  .directions .party .list .item div a {
-    font-size: 21px;
-    line-height: 23px;
-    font-weight: 400;
-  }
-}
 .directions .party .list .item div a img {
   margin-right: 5px;
   vertical-align: middle;
 }
-.directions .party .list .item:first-of-type {
-  display: grid;
-  grid-row: 1/3;
-}
-@media screen and (max-width: 768px) {
-  .directions .party .list .item:first-of-type {
-    grid-row: 1/2;
-  }
-}
-.directions .party .list .item:first-of-type picture {
-  grid-area: 1/1;
-  grid-row: 1/3;
-}
-.directions .party .list .item:first-of-type div {
-  grid-area: 1/1;
-  grid-row: 2/3;
-}
 .directions .party .list .item:nth-of-type(2) {
-  grid-row: 1/3;
-  grid-column: 2/3;
+  display: flex;
   flex-direction: column;
   justify-content: end;
   padding: 40px 24px;
@@ -2502,14 +2702,7 @@ main {
 }
 @media screen and (max-width: 991px) {
   .directions .party .list .item:nth-of-type(2) {
-    grid-row: 3/4;
-    grid-column: 1/3;
-  }
-}
-@media screen and (max-width: 768px) {
-  .directions .party .list .item:nth-of-type(2) {
-    grid-column: auto;
-    grid-row: 3/3;
+    order: 3;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2524,10 +2717,10 @@ main {
   line-height: 28px;
   font-weight: 400;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   .directions .party .list .item:nth-of-type(2) p {
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 21px;
+    line-height: 23px;
     font-weight: 400;
   }
 }
@@ -2537,11 +2730,9 @@ main {
   font-weight: 400;
   margin: 6px 0 32px 0;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 480px) {
   .directions .party .list .item:nth-of-type(2) p:last-of-type {
-    font-size: 21px;
-    line-height: 23px;
-    font-weight: 400;
+    font-size: 14px;
   }
 }
 .directions .party .list .item:nth-of-type(2) button {
@@ -2555,27 +2746,17 @@ main {
   display: flex;
   justify-content: center;
 }
-.directions .party .list .item:last-of-type {
-  display: grid;
-  grid-row: 1/3;
-  grid-column: 3/3;
+.directions .party .list .shpaihler div, .directions .party .list .skobelev div {
+  opacity: 80%;
 }
-@media screen and (max-width: 991px) {
-  .directions .party .list .item:last-of-type {
-    grid-column: 2/3;
-  }
+.directions .party .list .skobelev {
+  order: 2;
 }
-@media screen and (max-width: 768px) {
-  .directions .party .list .item:last-of-type {
-    grid-column: auto;
-    grid-row: 2/3;
-  }
+.directions .party .list .element {
+  order: 3;
 }
-.directions .party .list .item:last-of-type picture {
-  grid-row: 1/2;
-}
-.directions .party .list .item:last-of-type div {
-  grid-row: 2/3;
+.directions .party .list .chistov {
+  order: 1;
 }
 .directions .media {
   display: flex;
@@ -2636,6 +2817,25 @@ main {
   background-image: linear-gradient(to top, black, transparent);
   inset: 0;
   opacity: 80%;
+}
+.directions .media .list .item .marker {
+  display: block;
+  position: absolute;
+  padding: 13px 21px;
+  top: 7%;
+  right: 0;
+  color: white;
+  background-color: #499647;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .directions .media .list .item .marker {
+    top: 3%;
+    padding: 13px;
+  }
 }
 .directions .media .list .item div {
   position: absolute;
@@ -5220,7 +5420,6 @@ main {
 }
 .events .general .info .element picture {
   display: block;
-  position: relative;
 }
 .events .general .info .element picture img {
   object-fit: cover;
@@ -5252,7 +5451,7 @@ main {
     padding: 13px;
   }
 }
-.events .general .info .element .box {
+.events .general .info .element .meta {
   position: absolute;
   right: 24px;
   left: 20px;
@@ -5260,41 +5459,41 @@ main {
   color: white;
 }
 @media screen and (max-width: 768px) and (min-width: 480px) {
-  .events .general .info .element .box {
+  .events .general .info .element .meta {
     left: 16px;
     right: 16px;
     bottom: 3%;
   }
 }
-.events .general .info .element .box div {
+.events .general .info .element .meta div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.events .general .info .element .box div span:first-of-type {
+.events .general .info .element .meta div time {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   opacity: 80%;
 }
-.events .general .info .element .box div span:nth-of-type(2) {
+.events .general .info .element .meta div blockquote p {
   font-size: 21px;
   line-height: 23px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
-  .events .general .info .element .box div span:nth-of-type(2) {
+  .events .general .info .element .meta div blockquote p {
     font-size: 18px;
   }
 }
-.events .general .info .element .box div span:last-of-type {
+.events .general .info .element .meta div blockquote span {
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
   opacity: 80%;
 }
 @media screen and (max-width: 768px) {
-  .events .general .info .element .box div span:last-of-type {
+  .events .general .info .element .meta div blockquote span {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;

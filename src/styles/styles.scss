@@ -1559,6 +1559,128 @@ main {
 		gap: 90px;
 	}
 
+	.identity {
+		display: flex;
+		flex-direction: column;
+		gap: 52px;
+		margin: 0 -60px;
+		padding: 130px 60px;
+		background-color: $green;
+
+		@media screen and (max-width: 768px) {
+			gap: 8px;
+			margin: 0 -24px;
+			padding: 60px 24px;
+		}
+
+		@media screen and (max-width: 480px) {
+			margin: 0 -16px;
+			padding: 32px 16px 0 16px;
+		}
+
+		.breadcrumbs {
+			display: flex;
+
+			@media screen and (max-width: 768px) {
+				margin-bottom: 42px;
+			}
+
+			li {
+				font-size: 13px;
+				color: $white;
+				opacity: 50%;
+			}
+
+			li:first-of-type::after {
+				content: '\2014';
+				margin: 0 5px;
+			}
+		}
+
+		.summary {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 40px;
+			gap: 20px;
+
+			@media screen and (max-width: 768px) {
+				padding: 0 24px;
+			}
+
+			@media screen and (max-width: 480px) {
+				flex-direction: column;
+				margin: 0 -16px;
+				padding: 16px 16px 0;
+			}
+
+			picture {
+				display: block;
+				flex-basis: 35%;
+
+				img {
+					@include img;
+				}
+			}
+
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				padding: 37px 60px 37px 41px;
+				background-color: $white;
+				border-radius: 10px;
+				flex-basis: 35%;
+
+				@media screen and (max-width: 768px) {
+					padding: 24px 40px 24px 24px;
+				}
+
+				@media screen and (max-width: 480px) {
+					padding: 28px 16px 48px 16px;
+					border-bottom: 1px solid $grey-100;
+					width: 100%;
+					border-radius: 10px 10px 0 0;
+				}
+
+				h3 {
+					@include m;
+					margin-bottom: 8px;
+					color: $grey-500;
+
+					@media screen and (max-width: 768px) {
+						@include s;
+					}
+				}
+
+				a {
+					@include s;
+					font-size: 18px;
+					color: $grey-500;
+					display: flex;
+					align-items: center;
+					padding: 5px 0;
+					text-decoration: none;
+
+					@media screen and (max-width: 768px) {
+						@include xs;
+					}
+
+					img {
+						margin-right: 14px;
+						width: 47px;
+						height: 47px;
+
+						@media screen and (max-width: 768px) {
+							width: 32px;
+							height: 32px;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.promo {
 		display: grid;
 		grid-template-columns: 3fr 7fr;
@@ -1583,6 +1705,19 @@ main {
 			flex-direction: column;
 			gap: 24px;
 
+			p {
+				@include xs;
+				color: $grey-400;
+			}
+
+			.nevateka {
+				margin-bottom: 32px;
+
+				@media screen and (max-width: 768px) {
+					margin-bottom: 24px;
+				}
+			}
+
 			p:first-of-type {
 				@include xl;
 				color: $grey-500;
@@ -1590,11 +1725,6 @@ main {
 				@media screen and (max-width: 768px) {
 					@include l;
 				}
-			}
-
-			p:nth-of-type(2), p:last-of-type {
-				@include xs;
-				color: $grey-400;
 			}
 
 			p:nth-of-type(2) {
@@ -1619,6 +1749,39 @@ main {
 
 			p:last-of-type {
 				font-weight: 700;
+			}
+		}
+	}
+
+	.slogan {
+		position: relative;
+		margin: 0 -60px;
+		padding: 236px 60px 50px 60px;
+		background-color: black;
+		padding-right: 20%;
+
+		picture {
+			display: block;
+			position: absolute;
+			right: 48px;
+			top: -50px;
+
+			@media screen and (max-width: 768px) {
+				right: 0;
+				left: 0;
+			}
+
+			img {
+				@include img;
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: 128px;
+
+			@media screen and (max-width: 768px) {
+				@include xxl;
 			}
 		}
 	}
@@ -1871,6 +2034,11 @@ main {
 						@include s;
 						margin: 20px 0 10px;
 					}
+				}
+
+				.item {
+					border-bottom: 1px solid $grey-100;
+					flex: 1;
 				}
 			}
 
@@ -2144,8 +2312,58 @@ main {
 
 		.list {
 			display: flex;
+			gap: 24px;
+			justify-content: center;
 
-			
+			.item {
+				position: relative;
+				flex: 1 1 300px;
+				max-width: 424px;
+
+				picture {
+					display: block;
+
+					img {
+						@include img;
+					}
+				}
+
+				div {
+					position: absolute;
+					bottom: 0;
+					padding: 34px 10px 10px 17px;
+					background-color: $grey-100;
+					width: -webkit-fill-available;
+					opacity: 80%;
+
+					h3 {
+						@include s;
+
+						@media screen and (max-width: 480px) {
+							font-size: 18px;
+						}
+					}
+
+					span {
+						display: block;
+						padding: 8px 0 32px 0;
+						@include xxs;	
+					}
+
+					a {
+						display: block;
+						padding: 5px 0;
+						@include xxs;
+						text-decoration: none;
+						word-break: break-all;
+
+						img {
+							margin-right: 5px;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
 		}
 
 		&__box {
@@ -2317,24 +2535,35 @@ main {
 		}
 
 		.list {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			display: flex;
+			justify-content: center;
 			gap: 24px;
+			flex-wrap: nowrap;
 
 			@media screen and (max-width: 991px) {
-				grid-template-columns: repeat(2, 1fr);
+					flex-wrap: wrap;
+				}
+
+			.item:first-of-type {
+				
+				@media screen and (max-width: 991px) {
+					order: 1;
+				}
 			}
 
-			@media screen and (max-width: 768px) {
-				grid-template-columns: auto;
+			.item:last-of-type {
+				
+				@media screen and (max-width: 991px) {
+					order: 2;
+				}
 			}
 
 			.item {
-				display: flex;
+				position: relative;
+				flex: 1 1 300px;
 
 				picture {
-					display: flex;
-					width: 100%;
+					display: block;
 
 					img {
 						@include img;
@@ -2342,26 +2571,20 @@ main {
 				}
 
 				div {
+					position: absolute;
+					bottom: 0;
 					padding: 34px 10px 10px 17px;
 					background-color: $grey-100;
 					width: -webkit-fill-available;
 
 					h3 {
 						@include s;
-
-						@media screen and (max-width: 576px) {
-							@include l;
-						}
 					}
 
 					span {
 						display: block;
 						padding: 8px 0 32px 0;
 						@include xxs;	
-
-						@media screen and (max-width: 576px) {
-							@include s;
-						}
 					}
 
 					a {
@@ -2371,10 +2594,6 @@ main {
 						text-decoration: none;
 						word-break: break-all;
 
-						@media screen and (max-width: 576px) {
-							@include s;
-						}
-
 						img {
 							margin-right: 5px;
 							vertical-align: middle;
@@ -2383,40 +2602,14 @@ main {
 				}
 			}
 
-			.item:first-of-type {
-				display: grid;
-				grid-row: 1 / 3;
-
-				@media screen and (max-width: 768px) {
-					grid-row: 1 / 2;
-				}
-			
-				picture {
-					grid-area: 1 / 1;
-					grid-row: 1 / 3;
-				}
-
-				div {
-					grid-area: 1 / 1;
-					grid-row: 2 / 3;
-				}
-			}
-
 			.item:nth-of-type(2) {
-				grid-row: 1 / 3;
-				grid-column: 2 / 3;
+				display: flex;
 				flex-direction: column;
 				justify-content: end;
 				@include join;
 
 				@media screen and (max-width: 991px) {
-					grid-row: 3 / 4;
-					grid-column: 1 / 3;
-				}
-
-				@media screen and (max-width: 768px) {
-					grid-column: auto;
-					grid-row: 3 / 3;
+					order: 3;
 				}
 
 				@media screen and (max-width: 480px) {
@@ -2428,8 +2621,8 @@ main {
 				p {
 					@include m;
 
-					@media screen and (max-width: 576px) {
-						@include l;
+					@media screen and (max-width: 480px) {
+						@include s;
 					}
 				}
 
@@ -2437,8 +2630,8 @@ main {
 					@include xxs;
 					margin: 6px 0 32px 0;
 
-					@media screen and (max-width: 576px) {
-						@include s;
+					@media screen and (max-width: 480px) {
+						font-size: 14px;
 					}
 				}
 
@@ -2449,27 +2642,23 @@ main {
 				}
 			}
 
-			.item:last-of-type {
-				display: grid;
-				grid-row: 1 / 3;
-				grid-column: 3 / 3;
-
-				@media screen and (max-width: 991px) {
-					grid-column: 2 / 3;
-				}
-
-				@media screen and (max-width: 768px) {
-					grid-column: auto;
-					grid-row: 2 / 3;
-				}
-
-				picture {
-					grid-row: 1 / 2;
-				}
+			.shpaihler, .skobelev {
 
 				div {
-					grid-row: 2 / 3;
+					opacity: 80%;
 				}
+			}
+
+			.skobelev {
+				order: 2;
+			}
+
+			.element {
+				order: 3;
+			}
+
+			.chistov {
+				order: 1;
 			}
 		}
 	}
@@ -2527,6 +2716,25 @@ main {
 					background-image: linear-gradient(to top, black, transparent);
 					inset: 0;
 					opacity: 80%;
+				}
+
+				.marker {
+					display: block;
+					position: absolute;
+					padding: 13px 21px;
+					top: 7%;
+					right: 0;
+					color: $white;
+					background-color: $green;
+					border-top-left-radius: 4px;
+					border-bottom-left-radius: 4px;
+					white-space: nowrap;
+					font-size: 12px;
+
+					@media screen and (max-width: 768px) and (min-width: 480px) {
+						top: 3%;
+						padding: 13px;
+					}
 				}
 
 				div {
@@ -4985,7 +5193,6 @@ main {
 
 				picture {
 					display: block;
-					position: relative;
 					
 					img {
 						@include img;
@@ -5018,7 +5225,7 @@ main {
 					}
 				}
 
-				.box {
+				.meta {
 					position: absolute;
 					right: 24px;
 					left: 20px;
@@ -5036,25 +5243,28 @@ main {
 						flex-direction: column;
 						gap: 8px;
 
-						span:first-of-type {
+						time {
 							@include xxs;
 							opacity: 80%;
 						}
 
-						span:nth-of-type(2) {
-							@include s;
+						blockquote {
 
-							@media screen and (max-width: 768px) {
-								font-size: 18px;
+							p {
+								@include s;
+
+								@media screen and (max-width: 768px) {
+									font-size: 18px;
+								}
 							}
-						}
 
-						span:last-of-type {
-							@include xs;
-							opacity: 80%;
+							span {
+								@include xs;
+								opacity: 80%;
 
-							@media screen and (max-width: 768px) {
-								@include xxs;
+								@media screen and (max-width: 768px) {
+									@include xxs;
+								}
 							}
 						}
 					}
