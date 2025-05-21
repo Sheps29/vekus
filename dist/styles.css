@@ -1639,6 +1639,7 @@ main {
   object-fit: cover;
   width: 100%;
   height: auto;
+  object-fit: scale-down;
 }
 .directions .identity .summary div {
   display: flex;
@@ -1913,6 +1914,49 @@ main {
     border-top: none;
   }
 }
+.directions .direction .listing {
+  display: flex;
+  gap: 40px 24px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 480px) {
+  .directions .direction .listing {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+.directions .direction .listing .item {
+  flex-basis: 45%;
+  border-top: 1px solid #EAEEF1;
+  padding-top: 20px;
+}
+.directions .direction .listing .item picture {
+  display: block;
+  width: 61px;
+  height: 61px;
+}
+.directions .direction .listing .item picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .direction .listing .item h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #282828;
+  margin: 10px 0;
+}
+.directions .direction .listing .item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.directions .direction .listing .item:nth-of-type(5) {
+  flex: 1;
+}
+.directions .direction .listing .foreign {
+  flex: 1;
+}
 .directions .line {
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -2079,9 +2123,22 @@ main {
   font-weight: 400;
   margin: 20px 0 10px;
 }
+.directions .services .description .dev .element ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
 .directions .services .description .dev .item {
   border-bottom: 1px solid #EAEEF1;
   flex: 1;
+}
+.directions .services .description .dev .repair {
+  flex: 1;
+}
+.directions .services .description .dev .multimedia {
+  margin-left: -24px;
+  padding-left: 24px;
+  display: flex;
+  align-items: end;
 }
 .directions .services .description button {
   font-size: 16px;
@@ -2200,6 +2257,31 @@ main {
   font-weight: 400;
   padding: 0 10px 28px 16px;
   color: #3D4548;
+}
+.directions .patrons {
+  background-color: #EAEEF1;
+  margin: 0 -60px;
+  padding: 60px;
+}
+@media screen and (max-width: 768px) {
+  .directions .patrons {
+    margin: 0 -24px;
+    padding: 60px 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .patrons {
+    margin: 0 -16px;
+    padding: 60px 16px;
+  }
+}
+.directions .patrons div {
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+.directions .patrons .listing {
+  justify-content: end;
+  gap: 24px;
 }
 .directions .clients {
   display: flex;
@@ -2401,6 +2483,7 @@ main {
   background-color: #EAEEF1;
   width: -webkit-fill-available;
   opacity: 80%;
+  border-radius: 0 0 10px 10px;
 }
 .directions .team .list .item div h3 {
   font-size: 21px;
@@ -2429,6 +2512,181 @@ main {
   word-break: break-all;
 }
 .directions .team .list .item div a img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.directions .team .listing {
+  display: flex;
+  gap: 24px;
+  justify-content: end;
+}
+@media screen and (max-width: 768px) {
+  .directions .team .listing {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.directions .team .listing .chistov {
+  position: relative;
+  flex: 1;
+  max-width: 424px;
+  display: grid;
+}
+.directions .team .listing .chistov picture {
+  display: block;
+  grid-row: 1/2;
+}
+.directions .team .listing .chistov picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .team .listing .chistov div {
+  grid-row: 2/3;
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+  border-radius: 0 0 10px 10px;
+}
+.directions .team .listing .chistov div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .listing .chistov div h3 {
+    font-size: 18px;
+  }
+}
+.directions .team .listing .chistov div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.directions .team .listing .chistov div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+  color: #3D4548;
+}
+.directions .team .listing .chistov div a img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.directions .team .listing .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 40px 24px;
+  background-color: #499647;
+  color: white;
+  max-width: 424px;
+  flex: 1;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .directions .team .listing .item {
+    display: flex;
+    justify-content: center;
+    margin: 0 -24px;
+    width: 100%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .team .listing .item {
+    margin: 0 -16px;
+  }
+}
+.directions .team .listing .item p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .listing .item p {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.directions .team .listing .item p:last-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 6px 0 32px 0;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .listing .item p:last-of-type {
+    font-size: 14px;
+  }
+}
+.directions .team .listing .item button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.directions .team .listing .semenin {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 424px;
+}
+.directions .team .listing .semenin picture {
+  display: block;
+}
+.directions .team .listing .semenin picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .team .listing .semenin div {
+  position: absolute;
+  bottom: 0;
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+  opacity: 80%;
+  border-radius: 0 0 10px 10px;
+}
+.directions .team .listing .semenin div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .listing .semenin div h3 {
+    font-size: 18px;
+  }
+}
+.directions .team .listing .semenin div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.directions .team .listing .semenin div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+}
+.directions .team .listing .semenin div a img {
   margin-right: 5px;
   vertical-align: middle;
 }
@@ -2604,6 +2862,223 @@ main {
   display: flex;
   justify-content: center;
 }
+.directions .team .workers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+}
+@media screen and (max-width: 991px) {
+  .directions .team .workers {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.directions .team .workers .worker {
+  display: flex;
+}
+.directions .team .workers .worker picture {
+  display: flex;
+  width: 100%;
+}
+.directions .team .workers .worker picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .team .workers .worker div {
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+}
+.directions .team .workers .worker div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.directions .team .workers .worker div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.directions .team .workers .worker div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+  color: #3D4548;
+}
+.directions .team .workers .worker div a img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.directions .team .workers .danilov {
+  position: relative;
+  max-width: 424px;
+  display: grid;
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+@media screen and (max-width: 768px) {
+  .directions .team .workers .danilov {
+    grid-row: 1/3;
+  }
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .danilov {
+    grid-row: 1/2;
+    max-width: none;
+  }
+}
+.directions .team .workers .danilov picture {
+  display: block;
+}
+.directions .team .workers .danilov picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .team .workers .danilov div {
+  position: absolute;
+  bottom: 0;
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (max-width: 768px) {
+  .directions .team .workers .danilov div {
+    position: static;
+  }
+}
+.directions .team .workers .danilov div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .team .workers .danilov div h3 {
+    font-size: 18px;
+  }
+}
+.directions .team .workers .danilov div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.directions .team .workers .danilov div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+}
+.directions .team .workers .danilov div a img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .directions .team .workers .davlatov {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .davlatov {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .directions .team .workers .verin {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .verin {
+    display: none;
+  }
+}
+.directions .team .workers .join {
+  grid-row: 1/3;
+  grid-column: 3/3;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px;
+  background-color: #499647;
+  color: white;
+  justify-content: end;
+}
+@media screen and (max-width: 991px) {
+  .directions .team .workers .join {
+    grid-row: 3/3;
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .directions .team .workers .join {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .join {
+    grid-row: 2/3;
+    grid-column: 1/1;
+    justify-content: center;
+  }
+}
+.directions .team .workers .join p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .join p {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.directions .team .workers .join p:last-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 6px 0 32px 0;
+}
+@media screen and (max-width: 576px) {
+  .directions .team .workers .join p:last-of-type {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.directions .team .workers .join button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
 .directions .party {
   display: flex;
   flex-direction: column;
@@ -2757,6 +3232,159 @@ main {
 }
 .directions .party .list .chistov {
   order: 1;
+}
+.directions .band ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.directions .band ul li {
+  display: flex;
+  flex: 1;
+  flex-basis: 30%;
+}
+@media screen and (max-width: 768px) {
+  .directions .band ul li {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .band ul li {
+    flex-basis: 100%;
+  }
+}
+.directions .band ul li picture {
+  display: flex;
+  width: 100%;
+}
+.directions .band ul li picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.directions .band ul li div {
+  padding: 34px 10px 10px 17px;
+  background-color: #EAEEF1;
+  width: -webkit-fill-available;
+}
+.directions .band ul li div h3 {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+}
+.directions .band ul li div span {
+  display: block;
+  padding: 8px 0 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #3D4548;
+}
+.directions .band ul li div a {
+  display: block;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-all;
+  color: #3D4548;
+}
+.directions .band ul li div a img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.directions .band ul .join {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 40px 24px;
+  background-color: #499647;
+  color: white;
+  flex: 1;
+  border-radius: 10px;
+  flex-basis: 30%;
+}
+@media screen and (max-width: 768px) {
+  .directions .band ul .join {
+    display: flex;
+    justify-content: center;
+    margin: 0 -24px;
+    width: 100%;
+    max-width: none;
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .directions .band ul .join {
+    margin: 0 -16px;
+    flex-basis: 100%;
+  }
+}
+.directions .band ul .join p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .directions .band ul .join p {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.directions .band ul .join p:last-of-type {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 6px 0 32px 0;
+}
+@media screen and (max-width: 480px) {
+  .directions .band ul .join p:last-of-type {
+    font-size: 14px;
+  }
+}
+.directions .band ul .join button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.directions .consultants {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.directions .consultants h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .directions .consultants h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.directions .consultants div {
+  display: flex;
+  gap: 24px;
+}
+.directions .consultants div picture {
+  display: block;
+  border-radius: 10px;
+}
+.directions .consultants div picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 .directions .media {
   display: flex;
