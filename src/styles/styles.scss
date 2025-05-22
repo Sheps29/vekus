@@ -6633,3 +6633,478 @@ main {
     }
   }
 }
+
+.history {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+
+	.headers {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		li {
+			@include xxs;
+			color: $grey-400;
+			padding: 13px;
+			border: 1px solid $grey-100;
+			flex: 1;
+			text-align: center;
+			flex-basis: 20%;
+
+			@media screen and (max-width: 768px) {
+        flex-basis: 45%;
+      }
+		}
+
+		li:first-of-type {
+			color: $grey-500;
+			font-weight: 700;
+			background-color: $grey-100;
+		}
+	}
+
+	.promo {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h3 {
+			@include l;
+			color: $grey-200;
+
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			p {
+				@include xs;
+				color: $grey-400;
+			}
+
+			p:first-of-type {
+				@include xl;
+				color: $grey-500;
+
+				@media screen and (max-width: 768px) {
+					@include l;
+				}
+			}
+
+			p:nth-of-type(2) {
+				@include top-border;
+				padding-top: 16px;
+				margin-bottom: 24px;
+			}
+
+			button {
+				@include button-white;
+				border-color: $grey-200;
+				margin-top: 24px;
+				margin-right: auto;
+			}
+		}
+	}
+
+	.periods {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-400;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.time {
+			display: flex;
+			justify-content: space-between;
+			gap: 24px;
+			margin-top: 32px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 18px;
+
+				@media screen and (max-width: 480px) {
+					align-items: flex-start;
+				}
+
+				li {
+					@include xl;
+					color: $grey-200;
+					padding-left: 10px;
+
+					@media screen and (max-width: 768px) {
+						@include l;
+					}
+
+					@media screen and (max-width: 480px) {
+						display: flex;
+						gap: 8px;
+						align-items: center;
+					}
+
+					.arrow {
+						display: flex;
+						width: 14px;
+						height: 14px;
+						rotate: -90deg;
+
+						@media screen and (min-width: 481px) {
+							display: none;
+						}
+
+						img {
+							@include img;
+							opacity: 30%;
+						}
+					}
+				}
+
+				li:first-of-type {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					@media screen and (max-width: 480px) {
+						align-items: flex-start;
+					}
+
+					div:first-of-type {
+						display: flex;
+						align-items: center;
+						gap: 16px;
+						font-size: 64px;
+						color: $grey-400;
+
+						@media screen and (max-width: 768px) {
+							@include xxl;
+						}
+
+						@media screen and (max-width: 480px) {
+							@include l;
+						}
+
+						picture:first-of-type {
+							display: flex;
+							width: 14px;
+							height: 14px;
+							rotate: 180deg;
+
+							@media screen and (min-width: 481px) {
+								display: none;
+							}
+
+							img {
+								@include img;
+							}
+						}
+
+						picture:last-of-type {
+							display: flex;
+							width: 27px;
+							height: 27px;
+
+							@media screen and (max-width: 480px) {
+								display: none;
+							}
+
+							img {
+								@include img;
+							}
+						}
+					}
+
+					div:last-of-type {
+						display: block;
+
+						@media screen and (min-width: 481px) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			div {
+				max-width: 563px;
+
+				@media screen and (max-width: 480px) {
+					display: none;
+				}
+
+				p {
+					@include s;
+					padding: 20px 0;
+					border-top: 1px solid $grey-100;
+				}
+
+				picture {
+					display: block;
+
+					img {
+						@include img;
+					}
+				}
+			}
+		}
+	}
+
+	.partners {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+			max-width: 375px;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		div{
+			display: flex;
+			justify-content: center;
+			
+			@media screen and (max-width: 768px) {
+				overflow-x: scroll;
+				overflow-y: hidden;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+			}
+
+			picture {
+				display: block;
+
+				@media screen and (max-width: 768px) {
+					min-width: 165px;
+				}
+
+				img {
+					@include img;
+				}
+			}
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				height: 6px;
+			}
+
+			&::-webkit-scrollbar-track {
+				height: 10px;
+				background-color: $grey-100;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				height: 10px;
+				background-color: $grey-100;
+			}
+		}
+	}
+}
+
+.divisions {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+
+	.headers {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		li {
+			@include xxs;
+			color: $grey-400;
+			padding: 13px;
+			border: 1px solid $grey-100;
+			flex: 1;
+			text-align: center;
+			flex-basis: 20%;
+
+			@media screen and (max-width: 768px) {
+        flex-basis: 45%;
+      }
+		}
+
+		li:nth-last-of-type(2) {
+			color: $grey-500;
+			font-weight: 700;
+			background-color: $grey-100;
+		}
+	}
+
+	.promo {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h1 {
+			@include l;
+			color: $grey-200;
+
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+
+			p {
+				@include xs;
+				color: $grey-400;
+			}
+
+			p:first-of-type {
+				@include xl;
+				color: $grey-500;
+				margin-bottom: 24px;
+
+				@media screen and (max-width: 768px) {
+					@include l;
+				}
+			}
+
+			p:nth-of-type(2) {
+				@include top-border;
+				padding-top: 16px;
+			}
+		}
+	}
+
+	.units {
+		margin: 60px -60px;
+		padding: 60px;
+		background-color: $grey-100;
+
+		@media screen and (max-width: 768px) {
+			margin: 60px -24px;
+			padding: 60px 24px;
+		}
+
+		@media screen and (max-width: 480px) {
+			margin: 60px -16px;
+			padding: 60px 16px;
+		}
+		
+		.elements {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 24px;
+
+			@media screen and (max-width: 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media screen and (max-width: 480px) {
+				grid-template-columns: 1fr;
+			}
+
+			li {
+				position: relative;
+
+				picture {
+					display: block;
+
+					img {
+						@include img;
+					}
+				}
+
+				.item1 {
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: $green;
+				}
+			}
+
+			.element1, .element2, .element6, .element7 {
+				grid-column: span 3;
+
+				@media screen and (max-width: 768px) {
+					grid-column: span 1;
+				}
+			}
+
+			.element3, .element4, .element5, .element8, .element9, .element10 {
+				grid-column: span 2;
+
+				@media screen and (max-width: 768px) {
+					grid-column: span 1;
+				}
+			}
+
+			.element6 {
+
+				@media screen and (max-width: 768px) and (min-width: 480px) {
+					grid-column: 1 / 2;
+					grid-row: 3 / 4;
+				}
+			}
+
+			.element7 {
+
+				@media screen and (max-width: 768px) and (min-width: 480px) {
+					grid-column: 2 / 3;
+					grid-row: 3 / 4;
+				}
+			}
+
+			.element1:hover .item1 {
+				display: block;
+			}
+		}
+
+		// .info {
+		// 	position: relative;
+
+		// 	.item {
+		// 		position: absolute;
+		// 		display: none;
+		// 		top: 0;
+		// 		left: 0;
+		// 	}
+		// }
+
+		
+	}
+}
