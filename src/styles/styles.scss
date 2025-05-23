@@ -6957,7 +6957,7 @@ main {
       }
 		}
 
-		li:nth-last-of-type(2) {
+		li:nth-of-type(2) {
 			color: $grey-500;
 			font-weight: 700;
 			background-color: $grey-100;
@@ -7039,6 +7039,11 @@ main {
 
 			li {
 				position: relative;
+				overflow: scroll;
+				
+				&::-webkit-scrollbar {
+					display: none;
+				}
 
 				picture {
 					display: block;
@@ -7048,17 +7053,17 @@ main {
 					}
 				}
 
-				.item1 {
+				.item {
 					display: none;
 					position: absolute;
-					top: 0;
-					left: 0;
-					padding: 8px 20px;
+					padding: 10px 20px;
 					background-color: $green;
-					height: 88%;
 					border-radius: 10px;
+					overflow-y: auto;
+					background-image: linear-gradient(to right, $green-100, transparent);
+					inset: 0;
 
-					div {
+					.logo {
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
@@ -7077,18 +7082,26 @@ main {
 						@include xxs;
 						color: $white;
 						border-top: 1px solid $white;
-						padding: 6px 0 4px;
+						padding: 8px 0 6px;
 					}
 
 					.lists {
 						display: flex;
-						gap: 8px;
+						gap: 20px;
+						padding-top: 10px;
+						border-top: 1px solid $white;
+
+						@media screen and (max-width: 768px) {
+							flex-direction: column;
+							gap: 0;
+						}
 
 						ul {
 
 							li {
 								@include xxs;
 								color: $white;
+								margin-bottom: 8px;
 
 								span {
 									vertical-align: super;
@@ -7096,6 +7109,28 @@ main {
 							}
 						}
 					}
+
+					.listing {
+						padding-top: 10px;
+						border-top: 1px solid $white;
+
+						li {
+							@include xxs;
+							color: $white;
+							margin-bottom: 8px;
+
+							span {
+								vertical-align: super;
+							}
+						}
+					}
+				}
+			}
+
+			.element {
+				
+				@media screen and (max-width: 480px) {
+					margin: 0 -16px;
 				}
 			}
 
@@ -7134,6 +7169,459 @@ main {
 			.element1:hover .item1 {
 				display: block;
 			}
+
+			.element2:hover .item2 {
+				display: block;
+			}
+
+			.element3:hover .item3 {
+				display: block;
+			}
+
+			.element4:hover .item4 {
+				display: block;
+			}
+
+			.element5:hover .item5 {
+				display: block;
+			}
+
+			.element6:hover .item6 {
+				display: block;
+			}
+
+			.element7:hover .item7 {
+				display: block;
+			}
+
+			.element8:hover .item8 {
+				display: block;
+			}
+
+			.element9:hover .item9 {
+				display: block;
+			}
+
+			.element10:hover .item10 {
+				display: block;
+			}
 		}		
+	}
+}
+
+.production {
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+
+	.headers {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		li {
+			@include xxs;
+			color: $grey-400;
+			padding: 13px;
+			border: 1px solid $grey-100;
+			flex: 1;
+			text-align: center;
+			flex-basis: 20%;
+
+			@media screen and (max-width: 768px) {
+        flex-basis: 45%;
+      }
+		}
+
+		li:nth-of-type(3) {
+			color: $grey-500;
+			font-weight: 700;
+			background-color: $grey-100;
+		}
+	}
+
+	.promo {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h2 {
+			@include l;
+			color: $grey-200;
+
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
+
+		p {
+			@include xl;
+			color: $grey-500;
+			padding-bottom: 24px;
+			border-bottom: 1px solid $grey-100;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+	}
+
+	.specifications {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h3 {
+			@include l;
+			color: $grey-200;
+
+			@media screen and (max-width: 768px) {
+				@include m;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+
+			picture {
+				display: block;
+
+				@media screen and (max-width: 480px) {
+					margin: 0 -16px;
+				}
+
+				img {
+					@include img;
+				}
+			}
+
+			.list {
+				gap: 32px 24px;
+
+				li {
+					border-top: 1px solid $grey-100;
+					padding-top: 20px;
+					flex-basis: 45%;
+
+					@media screen and (max-width: 480px) {
+						flex-basis: 100%;
+					}
+
+					span:first-of-type {
+						@include m;
+						background-color: $green;
+						color: $white;
+						border-radius: 50%;
+						padding: 10px;
+					}
+
+					span:last-of-type {
+						@include s;
+						display: block;
+						padding-top: 20px;
+					}
+				}
+
+				li:last-of-type {
+					flex-basis: 100%;
+				}
+			}
+		}
+	}
+
+	.ware {
+		display: grid;
+		grid-template-columns: 3fr 7fr;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: auto;
+			gap: 20px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-400;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.tabs {
+			display: flex;
+			gap: 32px;
+			margin-top: 56px;
+
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
+
+			input {
+				display: none;
+			}
+
+			.labels {
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+				gap: 18px;
+
+				@media screen and (max-width: 768px) {
+					flex-direction: row;
+				}
+
+				label {
+					@include m;
+					display: block;
+					cursor: pointer;
+					color: $grey-200;
+					position: relative;
+				}
+
+				
+			}
+
+			#tab1:checked ~ .labels label[for='tab1'],
+			#tab2:checked ~ .labels label[for='tab2'],
+			#tab3:checked ~ .labels label[for='tab3'] {
+				font-size: 36px;
+				color: $grey-500;
+				margin-right: 44px;
+			}
+
+			#tab1:checked ~ .labels label[for='tab1']::after,
+			#tab2:checked ~ .labels label[for='tab2']::after,
+			#tab3:checked ~ .labels label[for='tab3']::after {
+				content: "▼";
+				position: absolute;
+				right: -20px;
+				rotate: 90deg;
+				transform: translateY(-50%);
+				font-size: 0.8em;
+
+				@media screen and (max-width: 768px) {
+					rotate: 0deg;
+				}
+			}
+
+			.contents {
+				flex: 1;
+
+				@media screen and (max-width: 768px) {
+					flex: none;
+				}
+
+				.content {
+					display: none;
+
+					ul {
+						padding-top: 20px;
+						list-style-type: disc;
+						border-top: 1px solid $grey-100;
+
+						li {
+							@include s;
+							margin-bottom: 10px;
+						}
+
+						li::marker {
+							font-size: 0.5em;
+						}
+					}
+				}
+			}
+
+			#tab1:checked ~ .contents #content1,
+			#tab2:checked ~ .contents #content2,
+			#tab3:checked ~ .contents #content3 {
+				display: block;
+			}
+		}
+	}
+
+	.computers {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		
+		h2 {
+			@include xl;
+			color: $grey-400;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.inventory {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+			gap: 24px;
+
+			.item {
+				border: 1px solid $grey-100;
+				border-radius: 4px;
+				text-align: center;
+
+				.icon {
+					display: block;
+
+					.comp {
+						@include img;
+						max-width: 240px;
+					}
+				}
+
+				.name {
+					@include s;
+					padding: 16px 26px 28px 26px;
+					border-bottom: 1px solid $grey-100;
+					text-align: left;
+				}
+
+				.model {
+					display: flex;
+					flex-direction: column;
+					align-items: baseline;
+					padding: 16px 26px 28px 26px;
+					border-bottom: 1px solid $grey-100;
+
+					.name {
+						@include s;
+						border-bottom: none;
+						padding: 0;
+					}
+
+					.order {
+						color: $red;
+						font-size: 12px;
+						font-weight: 700;
+						display: block;
+						padding-top: 10px;
+					}
+				}
+
+				.buttons {
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					gap: 24px;
+					padding: 24px 26px 32px;
+
+					button:first-of-type {
+						@include button-white;
+						border: 1px solid $grey-200;
+						border-radius: 4px;
+						padding: 17px 35px;
+		
+						span {
+							margin-right: 10px;
+							@include xs;
+						}
+					}
+
+					button:last-of-type {
+						@include button-green;
+						border-radius: 4px;
+						padding: 17px 55px;
+					}
+				}
+			}
+		}
+	}
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		.list {
+			display: flex;
+			gap: 24px;
+			flex-wrap: nowrap;
+
+			@media screen and (max-width: 590px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.item {
+				position: relative;
+				width: 100%;
+
+				picture {
+
+					img {
+						@include img;
+					}
+				}
+				
+				div {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					position: absolute;
+					color: $white;
+					bottom: 50px;
+					left: 20px;
+
+					span {
+						@include xxs;
+						opacity: 80%;
+					}
+		
+					p {
+						@include xs;
+						color: $white;
+						
+						@media screen and (max-width: 900px) {
+							@include xxs;
+						}
+		
+						@media screen and (max-width: 590px) {
+							font-size: 18px;
+							line-height: 21px;
+						}
+					}
+				}
+			}
+		}
+
+		button {
+			@include button-white;
+			border-color: $grey-100;
+			margin-top: 40px;
+			width: 100%;
+
+			img {
+				rotate: 90deg;
+			}
+		}
 	}
 }

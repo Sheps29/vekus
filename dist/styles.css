@@ -7314,7 +7314,7 @@ main {
     flex-basis: 45%;
   }
 }
-.divisions .headers li:nth-last-of-type(2) {
+.divisions .headers li:nth-of-type(2) {
   color: #282828;
   font-weight: 700;
   background-color: #EAEEF1;
@@ -7405,6 +7405,10 @@ main {
 }
 .divisions .units .elements li {
   position: relative;
+  overflow: scroll;
+}
+.divisions .units .elements li::-webkit-scrollbar {
+  display: none;
 }
 .divisions .units .elements li picture {
   display: block;
@@ -7414,50 +7418,78 @@ main {
   width: 100%;
   height: auto;
 }
-.divisions .units .elements li .item1 {
+.divisions .units .elements li .item {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 8px 20px;
+  padding: 10px 20px;
   background-color: #499647;
-  height: 88%;
   border-radius: 10px;
+  overflow-y: auto;
+  background-image: linear-gradient(to right, #59B142, transparent);
+  inset: 0;
 }
-.divisions .units .elements li .item1 div {
+.divisions .units .elements li .item .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6px;
 }
-.divisions .units .elements li .item1 div picture {
+.divisions .units .elements li .item .logo picture {
   display: block;
 }
-.divisions .units .elements li .item1 div picture img {
+.divisions .units .elements li .item .logo picture img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.divisions .units .elements li .item1 p {
+.divisions .units .elements li .item p {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: white;
   border-top: 1px solid white;
-  padding: 6px 0 4px;
+  padding: 8px 0 6px;
 }
-.divisions .units .elements li .item1 .lists {
+.divisions .units .elements li .item .lists {
   display: flex;
-  gap: 8px;
+  gap: 20px;
+  padding-top: 10px;
+  border-top: 1px solid white;
 }
-.divisions .units .elements li .item1 .lists ul li {
+@media screen and (max-width: 768px) {
+  .divisions .units .elements li .item .lists {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.divisions .units .elements li .item .lists ul li {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: white;
+  margin-bottom: 8px;
 }
-.divisions .units .elements li .item1 .lists ul li span {
+.divisions .units .elements li .item .lists ul li span {
   vertical-align: super;
+}
+.divisions .units .elements li .item .listing {
+  padding-top: 10px;
+  border-top: 1px solid white;
+}
+.divisions .units .elements li .item .listing li {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 8px;
+}
+.divisions .units .elements li .item .listing li span {
+  vertical-align: super;
+}
+@media screen and (max-width: 480px) {
+  .divisions .units .elements .element {
+    margin: 0 -16px;
+  }
 }
 .divisions .units .elements .element1, .divisions .units .elements .element2, .divisions .units .elements .element6, .divisions .units .elements .element7 {
   grid-column: span 3;
@@ -7489,6 +7521,483 @@ main {
 }
 .divisions .units .elements .element1:hover .item1 {
   display: block;
+}
+.divisions .units .elements .element2:hover .item2 {
+  display: block;
+}
+.divisions .units .elements .element3:hover .item3 {
+  display: block;
+}
+.divisions .units .elements .element4:hover .item4 {
+  display: block;
+}
+.divisions .units .elements .element5:hover .item5 {
+  display: block;
+}
+.divisions .units .elements .element6:hover .item6 {
+  display: block;
+}
+.divisions .units .elements .element7:hover .item7 {
+  display: block;
+}
+.divisions .units .elements .element8:hover .item8 {
+  display: block;
+}
+.divisions .units .elements .element9:hover .item9 {
+  display: block;
+}
+.divisions .units .elements .element10:hover .item10 {
+  display: block;
+}
+
+.production {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.production .headers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.production .headers li {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #3D4548;
+  padding: 13px;
+  border: 1px solid #EAEEF1;
+  flex: 1;
+  text-align: center;
+  flex-basis: 20%;
+}
+@media screen and (max-width: 768px) {
+  .production .headers li {
+    flex-basis: 45%;
+  }
+}
+.production .headers li:nth-of-type(3) {
+  color: #282828;
+  font-weight: 700;
+  background-color: #EAEEF1;
+}
+.production .promo {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .production .promo {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+.production .promo h2 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #A0A7AC;
+}
+@media screen and (max-width: 768px) {
+  .production .promo h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .promo p {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EAEEF1;
+}
+@media screen and (max-width: 768px) {
+  .production .promo p {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .specifications {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .production .specifications {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+.production .specifications h3 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #A0A7AC;
+}
+@media screen and (max-width: 768px) {
+  .production .specifications h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .specifications div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.production .specifications div picture {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .production .specifications div picture {
+    margin: 0 -16px;
+  }
+}
+.production .specifications div picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.production .specifications div .list {
+  gap: 32px 24px;
+}
+.production .specifications div .list li {
+  border-top: 1px solid #EAEEF1;
+  padding-top: 20px;
+  flex-basis: 45%;
+}
+@media screen and (max-width: 480px) {
+  .production .specifications div .list li {
+    flex-basis: 100%;
+  }
+}
+.production .specifications div .list li span:first-of-type {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  background-color: #499647;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.production .specifications div .list li span:last-of-type {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  display: block;
+  padding-top: 20px;
+}
+.production .specifications div .list li:last-of-type {
+  flex-basis: 100%;
+}
+.production .ware {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .production .ware {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+.production .ware h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #3D4548;
+}
+@media screen and (max-width: 768px) {
+  .production .ware h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .ware .tabs {
+  display: flex;
+  gap: 32px;
+  margin-top: 56px;
+}
+@media screen and (max-width: 768px) {
+  .production .ware .tabs {
+    flex-direction: column;
+  }
+}
+.production .ware .tabs input {
+  display: none;
+}
+.production .ware .tabs .labels {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 18px;
+}
+@media screen and (max-width: 768px) {
+  .production .ware .tabs .labels {
+    flex-direction: row;
+  }
+}
+.production .ware .tabs .labels label {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  display: block;
+  cursor: pointer;
+  color: #A0A7AC;
+  position: relative;
+}
+.production .ware .tabs #tab1:checked ~ .labels label[for=tab1],
+.production .ware .tabs #tab2:checked ~ .labels label[for=tab2],
+.production .ware .tabs #tab3:checked ~ .labels label[for=tab3] {
+  font-size: 36px;
+  color: #282828;
+  margin-right: 44px;
+}
+.production .ware .tabs #tab1:checked ~ .labels label[for=tab1]::after,
+.production .ware .tabs #tab2:checked ~ .labels label[for=tab2]::after,
+.production .ware .tabs #tab3:checked ~ .labels label[for=tab3]::after {
+  content: "▼";
+  position: absolute;
+  right: -20px;
+  rotate: 90deg;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+@media screen and (max-width: 768px) {
+  .production .ware .tabs #tab1:checked ~ .labels label[for=tab1]::after,
+  .production .ware .tabs #tab2:checked ~ .labels label[for=tab2]::after,
+  .production .ware .tabs #tab3:checked ~ .labels label[for=tab3]::after {
+    rotate: 0deg;
+  }
+}
+.production .ware .tabs .contents {
+  flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .production .ware .tabs .contents {
+    flex: none;
+  }
+}
+.production .ware .tabs .contents .content {
+  display: none;
+}
+.production .ware .tabs .contents .content ul {
+  padding-top: 20px;
+  list-style-type: disc;
+  border-top: 1px solid #EAEEF1;
+}
+.production .ware .tabs .contents .content ul li {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.production .ware .tabs .contents .content ul li::marker {
+  font-size: 0.5em;
+}
+.production .ware .tabs #tab1:checked ~ .contents #content1,
+.production .ware .tabs #tab2:checked ~ .contents #content2,
+.production .ware .tabs #tab3:checked ~ .contents #content3 {
+  display: block;
+}
+.production .computers {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.production .computers h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #3D4548;
+}
+@media screen and (max-width: 768px) {
+  .production .computers h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .computers .inventory {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+  gap: 24px;
+}
+.production .computers .inventory .item {
+  border: 1px solid #EAEEF1;
+  border-radius: 4px;
+  text-align: center;
+}
+.production .computers .inventory .item .icon {
+  display: block;
+}
+.production .computers .inventory .item .icon .comp {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 240px;
+}
+.production .computers .inventory .item .name {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  padding: 16px 26px 28px 26px;
+  border-bottom: 1px solid #EAEEF1;
+  text-align: left;
+}
+.production .computers .inventory .item .model {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 16px 26px 28px 26px;
+  border-bottom: 1px solid #EAEEF1;
+}
+.production .computers .inventory .item .model .name {
+  font-size: 21px;
+  line-height: 23px;
+  font-weight: 400;
+  border-bottom: none;
+  padding: 0;
+}
+.production .computers .inventory .item .model .order {
+  color: #CD0000;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  padding-top: 10px;
+}
+.production .computers .inventory .item .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 26px 32px;
+}
+.production .computers .inventory .item .buttons button:first-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border: 1px solid #A0A7AC;
+  border-radius: 4px;
+  padding: 17px 35px;
+}
+.production .computers .inventory .item .buttons button:first-of-type span {
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+}
+.production .computers .inventory .item .buttons button:last-of-type {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  padding: 17px 55px;
+}
+.production .projects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .production .projects {
+    gap: 32px;
+  }
+}
+.production .projects h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .production .projects h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.production .projects .list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 590px) {
+  .production .projects .list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.production .projects .list .item {
+  position: relative;
+  width: 100%;
+}
+.production .projects .list .item picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.production .projects .list .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  color: white;
+  bottom: 50px;
+  left: 20px;
+}
+.production .projects .list .item div span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  opacity: 80%;
+}
+.production .projects .list .item div p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .production .projects .list .item div p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 590px) {
+  .production .projects .list .item div p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+.production .projects button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border-color: #EAEEF1;
+  margin-top: 40px;
+  width: 100%;
+}
+.production .projects button img {
+  rotate: 90deg;
 }
 
 /*# sourceMappingURL=styles.css.map */
