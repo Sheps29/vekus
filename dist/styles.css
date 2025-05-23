@@ -7419,7 +7419,45 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 8px 20px;
   background-color: #499647;
+  height: 88%;
+  border-radius: 10px;
+}
+.divisions .units .elements li .item1 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.divisions .units .elements li .item1 div picture {
+  display: block;
+}
+.divisions .units .elements li .item1 div picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.divisions .units .elements li .item1 p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: white;
+  border-top: 1px solid white;
+  padding: 6px 0 4px;
+}
+.divisions .units .elements li .item1 .lists {
+  display: flex;
+  gap: 8px;
+}
+.divisions .units .elements li .item1 .lists ul li {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: white;
+}
+.divisions .units .elements li .item1 .lists ul li span {
+  vertical-align: super;
 }
 .divisions .units .elements .element1, .divisions .units .elements .element2, .divisions .units .elements .element6, .divisions .units .elements .element7 {
   grid-column: span 3;
