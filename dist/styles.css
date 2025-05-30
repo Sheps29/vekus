@@ -837,6 +837,290 @@ main {
   height: 10px;
   background-color: #EAEEF1;
 }
+.master .part {
+  margin-top: 56px;
+  margin-bottom: 90px;
+}
+.master .part h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  max-width: 27%;
+  margin-bottom: 26px;
+}
+@media screen and (max-width: 768px) {
+  .master .part h3 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+}
+.master .part .separation {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .master .part .separation {
+    grid-template-columns: auto;
+  }
+}
+.master .part .separation .box--green {
+  height: 225px;
+  background-color: #499647;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 26px;
+}
+@media screen and (max-width: 768px) {
+  .master .part .separation .box--green {
+    display: none;
+  }
+}
+.master .part .separation .box--green .bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 46px;
+  margin: 33px 20px;
+  border-radius: 10px;
+}
+.master .part .separation .box--green .bar .icon {
+  width: 70px;
+  height: 46px;
+  background-color: white;
+  border-radius: 10px;
+}
+.master .part .separation .box--green h6 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  max-width: 200px;
+  margin: 24px 0 30px 20px;
+  color: white;
+}
+.master .part .separation .invite {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 26px;
+}
+@media screen and (max-width: 768px) {
+  .master .part .separation .invite {
+    margin: 0;
+  }
+}
+.master .part .separation .invite .item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  height: 225px;
+  background-color: #499647;
+  border-radius: 10px;
+}
+.master .part .separation .invite .item span {
+  display: flex;
+  padding-right: 20px;
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: 700;
+  color: #A0A7AC;
+  opacity: 30%;
+}
+@media screen and (max-width: 480px) {
+  .master .part .separation .invite .item span {
+    font-size: 96px;
+    line-height: 130px;
+    align-items: start;
+  }
+}
+.master .part .separation .invite .item div {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .master .part .separation .invite .item div {
+    gap: 8px;
+  }
+}
+.master .part .separation .invite .item div h6 {
+  display: flex;
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 768px) {
+  .master .part .separation .invite .item div h6 {
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+}
+.master .part .separation .invite .item div picture {
+  display: flex;
+  margin-bottom: 30px;
+}
+.master .part .separation .invite .item div picture img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+.master .part .separation .invite .item:first-of-type div h6 {
+  color: white;
+}
+.master .part .separation .invite .item:nth-of-type(2), .master .part .separation .invite .item:last-of-type {
+  background-color: #EAEEF1;
+}
+.master .part .separation .invite .item:nth-of-type(2) span, .master .part .separation .invite .item:last-of-type span {
+  color: #A0A7AC;
+}
+.master .reservation {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding-top: 65px;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation {
+    grid-template-columns: auto;
+    padding-top: 20px;
+  }
+}
+.master .reservation .header-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .header-tabs {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+.master .reservation .header-tabs button {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  border: none;
+  background-color: white;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .header-tabs button {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    display: flex;
+    flex: 1;
+    padding: 13px 0;
+    justify-content: center;
+    border: 1px solid #EAEEF1;
+  }
+}
+.master .reservation .header-tabs button:first-of-type {
+  color: #499647;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .header-tabs button:first-of-type {
+    background-color: #EAEEF1;
+  }
+}
+.master .reservation .header-tabs button:last-of-type {
+  color: #909090;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .application {
+    margin-top: 54px;
+  }
+}
+.master .reservation .application h3 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .application h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.master .reservation .application p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #3D4548;
+  margin-bottom: 42px;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .application p {
+    margin-bottom: 32px;
+  }
+}
+.master .reservation .application form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.master .reservation .application form .info {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #909090;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #EAEEF1;
+}
+.master .reservation .application form .company {
+  line-height: 0.8em;
+}
+@media screen and (max-width: 480px) {
+  .master .reservation .application form .company {
+    margin-top: 24px;
+  }
+}
+.master .reservation .application form label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #3D4548;
+  margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  .master .reservation .application form label {
+    margin-top: -16px;
+  }
+}
+.master .reservation .application form label a {
+  text-decoration: none;
+  color: #499647;
+}
+.master .reservation .application form .button--green {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: #499647;
+  border: 1px solid white;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+@media screen and (max-width: 480px) {
+  .master .reservation .application form .button--green {
+    margin-left: 0;
+  }
+}
 
 .primary {
   display: flex;
