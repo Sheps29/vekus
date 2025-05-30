@@ -685,6 +685,73 @@ main {
 				}
 			}
 		}
+
+		button {
+			@include button-white;
+			border-color: $grey-200;
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.clients {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@media screen and (max-width: 768px) {
+			gap: 32px;
+		}
+
+		h2 {
+			@include xl;
+			color: $grey-500;
+
+			@media screen and (max-width: 768px) {
+				@include l;
+			}
+		}
+
+		div{
+			display: flex;
+			justify-content: center;
+			
+			@media screen and (max-width: 768px) {
+				overflow-x: scroll;
+				overflow-y: hidden;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+			}
+
+			picture {
+				display: block;
+
+				@media screen and (max-width: 768px) {
+					min-width: 165px;
+				}
+
+				img {
+					@include img;
+				}
+			}
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				height: 6px;
+			}
+
+			&::-webkit-scrollbar-track {
+				height: 10px;
+				background-color: $grey-100;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				height: 10px;
+				background-color: $grey-100;
+			}
+		}
 	}
 }
 

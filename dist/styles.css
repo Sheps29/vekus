@@ -764,6 +764,79 @@ main {
   width: 100%;
   height: auto;
 }
+.master .media button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  padding: 17px 62px;
+  background-color: white;
+  border: 1px solid #499647;
+  color: #282828;
+  border-color: #A0A7AC;
+}
+.master .media button img {
+  vertical-align: middle;
+}
+.master .clients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .master .clients {
+    gap: 32px;
+  }
+}
+.master .clients h2 {
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #282828;
+}
+@media screen and (max-width: 768px) {
+  .master .clients h2 {
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+}
+.master .clients div {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .master .clients div {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+.master .clients div picture {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .master .clients div picture {
+    min-width: 165px;
+  }
+}
+.master .clients div picture img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.master .clients div::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.master .clients div::-webkit-scrollbar-track {
+  height: 10px;
+  background-color: #EAEEF1;
+}
+.master .clients div::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #EAEEF1;
+}
 
 .primary {
   display: flex;
